@@ -4,140 +4,152 @@
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="src/input.css">
-    <link rel="stylesheet" href="output.css">
-    <!-- <meta property="twitter:card" content="summary_large_image" /> -->
-
-    <!-- <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth;  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
+    <link rel="stylesheet" href="src/input.css" />
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      * {
         font-family: Inter;
-        font-size: 16px;
       }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      } -->
     </style>
-    
   </head>
 
-  
   <body class="bg-color-main-bg">
-    
+    <!-- section -->
+    <section class="max-w-6xl mx-auto mt-32 mb-32 p-10 bg-white rounded-lg">
+      <form name="forms_pak_chusni">
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
+          <div>
+            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+            <input
+              type="text"
+              name="nama"
+              id="nama"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:sbg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+              placeholder="Masukkan Nama"
+              required
+            />
+          </div>
 
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../img/logo-telkom-schools-bundar-1024x1024-removebg-preview.png" class="h-12" alt="Flowbite Logo">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <a href="frame-group-1/frame2.html"><button type="button" class="text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 hidden">Next</button></a>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  
-  </div>
-</nav>
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+              placeholder="Masukkan Email"
+              required
+            />
+          </div>
 
-<!-- section -->
-<section class="max-w-6xl mx-auto mt-32 mb-32 p-10 bg-white rounded-lg">
+          <div>
+            <label for="umur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Umur</label>
+            <input
+              type="number"
+              name="umur"
+              id="umur"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+              placeholder="Masukkan Umur"
+              required
+            />
+          </div>
+          <div>
+            <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
+            <input
+              type="text"
+              name="gender"
+              id="gender"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+              placeholder="Laki-laki / Perempuan"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="studi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Program Studi</label>
+          <input
+            type="text"
+            name="program_studi"
+            id="studi"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+            placeholder="Masukkan Program Studi"
+            required
+          />
+        </div>
 
-<form name="forms_pak_chusni">
-  <div class="grid gap-6 mb-6 md:grid-cols-2">
-      <div>
-          <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
-          <input type="text" name="nama" id="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:sbg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan Nama" required>
-      </div>
-      
-      <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-          <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan Email" required>
-      </div>  
-      
-      <div>
-          <label for="umur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Umur</label>
-          <input type="number" name="umur" id="umur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan Umur" required>
-      </div>
-      <div>
-          <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
-          <input type="text" name="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Laki-laki / Perempuan" required>
-      </div>
-      
-  </div>
-  <div class="mb-6">
-      <label for="studi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Program Studi</label>
-      <input type="text" name="program_studi" id="studi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan Program Studi" required>
-  </div> 
+        <div class="mb-6">
+          <label for="universitas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Asal Universitas</label>
+          <input
+            type="text"
+            name="asal_universitas"
+            id="universitas"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+            placeholder="Masukkan Asal Universitas"
+            required
+          />
+        </div>
 
-  <div class="mb-6">
-      <label for="universitas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Asal Universitas</label>
-      <input type="text" name="asal_universitas" id="universitas" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan Asal Universitas" required>
-  </div> 
+        <div>
+          <label for="IPK" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Indeks Prestasi Kumulatif (IPK)</label>
+          <input
+            type="number"
+            name="IPK"
+            id="IPK"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100"
+            placeholder="Masukkan IPK"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            required
+          />
+        </div>
+        <div class="flex justify-end">
+          <button
+            type="submit"
+            class="btn-kirim text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 mt-5"
+          >
+            Selanjutnya
+          </button>
+          <button
+            disabled
+            type="button"
+            class="btn-loading text-white bg-indigo-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 dark:bg-primary-color dark:focus:ring-blue-800 items-center hidden mt-5"
+          >
+            <svg aria-hidden="true" role="status" class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="#E5E7EB"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentColor"
+              />
+            </svg>
+            Loading...
+          </button>
+        </div>
+      </form>
+    </section>
 
-  <div>
-    <label for="IPK" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Indeks Prestasi Kumulatif (IPK)</label>
-    <input type="number" name="IPK" id="IPK" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-sm shadow-slate-300/80 focus:shadow-sm focus:shadow-blue-300/100" placeholder="Masukkan IPK" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-</div>
-  <div class="flex justify-end">
-  <button type="submit" class="btn-kirim text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 mt-5">Selanjutnya</button>
-  <button disabled type="button" class="btn-loading text-white bg-indigo-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 dark:bg-primary-color dark:focus:ring-blue-800 items-center hidden mt-5">
-    <svg aria-hidden="true" role="status" class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"/>
-    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"/>
-    </svg>
-    Loading...
-    </button>
-  </div>
-    
-  
-</form>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec";
+      const form = document.forms["forms_pak_chusni"];
 
-</section>
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const btnNext = document.querySelector(".btn-next");
 
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-<script>
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec';
-  const form = document.forms['forms_pak_chusni'];
-
-  const btnKirim = document.querySelector(".btn-kirim");
-  const btnLoading = document.querySelector(".btn-loading");
-  const btnNext = document.querySelector(".btn-next");
-
-  form.addEventListener("submit", async (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
         btnLoading.classList.toggle("hidden");
         btnKirim.classList.toggle("hidden");
         btnLoading.classList.toggle("hidden");
         btnKirim.classList.toggle("hidden");
-      let formData = new FormData(form);
-      const value = Object.fromEntries(formData.entries());
-      var json = JSON.stringify(value);
-      sessionStorage.setItem("FormData", json);
-      window.location.href = "frame-group-1/frame2.html";
-    });
-
-
-      
-</script>
-
-
-
+        let formData = new FormData(form);
+        const value = Object.fromEntries(formData.entries());
+        var json = JSON.stringify(value);
+        sessionStorage.setItem("FormData", json);
+        window.location.href = "frame-group-1/frame2.html";
+      });
+    </script>
   </body>
 </html>
