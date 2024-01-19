@@ -1757,8 +1757,16 @@ input[type="range"]::-ms-fill-lower {
     order: 2;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:grid-cols-2 {
