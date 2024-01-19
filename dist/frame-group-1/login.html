@@ -14,48 +14,48 @@
       <button type="submit">Login</button>
     </form>
     <script>
-        const express = require('express');
-const app = express();
-const bcrypt = require('bcrypt');
+      const express = require("express");
+      const app = express();
+      const bcrypt = require("bcrypt");
 
-// Sample user data
-const users = [
-  { username: 'user', password: '$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC' }, // Password is "password"
-];
+      // Sample user data
+      const users = [
+        { username: "user", password: "$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC" }, // Password is "password"
+      ];
 
-app.use(express.urlencoded({ extended: false }));
+      app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.redirect('/login');
-});
+      app.get("/", (req, res) => {
+        res.redirect("/login");
+      });
 
-app.get('/login', (req, res) => {
-  res.sendFile(`${__dirname}/login.html`);
-});
+      app.get("/login", (req, res) => {
+        res.sendFile(`${__dirname}/login.html`);
+      });
 
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  const user = users.find(u => u.username === username);
-  if (user && await bcrypt.compare(password, user.password)) {
-    // Set session cookie or token here
-    res.redirect('/admin');
-  } else {
-    res.redirect('/login');
-  }
-});
+      app.post("/login", async (req, res) => {
+        const { username, password } = req.body;
+        const user = users.find((u) => u.username === username);
+        if (user && (await bcrypt.compare(password, user.password))) {
+          // Set session cookie or token here
+          res.redirect("/admin");
+        } else {
+          res.redirect("/login");
+        }
+      });
 
-app.get('/admin', (req, res) => {
-  // Check for valid session cookie or token here
-  if (req.session.loggedIn) {
-    res.sendFile(`${__dirname}/admin.html`);
-  } else {
-    res.redirect('/login');
-  }
-});
+      app.get("/admin", (req, res) => {
+        // Check for valid session cookie or token here
+        if (req.session.loggedIn) {
+          res.sendFile(`${__dirname}/admin.html`);
+        } else {
+          res.redirect("/login");
+        }
+      });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+      app.listen(3000, () => {
+        console.log("Server started on port 3000");
+      });
     </script>
   </body>
 </html>
