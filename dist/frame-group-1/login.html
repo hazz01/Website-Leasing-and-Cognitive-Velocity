@@ -16,7 +16,7 @@
     <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">
       Please enter your username and password to access the admin page.
     </p>
-
+ 
     <form id="login-form" class="mx-auto max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow">
       <div class="mb-3">
         <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
@@ -40,7 +40,7 @@
         const password = document.getElementById('password').value;
 
 
-        if (username === 'admin') {
+        if (username === 'admin' && password === '') {
           sessionStorage.setItem('loggedIn', true);
           window.location.href = './admin.html';
         } else {
