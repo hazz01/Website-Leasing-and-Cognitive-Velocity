@@ -16,7 +16,7 @@
     <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">
       Please enter your username and password to access the admin page.
     </p>
- 
+
     <form id="login-form" class="mx-auto max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow">
       <div class="mb-3">
         <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
@@ -40,7 +40,7 @@
         const password = document.getElementById('password').value;
 
 
-        if (username === 'admin' && password === '') {
+        if (username === 'admin') {
           sessionStorage.setItem('loggedIn', true);
           window.location.href = './admin.html';
         } else {
@@ -73,7 +73,7 @@
         <section>
         <div class="max-w-4xl mx-auto mt-32 block">
           <h1 class="font-normal text-4xl text-center mb-5 uppercase">Admin Login</h1>
-           <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan sangat setuju</p>
+          <!-- <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan sangat setuju</p> -->
         </div>
         <section class="max-w-2xl mx-auto mb-32 p-10 bg-white rounded-lg">
             <form id="loginForm">
@@ -89,48 +89,49 @@
       </section>
 
 
-    <script>
-      const express = require("express");
+      <script>
+      const express = require('express');
       const app = express();
-      const bcrypt = require("bcrypt");
+      const bcrypt = require('bcrypt');
 
-      // Sample user data
+// Sample user data
       const users = [
-        { username: "user", password: "$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC" }, // Password is "password"
+        { username: 'user', password: '$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC' }, // Password is "password"
       ];
 
-      app.use(express.urlencoded({ extended: false }));
+    app.use(express.urlencoded({ extended: false }));
 
-      app.get("/", (req, res) => {
-        res.redirect("/login");
-      });
+    app.get('/', (req, res) => {
+      res.redirect('/login');
+    });
 
-      app.get("/login", (req, res) => {
-        res.sendFile(`${__dirname}/login.html`);
-      });
+    app.get('/login', (req, res) => {
+      res.sendFile(`${__dirname}/login.html`);
+    });
 
-      app.post("/login", async (req, res) => {
-        const { username, password } = req.body;
-        const user = users.find((u) => u.username === username);
-        if (user && (await bcrypt.compare(password, user.password))) {
-          res.redirect("/admin");
-        } else {
-          res.redirect("/login");
-        }
-      });
+    app.post('/login', async (req, res) => {
+      const { username, password } = req.body;
+      const user = users.find(u => u.username === username);
+      if (user && await bcrypt.compare(password, user.password)) {
+        // Set session cookie or token here
+        res.redirect('/admin');
+      } else {
+        res.redirect('/login');
+      }
+    });
 
-      app.get("/admin", (req, res) => {
-        if (req.session.loggedIn) {
-          res.sendFile(`${__dirname}/admin.html`);
-        } else {
-          res.redirect("/login");
-        }
-      });
+    app.get('/admin', (req, res) => {
+      // Check for valid session cookie or token here
+      if (req.session.loggedIn) {
+        res.sendFile(`${__dirname}/admin.html`);
+      } else {
+        res.redirect('/login');
+      }
+    });
 
-      app.listen(3000, () => {
-        console.log("Server started on port 3000");
-      });
-
+    app.listen(3000, () => {
+      console.log('Server started on port 3000');
+    });
     </script>
   </body>
-</html> -->
+</html>
