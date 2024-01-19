@@ -1,4 +1,60 @@
 <!DOCTYPE html>
+<html lang="english">
+ <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+      * {
+        font-family: Inter;
+      }
+    </style>
+ </head>
+
+ <body class="bg-color-main-bg">
+    <h1 class="font-normal text-4xl text-center mb-5 uppercase">Login</h1>
+    <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">
+      Please enter your username and password to access the admin page.
+    </p>
+
+    <form id="login-form" class="mx-auto max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow">
+      <div class="mb-3">
+        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+        <input type="text" id="username" name="username" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required />
+      </div>
+      <button type="submit" class="w-full py-2 px-4 mt-3 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+      </button>
+    </form>
+
+    <script>
+      const loginForm = document.getElementById('login-form');
+
+      loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+
+        if (username === 'admin') {
+          sessionStorage.setItem('loggedIn', true);
+          window.location.href = './admin.html';
+        } else {
+          alert('Incorrect username or password. Please try again.');
+        }
+      });
+    </script>
+ </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>exported project</title>
@@ -17,7 +73,7 @@
         <section>
         <div class="max-w-4xl mx-auto mt-32 block">
           <h1 class="font-normal text-4xl text-center mb-5 uppercase">Admin Login</h1>
-          <!-- <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan sangat setuju</p> -->
+           <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan sangat setuju</p>
         </div>
         <section class="max-w-2xl mx-auto mb-32 p-10 bg-white rounded-lg">
             <form id="loginForm">
@@ -57,7 +113,6 @@
         const { username, password } = req.body;
         const user = users.find((u) => u.username === username);
         if (user && (await bcrypt.compare(password, user.password))) {
-          // Set session cookie or token here
           res.redirect("/admin");
         } else {
           res.redirect("/login");
@@ -65,7 +120,6 @@
       });
 
       app.get("/admin", (req, res) => {
-        // Check for valid session cookie or token here
         if (req.session.loggedIn) {
           res.sendFile(`${__dirname}/admin.html`);
         } else {
@@ -79,4 +133,4 @@
 
     </script>
   </body>
-</html>
+</html> -->
