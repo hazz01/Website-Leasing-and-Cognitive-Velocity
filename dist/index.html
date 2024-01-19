@@ -131,6 +131,19 @@
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
+      function loadAnswers() {
+        const session = sessionStorage.getItem("FormData");
+        if (session) {
+          const sessionObject = JSON.parse(session);
+          for (var question in sessionObject) {
+            const inputs = document.getElementsByName(question);
+            if (inputs) {
+              inputs[0].value = sessionObject[question];
+            }
+          }
+        }
+      }
+      loadAnswers();
       const scriptURL = "https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec";
       const form = document.forms["forms_pak_chusni"];
 
