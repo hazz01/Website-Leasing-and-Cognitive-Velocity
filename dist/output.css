@@ -915,6 +915,14 @@ input[type="range"]::-ms-fill-lower {
   top: 1rem;
 }
 
+.right-1\/2 {
+  right: 50%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -1004,10 +1012,6 @@ input[type="range"]::-ms-fill-lower {
 
 .mt-16 {
   margin-top: 4rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
 }
 
 .mt-3 {
