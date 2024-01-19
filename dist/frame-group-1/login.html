@@ -34,28 +34,49 @@
 
 
     <script>
-    const users = [
-    { username: 'user', password: 'password' },
-    ];
+      const express = require("express");
+      const app = express();
+      const bcrypt = require("bcrypt");
 
-    const loginForm = document.getElementById('loginForm');
+      // Sample user data
+      const users = [
+        { username: "user", password: "$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC" }, // Password is "password"
+      ];
 
-    loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+      app.use(express.urlencoded({ extended: false }));
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+      app.get("/", (req, res) => {
+        res.redirect("/login");
+      });
 
-    const user = users.find((u) => u.username === username && u.password === password);
+      app.get("/login", (req, res) => {
+        res.sendFile(`${__dirname}/login.html`);
+      });
 
-    if (user) {
-        sessionStorage.setItem('loggedIn', 'true');
+      app.post("/login", async (req, res) => {
+        const { username, password } = req.body;
+        const user = users.find((u) => u.username === username);
+        if (user && (await bcrypt.compare(password, user.password))) {
+          // Set session cookie or token here
+          res.redirect("/admin");
+        } else {
+          res.redirect("/login");
+        }
+      });
 
-        window.location.href = 'admin.html';
-    } else {
-        alert('Invalid username or password');
-    }
-    });
+      app.get("/admin", (req, res) => {
+        // Check for valid session cookie or token here
+        if (req.session.loggedIn) {
+          res.sendFile(`${__dirname}/admin.html`);
+        } else {
+          res.redirect("/login");
+        }
+      });
+
+      app.listen(3000, () => {
+        console.log("Server started on port 3000");
+      });
+>>>>>>> 2ed6b99adc7394169a5d5c374ad1f19bd89f9676
     </script>
   </body>
 </html>
