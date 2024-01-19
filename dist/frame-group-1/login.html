@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Login</title>
-  </head>
-  <body>
-    <form action="/login" method="post">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" required />
-      <br />
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" required />
-      <br />
-      <button type="submit">Login</button>
-    </form>
+    <head>
+        <title>exported project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="src/input.css" />
+        <link rel="stylesheet" href="../output.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+        <style>
+          * {
+            font-family: Inter;
+          }
+        </style>
+      </head>
+      <body class="bg-color-main-bg">
+        <section>
+        <div class="max-w-4xl mx-auto mt-32 block">
+          <h1 class="font-normal text-4xl text-center mb-5 uppercase">Admin Login</h1>
+          <!-- <p class="text-center text-slate-500 text-lg max-w-xl mx-auto mb-5 px-3">Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan sangat setuju</p> -->
+        </div>
+        <section class="max-w-2xl mx-auto mb-32 p-10 bg-white rounded-lg">
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required />
+                <br />
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required />
+                <br />
+                <button type="submit">Login</button>
+              </form>
+          <div class="flex justify-end w-full"></div>
+      </section>
+
+
     <script>
-        const express = require('express');
-const app = express();
-const bcrypt = require('bcrypt');
+    const users = [
+    { username: 'user', password: 'password' },
+    ];
 
-// Sample user data
-const users = [
-  { username: 'user', password: '$2a$10$Q0p/6T0Zo6i6kZXKjTjzHe7z3/rjmC5ZWV6rU6U6jcRxhWoRzrjyC' }, // Password is "password"
-];
+    const loginForm = document.getElementById('loginForm');
 
-app.use(express.urlencoded({ extended: false }));
+    loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-app.get('/', (req, res) => {
-  res.redirect('/login');
-});
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-app.get('/login', (req, res) => {
-  res.sendFile(`${__dirname}/login.html`);
-});
+    const user = users.find((u) => u.username === username && u.password === password);
 
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  const user = users.find(u => u.username === username);
-  if (user && await bcrypt.compare(password, user.password)) {
-    // Set session cookie or token here
-    res.redirect('/admin');
-  } else {
-    res.redirect('/login');
-  }
-});
+    if (user) {
+        sessionStorage.setItem('loggedIn', 'true');
 
-app.get('/admin', (req, res) => {
-  // Check for valid session cookie or token here
-  if (req.session.loggedIn) {
-    res.sendFile(`${__dirname}/admin.html`);
-  } else {
-    res.redirect('/login');
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+        window.location.href = 'admin.html';
+    } else {
+        alert('Invalid username or password');
+    }
+    });
     </script>
   </body>
 </html>
