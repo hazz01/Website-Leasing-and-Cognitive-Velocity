@@ -15,46 +15,40 @@
   </head>
 
   <body class="bg-color-main-bg">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+        <div class="flex justify-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Admin Page</span>
+        </div>
+      </div>
+    </nav>
 
-    
-
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Admin Page</span>
-    </a>
-    
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      
-    </div>
-  </div>
-</nav>
-
-
-  <section>
-    
-    <section class="max-w-2xl mx-auto mb-32 p-10 bg-white rounded-lg">
-      <a href="https://docs.google.com/spreadsheets/d/1h6kVOlgGs12N35MMJ22ZwfS2CNTJa5cSYqNyEmLZKAU/edit?usp=sharing" target="_blank" class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <section class="max-w-2xl mx-auto p-10 bg-white rounded-lg mt-36">
+      <button class="block max-w-xl w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
         <!-- <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5> -->
-        <p class="font-normal text-3xl text-gray-700 dark:text-gray-400 leading-relaxed text-center mx-auto">Database</p>
-      </a>
-      <br>
-      <a href="https://docs.google.com/spreadsheets/d/1h6kVOlgGs12N35MMJ22ZwfS2CNTJa5cSYqNyEmLZKAU/export?format=xlsx" target="_blank" class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <p class="font-normal text-3xl text-gray-700 dark:text-gray-400 leading-relaxed text-center mx-auto">Clear Database</p>
+      </button>
+      <br />
+      <a
+        href="https://docs.google.com/spreadsheets/d/1h6kVOlgGs12N35MMJ22ZwfS2CNTJa5cSYqNyEmLZKAU/export?format=xlsx"
+        target="_blank"
+        class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
         <!-- <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5> -->
         <p class="font-normal text-3xl text-gray-700 dark:text-gray-400 leading-relaxed text-center mx-auto">Download Database</p>
       </a>
-      <br>
+      <br />
       <a href="#" class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
         <!-- <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5> -->
         <p class="font-normal text-3xl text-gray-700 dark:text-gray-400 leading-relaxed text-center mx-auto">Close Form</p>
       </a>
       <div class="flex justify-end w-full"></div>
-  </section>
+    </section>
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
-      if (!sessionStorage.getItem('loggedIn')) {
-        window.location.href = './login.html';
+      if (!sessionStorage.getItem("loggedIn")) {
+        window.location.href = "./login.html";
       }
     </script>
   </body>
