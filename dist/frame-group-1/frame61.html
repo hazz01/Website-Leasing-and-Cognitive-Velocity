@@ -534,12 +534,20 @@
       <form name="forms_pak_chusni">
         <div class="flex justify-end w-full mt-10">
           <button
-            onclick="saveAnswer()"
-            type="button"
-            class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
-          >
-            Selanjutnya
-          </button>
+          onclick="javascript:history.back()"
+          type="button"
+          class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 mr-5"
+        >
+          Sebelumnya
+        </button>
+        <div class="w-5"></div>
+        <button
+          onclick="saveAnswer()"
+          type="button"
+          class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
+        >
+          Selanjutnya
+        </button>
         </div>
       </form>
       <!-- inner -->
@@ -547,6 +555,19 @@
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
+      function loadAnswers() {
+        const session = sessionStorage.getItem("FormData");
+        if (session) {
+          const sessionObject = JSON.parse(session);
+          for (var question in sessionObject) {
+            const inputs = document.getElementsByName(question);
+            if (inputs) {
+              inputs[0].value = sessionObject[question];
+            }
+          }
+        }
+      }
+      
       const form = document.forms["forms_pak_chusni"];
       form.addEventListener("submit", saveAnswer);
       function saveAnswer(e) {
