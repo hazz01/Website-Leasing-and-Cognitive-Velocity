@@ -37,7 +37,7 @@
         </div>
       </div>
     </nav> -->
-
+    <div class="px-2 py-2 rounded-md p-2 m-auto bg-primary-color fixed top-4 right-4 invisible"><p id="TimerDisplay" class="font-semibold text-lg text-white w-full text-center"></p></div>
     <!-- section -->
 
     <div class="max-w-4xl mx-auto mt-32 block">
@@ -465,13 +465,13 @@
       </div>
       <form id="forms_pak_chusni" class="mb-10 mt-10">
         <div class="flex justify-end w-full">
-          <button
+          <!-- <button
             onclick="javascript:history.back()"
             type="button"
             class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 mr-5"
           >
             Sebelumnya
-          </button>
+          </button> -->
           <div class="w-5"></div>
           <button
             onclick="saveAnswer();javascript:history.forward()"
@@ -487,7 +487,7 @@
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
-      let timerNumber = "timer18";
+      let timerNumber = "timer56";
       let timeStart = parseInt(sessionStorage.getItem(timerNumber)) || 0; // Time Start
       var timer;
       function startTimer(duration, display) {
