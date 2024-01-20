@@ -211,7 +211,6 @@
             if (!isNaN(t)) clearInterval(t);
 
             saveAnswer();
-            submitAfterTimeOut();
             const mainContent = document.querySelector(".mainContent");
             const nextButton = document.querySelector("#nextButton");
 
@@ -219,18 +218,6 @@
             nextButton.classList.remove("hidden");
           }
         }, 1000);
-      }
-
-      function submitAfterTimeOut() {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec";
-        const storage = JSON.parse(sessionStorage.getItem("FormData"));
-        const formData = new FormData();
-        Object.keys(storage).forEach((key) => formData.append(key, storage[key]));
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            console.log("Success!", response);
-          })
-          .catch((error) => console.error("Error!", error.message));
       }
 
       window.onload = function () {
