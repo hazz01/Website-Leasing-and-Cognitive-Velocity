@@ -486,6 +486,36 @@
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
+      let timerNumber = "timer18";
+      let timeStart = parseInt(sessionStorage.getItem(timerNumber)) || 0; // Time Start
+      var timer;
+      function startTimer(duration, display) {
+        timer = duration;
+        var minutes, seconds;
+        let warning = timeStart;
+        var ok = false;
+        var form = document.forms.exam;
+
+        var t = setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+          sessionStorage.setItem(timerNumber, timer);
+          if (++timer <= 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        var time = timeStart, // your time in seconds here
+          display = document.querySelector("#TimerDisplay");
+        startTimer(time, display);
+      };
+
       function loadAnswers() {
         const session = sessionStorage.getItem("FormData");
         if (session) {
@@ -498,16 +528,17 @@
           }
         }
       }
-
       const form = document.forms["forms_pak_chusni"];
       form.addEventListener("submit", saveAnswer);
       function saveAnswer(e) {
         e?.preventDefault();
-
         let tempStorage = JSON.parse(sessionStorage.getItem("FormData"));
         let formData = new FormData(form);
         let object = Object.fromEntries(formData.entries());
+        console.log(object);
+        object[timerNumber] = timer;
         tempStorage = { ...tempStorage, ...object };
+        console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
 
         window.location.href = "frame39.html";

@@ -45,7 +45,7 @@
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        if (username === "admin") {
+        if (username === "admin" && password === "password") {
           sessionStorage.setItem("loggedIn", true);
           window.location.href = "./admin.html";
         } else {

@@ -113,25 +113,25 @@
       </form>
     </section>
 
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
     <script>
       function getValueClose() {
-        var deploymentId = "AKfycbzKTBxgiaK552WjWi6bDaTQQMCGPi6QuLcFTVb-4GNkWUKkTzn7a8P6NVZ1pFOYMhMd";
-        var url = "https://script.google.com/macros/s/AKfycbzKTBxgiaK552WjWi6bDaTQQMCGPi6QuLcFTVb-4GNkWUKkTzn7a8P6NVZ1pFOYMhMd/exec" + deploymentId + "/exec";
+        var deploymentId = "AKfycbwk035vAJWG_sGSpXtAqX6q2ByGMRRht_tGQtQn15Olh-IuhiSOJYHhrTOy_x8QBDbZ";
+        var url = "https://script.google.com/a/macros/student.smktelkom-mlg.sch.id/s/AKfycbxVlnVRgRC3QJUiv19cpxIrUG_8rmxe9Dz9HVw9esa_8W-c3Yrx6eUQpvx-48v2nyZt/exec";
 
-        fetch(url)
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-
-            if (data.status === "false") {
-              window.location.href = "closed.html";
-            } else if (data.status === "true") {
-              window.location.href = "./index.html";
-            }
-          })
-          .catch((error) => console.error("Error:", error));
+        fetch(url, { mode: "no-cors", redirect: "follow" }).then((res) => {
+          fetch(res.url, { mode: "no-cors", redirect: "follow" })
+            .then((res) => res.json())
+            .then((res) => {
+              if (data.status == false) {
+                window.location.href = "closed.html";
+              } else {
+                window.location.href = "./index.html";
+              }
+            });
+        });
       }
+      getValueClose();
 
       function loadAnswers() {
         const session = sessionStorage.getItem("FormData");

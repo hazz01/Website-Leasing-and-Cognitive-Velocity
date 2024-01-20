@@ -159,7 +159,7 @@
             </button>
             <div class="w-5"></div>
             <button
-              onclick="saveAnswer();windowLocation();javascript:history.forward()"
+              onclick="saveAnswer();javascript:history.forward()"
               type="button"
               class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
             >
@@ -171,22 +171,14 @@
       </section>
     </section>
 
-    <div id="nextButton" class="fixed hidden top-1/2 right-1/2">
-      <h1 class="text-center text-lg mb-3 font-semibold">TIMEOUT!</h1>
-      <button
-        onclick="saveAnswer();windowLocation();javascript:history.forward()"
-        type="button"
-        class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
-      >
-        Selanjutnya
-      </button>
-    </div>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
     <script>
-      let timeStart = 60; // Time Start
+      let timerNumber = "timer18";
+      let timeStart = parseInt(sessionStorage.getItem(timerNumber)) || 0; // Time Start
+      var timer;
       function startTimer(duration, display) {
-        var timer = duration;
+        timer = duration;
         var minutes, seconds;
         let warning = timeStart;
         var ok = false;
@@ -199,23 +191,9 @@
           seconds = seconds < 10 ? "0" + seconds : seconds;
 
           display.textContent = minutes + ":" + seconds;
-
-          if (timer <= warning && !ok) {
-            alert("Time Is Running");
-            ok = true;
-          }
-
-          if (--timer <= 0) {
+          sessionStorage.setItem(timerNumber, timer);
+          if (++timer <= 0) {
             timer = duration;
-
-            if (!isNaN(t)) clearInterval(t);
-
-            saveAnswer();
-            const mainContent = document.querySelector(".mainContent");
-            const nextButton = document.querySelector("#nextButton");
-
-            mainContent.classList.add("hidden");
-            nextButton.classList.remove("hidden");
           }
         }, 1000);
       }
@@ -242,14 +220,14 @@
       form.addEventListener("submit", saveAnswer);
       function saveAnswer(e) {
         e?.preventDefault();
-
         let tempStorage = JSON.parse(sessionStorage.getItem("FormData"));
         let formData = new FormData(form);
         let object = Object.fromEntries(formData.entries());
+        console.log(object);
+        object[timerNumber] = timer;
         tempStorage = { ...tempStorage, ...object };
+        console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
-      }
-      function windowLocation() {
         window.location.href = "frame19.html";
       }
     </script>
