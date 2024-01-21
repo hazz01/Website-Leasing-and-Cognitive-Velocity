@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 $deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
 $url = "https://script.google.com/macros/s/{$deploymentId}/exec";
