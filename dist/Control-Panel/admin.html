@@ -32,7 +32,7 @@
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">View Database</p>
       </a>
       <br />
-      <button class="block max-w-lg w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color">
+      <button id="clearDatabase" class="block max-w-lg w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color">
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Clear Database</p>
       </button>
       <br />
@@ -57,6 +57,17 @@
       if (!sessionStorage.getItem("loggedIn")) {
         window.location.href = "./login.html";
       }
+      //
+      const url = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
+      var sheets = "sheet1";
+      const form = document.getElementById("clearDatabase");
+
+      form.addEventListener("click", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "GET", mode: "no-cors" })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>

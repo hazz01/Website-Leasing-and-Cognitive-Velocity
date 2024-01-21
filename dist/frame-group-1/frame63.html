@@ -271,7 +271,7 @@
 
       // submit
       function submit() {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
         const storage = JSON.parse(sessionStorage.getItem("FormData"));
         const formData = new FormData();
         Object.keys(storage).forEach((key) => formData.append(key, storage[key]));

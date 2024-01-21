@@ -116,20 +116,27 @@
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
     <script>
       function getValueClose() {
-        var deploymentId = "AKfycbwk035vAJWG_sGSpXtAqX6q2ByGMRRht_tGQtQn15Olh-IuhiSOJYHhrTOy_x8QBDbZ";
-        var url = "https://script.google.com/a/macros/student.smktelkom-mlg.sch.id/s/AKfycbxVlnVRgRC3QJUiv19cpxIrUG_8rmxe9Dz9HVw9esa_8W-c3Yrx6eUQpvx-48v2nyZt/exec";
+        var deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
+        var url = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
 
-        fetch(url, { mode: "no-cors", redirect: "follow" }).then((res) => {
-          fetch(res.url, { mode: "no-cors", redirect: "follow" })
-            .then((res) => res.json())
-            .then((res) => {
-              if (data.status == false) {
-                window.location.href = "closed.html";
-              } else {
-                window.location.href = "./index.html";
-              }
-            });
-        });
+        fetch(url, { mode: "no-cors" })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Data received:", data);
+
+            // Assuming STATUS is a property of the returned data
+            if (data || data.STATUS == "false") {
+              window.location.href = "./closed.html";
+            } else {
+              window.location.href = "./index.html";
+            }
+          })
+          .catch((error) => console.error("Error:", error));
       }
       getValueClose();
 
@@ -146,7 +153,7 @@
         }
       }
       loadAnswers();
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxBi9Ab4xI1eDMTSC5VleuA4g21FMXLDV4zG2-T3a5GOfJqMZ7kPd-b33Dk1ykYBDg/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
       const form = document.forms["forms_pak_chusni"];
 
       // form.addEventListener("submit", async (e) => {
