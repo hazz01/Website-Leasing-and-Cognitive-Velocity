@@ -115,29 +115,38 @@
 
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
     <script>
-      function getValueClose() {
-        var deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
-        var url = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
+      const fetch = require("node-fetch");
 
-        fetch(url, { mode: "no-cors" })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            console.log("Data received:", data);
+      const deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
+      const url = `https://script.google.com/macros/s/${deploymentId}/exec`;
 
-            // Assuming STATUS is a property of the returned data
-            if (data || data.STATUS == "false") {
-              window.location.href = "./closed.html";
+      async function getValueClose() {
+        try {
+          // Perform the first fetch
+          const response1 = await fetch(url, { method: "HEAD" });
+          const redirectUrl = response1.headers.get("location");
+
+          if (redirectUrl) {
+            // Perform the second fetch
+            const response2 = await fetch(redirectUrl);
+            const data = await response2.json();
+
+            // Redirect based on data.status
+            if (data.status == false) {
+              console.log("Redirecting to ./closed.html");
+              window.location.href = "./closed.html"; // Modify this line
             } else {
-              window.location.href = "./index.html";
+              console.log("Redirecting to index.html");
+              window.location.href = "./index.html"; // Modify this line
             }
-          })
-          .catch((error) => console.error("Error:", error));
+          } else {
+            console.error("No redirect URL found");
+          }
+        } catch (error) {
+          console.error("Error:", error.message);
+        }
       }
+
       getValueClose();
 
       function loadAnswers() {
@@ -152,6 +161,7 @@
           }
         }
       }
+
       loadAnswers();
       const scriptURL = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
       const form = document.forms["forms_pak_chusni"];

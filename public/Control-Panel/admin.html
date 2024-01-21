@@ -32,7 +32,7 @@
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">View Database</p>
       </a>
       <br />
-      <button id="clearDatabase" class="block max-w-lg w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color">
+      <button id="clearButton" class="block max-w-lg w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color">
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Clear Database</p>
       </button>
       <br />
@@ -45,10 +45,10 @@
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Download Database</p>
       </a>
       <br />
-      <a href="#" class="block max-w-lg mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color">
+      <button onclick="runPhpCode()" class="block max-w-lg mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color w-full">
         <!-- <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5> -->
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Close Form</p>
-      </a>
+      </button>
       <div class="flex justify-end w-full"></div>
     </section>
 
@@ -58,16 +58,26 @@
         window.location.href = "./login.html";
       }
       //
-      const url = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
-      var sheets = "sheet1";
-      const form = document.getElementById("clearDatabase");
 
-      form.addEventListener("click", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "GET", mode: "no-cors" })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
+      document.getElementById("clearButton").addEventListener("click", function () {
+        fetch("https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec")
+          .then((response) => response.text())
+          .then((data) => {
+            console.log(data);
+            alert("Success to Clear Database!");
+          })
+          .catch((error) => console.error("Error:", error));
       });
+
+      function runPhpCode() {
+        fetch("../../getDataFormClose/status.php")
+          .then((response) => response.text())
+          .then((data) => {
+            alert("Success");
+            console.log("Success");
+          })
+          .catch((error) => console.error("Error:", error));
+      }
     </script>
   </body>
 </html>
