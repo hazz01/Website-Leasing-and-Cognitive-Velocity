@@ -59,14 +59,16 @@
       }
       //
 
-      document.getElementById("clearButton").addEventListener("click", function () {
-        fetch("https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec")
-          .then((response) => response.text())
-          .then((data) => {
-            console.log(data);
-            alert("Success to Clear Database!");
-          })
-          .catch((error) => console.error("Error:", error));
+      document.getElementById("clearButton").addEventListener("click", async function () {
+        try {
+          const response = await fetch("https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec");
+          const data = await response.text();
+
+          console.log(data);
+          alert("Success to Clear Database!");
+        } catch (error) {
+          console.error("Error:", error);
+        }
       });
 
       function runPhpCode() {
