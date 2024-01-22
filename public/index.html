@@ -114,40 +114,83 @@
     </section>
 
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
-    <script>
-      const fetch = require("node-fetch");
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      // INITIAL: import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
 
-      const deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
-      const url = `https://script.google.com/macros/s/${deploymentId}/exec`;
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+      import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBH5qtL-B41AXl3hm5ywcK6UcrWOxzKJb0",
+        authDomain: "web-leasing-cognitife-velocity.firebaseapp.com",
+        databaseURL: "https://web-leasing-cognitife-velocity-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "web-leasing-cognitife-velocity",
+        storageBucket: "web-leasing-cognitife-velocity.appspot.com",
+        messagingSenderId: "759615616067",
+        appId: "1:759615616067:web:6dbfe6a0b7bc5d5cc550f6"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const webOpenRef = ref(database, 'Website/Open');
+      console.log('webOpen:', webOpenRef);
 
-      async function getValueClose() {
-        try {
-          // Perform the first fetch
-          const response1 = await fetch(url, { method: "HEAD" });
-          const redirectUrl = response1.headers.get("location");
+      // Mendengarkan perubahan nilai pada path 'Website/Open'
+      onValue(webOpenRef, (snapshot) => {
+        const webOpenValue = snapshot.val();
+        console.log('Nilai terbaru dari Website/Open:', webOpenValue);
 
-          if (redirectUrl) {
-            // Perform the second fetch
-            const response2 = await fetch(redirectUrl);
-            const data = await response2.json();
-
-            // Redirect based on data.status
-            if (data.status == false) {
-              console.log("Redirecting to ./closed.html");
-              window.location.href = "./closed.html"; // Modify this line
-            } else {
-              console.log("Redirecting to index.html");
-              window.location.href = "./index.html"; // Modify this line
-            }
-          } else {
-            console.error("No redirect URL found");
-          }
-        } catch (error) {
-          console.error("Error:", error.message);
+        // Di sini, Anda dapat melakukan sesuatu dengan nilai boolean dari 'Website/Open'
+        // Misalnya:
+        if (webOpenValue) {
+          console.log('Website terbuka!');
+        } else {
+          console.log('Website tertutup!');
         }
-      }
+      });
 
-      getValueClose();
+    </script>
+
+    <script>
+
+      // const fetch = require("node-fetch");
+
+      // const deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
+      // const url = `https://script.google.com/macros/s/${deploymentId}/exec`; 
+
+      // async function getValueClose() {
+      //   try {
+      //     // Perform the first fetch
+      //     const response1 = await fetch(url, { method: "HEAD" });
+      //     const redirectUrl = response1.headers.get("location");
+      // 
+      //     if (redirectUrl) {
+      //       // Perform the second fetch
+      //       const response2 = await fetch(redirectUrl);
+      //       const data = await response2.json();
+      // 
+      //       // Redirect based on data.status
+      //       if (data.status == false) {
+      //         console.log("Redirecting to ./closed.html");
+      //         window.location.href = "./closed.html"; // Modify this line
+      //       } else {
+      //         console.log("Redirecting to index.html");
+      //         window.location.href = "./index.html"; // Modify this line
+      //       }
+      //     } else {
+      //       console.error("No redirect URL found");
+      //     }
+      //   } catch (error) {
+      //     console.error("Error:", error.message);
+      //   }
+      // }
+      // 
+      // getValueClose(); 
 
       function loadAnswers() {
         const session = sessionStorage.getItem("FormData");

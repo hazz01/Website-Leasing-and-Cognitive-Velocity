@@ -45,7 +45,8 @@
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Download Database</p>
       </a>
       <br />
-      <button onclick="runPhpCode()" class="block max-w-lg mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color w-full">
+       <!-- onclick="runPhpCode()" -->
+      <button id="closeButton" class="block max-w-lg mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-primary-color group transition focus:ring-2 focus:ring-blue-600 border-primary-color w-full">
         <!-- <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5> -->
         <p class="font-medium text-xl text-gray-700 leading-relaxed text-center mx-auto group-hover:text-white transition">Close Form</p>
       </button>
@@ -53,33 +54,83 @@
     </section>
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+      import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBH5qtL-B41AXl3hm5ywcK6UcrWOxzKJb0",
+        authDomain: "web-leasing-cognitife-velocity.firebaseapp.com",
+        databaseURL: "https://web-leasing-cognitife-velocity-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "web-leasing-cognitife-velocity",
+        storageBucket: "web-leasing-cognitife-velocity.appspot.com",
+        messagingSenderId: "759615616067",
+        appId: "1:759615616067:web:6dbfe6a0b7bc5d5cc550f6"
+      };
+    
+      var closeButton = document.getElementById('closeButton');
+      var webOpenValueFinal = true;
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const webOpenRef = ref(database, 'Website/Open');
+     
+    
+      // Mendengarkan perubahan nilai pada path 'Website/Open'
+      onValue(webOpenRef, (snapshot) => {
+        const webOpenValue = snapshot.val();
+        console.log('Nilai terbaru dari Website/Open:', webOpenValue);
+        if (webOpenValue) {
+          webOpenValueFinal = false
+          console.log('Website terbuka!');
+        } else {
+          webOpenValueFinal = true
+          console.log('Website tertutup!');
+        }
+      });
+    
+      // Menambahkan event click pada button
+      closeButton.addEventListener('click', function () {
+        // Mendapatkan nilai saat ini
+        // const currentValue = webOpenValue.val(); // snapshot.val() in the previous code
+    
+        // Mengubah nilai di database
+        set(webOpenRef, webOpenValueFinal);
+      });
+    </script>
+    
+
+
     <script>
       if (!sessionStorage.getItem("loggedIn")) {
         window.location.href = "./login.html";
       }
       //
 
-      document.getElementById("clearButton").addEventListener("click", async function () {
-        try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec");
-          const data = await response.text();
+      //document.getElementById("clearButton").addEventListener("click", async function () {
+      //  try {
+      //    const response = await fetch("https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec");
+      //    const data = await response.text();
+      //
+      //    console.log(data);
+      //    alert("Success to Clear Database!");
+      //  } catch (error) {
+      //    console.error("Error:", error);
+      //  }
+      //});
 
-          console.log(data);
-          alert("Success to Clear Database!");
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      });
-
-      function runPhpCode() {
-        fetch("../../getDataFormClose/status.php")
-          .then((response) => response.text())
-          .then((data) => {
-            alert("Form Closed!");
-            console.log("Success");
-          })
-          .catch((error) => console.error("Error:", error));
-      }
+      // function runPhpCode() {
+      //  fetch("../../getDataFormClose/status.php")
+      //    .then((response) => response.text())
+      //    .then((data) => {
+      //      alert("Form Closed!");
+      //      console.log("Success");
+      //    })
+      //    .catch((error) => console.error("Error:", error));
+      // }
     </script>
   </body>
 </html>
