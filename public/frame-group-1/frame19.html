@@ -59,15 +59,60 @@
         </div>
 
         <!-- inner -->
-        <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-5">
-          <div class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-5 text-lg font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 2</h5>
-            <p class="text-sm">
-              *Nilai (d) dan (a) otomatis terinput dari hasil kalkulasi pada slide sebelumnya. * nilai (b) pada th. pertama akan otomatis terinput 0 *(c) dst. responden menghitung manual dengan memasukkan formula =*(a) – (b) *(e) dst. nilai
-              tersebut otomatis terinput dengan mengurangi nilai *(d) – *(c) dst. **(e) responden menghitung manual (...%) x * (d) *nilai (g) harus sama dengan nilai *(d)
-            </p>
+        <div class="grid sm:grid-cols-1 gap-5">
+          <div class="block max-w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-5 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">LEASE AMORTIZATION SCHEDULE.</h5>
+            <div class="block max-w-xl w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div class="relative overflow-x-auto shadow-md sm:rounded-l">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-black border-2">
+                  <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800" colspan="2">Calculation of Annual Payments of Leassee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Fair Value of Assets</th>
+                      <td class="px-6 py-4 flex">
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd"></p>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">(-) PV of residual value</th>
+                      <td class="px-6 py-4">
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="aa"></p>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Total payment due for the leased asset</th>
+                      <td class="px-6 py-4">
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="d"></p>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Annual Lease Payments</th>
+                      <td class="px-6 py-4">
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="a"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="px-6 pt-4 pb-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2"><strong> Notes : </strong></th>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="px-6 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(1) Present value discount rate (7,6%) = 0.665</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(2) Present value annuity-due (7,6%) = 5.582</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(3) Angka yang diinput tidak perlu menambahkan titik maupun koma</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <div class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <div class="block max-w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="">
               <form id="forms_pak_chusni">
                 <table class="text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -85,7 +130,7 @@
                       <td class="px-6 py-4">01/01/19</td>
                       <td class="px-6 py-4">
                         <input
-                          type="text"
+                          type="number"
                           id="smallUndervalueTab2_A1"
                           name="smallUndervalueTab2_A1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -95,7 +140,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <input
-                          type="text"
+                          type="number"
                           id="smallUndervalueTab2_A2"
                           name="smallUndervalueTab2_A2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -105,7 +150,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <input
-                          type="text"
+                          type="number"
                           id="smallUndervalueTab2_A3"
                           name="smallUndervalueTab2_A3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -113,21 +158,48 @@
                           required
                         />
                       </td>
-                      <td class="px-6 py-4"><p class="text-red-600">*(d)</p></td>
+                      <td class="px-6 py-4">
+                        <input
+                          type="number"
+                          id="smallUndervalueTab2_A3_1"
+                          name="smallUndervalueTab2_A3_1"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </td>
                     </tr>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                       <td class="px-6 py-4">01/01/19</td>
-                      <td class="px-6 py-4"><p class="text-red-600">*(a)</p></td>
-                      <td class="px-6 py-4"><p class="text-black">*(b) 0</p></td>
-                      <td class="px-6 py-4"><p class="text-black">*(c) = (a) – (b)</p></td>
-                      <td class="px-6 py-4"><p class="text-black">*(e)</p></td>
+                      <td class="px-6 py-4">
+                        <input
+                          type="number"
+                          id="smallUndervalueTab2_A3_2"
+                          name="smallUndervalueTab2_A3_2"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="b">0</p></td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="c">*(c) = (a) – (b)</p></td>
+                      <td class="px-6 py-4">
+                        <input
+                          type="number"
+                          id="smallUndervalueTab2_A3_3"
+                          name="smallUndervalueTab2_A3_3"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </td>
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
                       <td class="px-6 py-4">01/01/20</td>
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_B1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -136,11 +208,22 @@
                           />
                         </p>
                       </td>
-                      <td class="px-6 py-4"><p class="text-black">**(f)</p></td>
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
+                            id=""
+                            name="smallUndervalueTab2_0_B2"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                            placeholder=""
+                            required
+                          />
+                        </p>
+                      </td>
+                      <td class="px-6 py-4">
+                        <p class="text-black">
+                          <input
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_B2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -152,7 +235,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_B3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -167,7 +250,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_C1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -179,7 +262,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_C2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -191,7 +274,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_C3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -203,7 +286,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_C4"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -218,7 +301,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_D1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -230,7 +313,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_D2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -242,7 +325,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_D3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -254,7 +337,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_D4"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -269,7 +352,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_E1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -281,7 +364,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_E2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -293,7 +376,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_E3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -305,7 +388,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_E4"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -320,7 +403,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_F1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -332,7 +415,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_F2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -344,7 +427,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_F3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -356,7 +439,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_F4"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -371,7 +454,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_G1"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -383,7 +466,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_G2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -395,7 +478,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_G3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -407,7 +490,7 @@
                       <td class="px-6 py-4">
                         <p class="text-black">
                           <input
-                            type="text"
+                            type="number"
                             id=""
                             name="smallUndervalueTab2_G4"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
@@ -425,54 +508,31 @@
                       <td class="px-6 py-4"><p class="text-black"></p></td>
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
-                      <td class="px-6 py-4">TOTAL (Otomatis Terjumlah)</td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
+                      <td class="px-6 py-4">TOTAL</td>
+                      <td class="px-6 py-4 justify-center"><p id="total1"></p></td>
+                      <td class="px-6 py-4 justify-center"><p id="total2"></p></td>
+                      <td class="px-6 py-4 justify-center"><p id="total3"></p></td>
+                      <td class="px-6 py-4 justify-center">
+                        <p id="total4"></p>
                       </td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
+                    </tr>
+                    <tr class="bg-white dark:bg-gray-800">
+                      <td class="px-6 py-4"></td>
+                      <td class="px-6 py-4 justify-center">
+                        <button
+                          onclick="saveAnswer();myButton()"
+                          name=""
+                          type="button"
+                          id="#totalbutton1"
+                          class="text-white w-full mx-auto bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 focus:outline-none"
+                        >
+                          Click to Totalyze
+                        </button>
                       </td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
-                      </td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
+                      <td class="px-6 py-4 justify-center"></td>
+                      <td class="px-6 py-4 justify-center"></td>
+                      <td class="px-6 py-4 justify-center">
+                        <p class="text-black"></p>
                       </td>
                     </tr>
                   </tbody>
@@ -484,16 +544,16 @@
 
         <form name="forms_pak_chusni">
           <div class="flex justify-end w-full mt-10">
-            <!-- <button
+            <button
               onclick="javascript:history.back()"
               type="button"
               class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 mr-5"
             >
               Sebelumnya
-            </button> -->
+            </button>
             <div class="w-5"></div>
             <button
-              onclick="saveAnswer();javascript:history.forward()"
+              onclick="saveAnswer();windowwss();javascript:history.forward()"
               type="button"
               class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
             >
@@ -556,13 +616,338 @@
         let tempStorage = JSON.parse(sessionStorage.getItem("FormData"));
         let formData = new FormData(form);
         let object = Object.fromEntries(formData.entries());
-        console.log(object);
         object[timerNumber] = timer;
         tempStorage = { ...tempStorage, ...object };
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
+      }
+
+      function windowwss() {
         window.location.href = "frame20.html";
       }
+      // table
+      function tableDataInnner() {
+        let jsonString = sessionStorage.getItem("FormData");
+        let jsonObject = JSON.parse(jsonString);
+        let fixA = jsonObject.smallUndervalueTab1_4;
+        console.log(fixA);
+        document.querySelector("#a").innerHTML = fixA;
+        let fixD = jsonObject.smallUndervalueTab1_3;
+        document.querySelector("#d").innerHTML = fixD;
+        let b = document.querySelector("#b").innerHTML;
+        let BNumber = parseInt(b);
+        let AminB = fixA - BNumber;
+        document.querySelector("#c").innerHTML = AminB;
+        let dd = document.querySelector("#dd");
+        let fixDD = jsonObject.smallUndervalueTab1_1;
+        document.querySelector("#dd").innerHTML = fixDD;
+        let fixAA = jsonObject.smallUndervalueTab1_2;
+        document.querySelector("#aa").innerHTML = fixAA;
+        return AminB;
+      }
+      tableDataInnner();
+
+      // let isButtonClicked1 = false;
+      // let isButtonClicked2 = false;
+      // let isButtonClicked3 = false;
+      // let isButtonClicked4 = false;
+      // function saveDataToSessionStorage(dataKey, dataValue) {
+      //   sessionStorage.setItem(dataKey, JSON.stringify(dataValue));
+      // }
+
+      // function getDataFromSessionStorage(dataKey) {
+      //   let jsonData = sessionStorage.getItem(dataKey);
+      //   if (jsonData) {
+      //     return JSON.parse(jsonData);
+      //   }
+      //   return null;
+      // }
+
+      // function totalcols() {
+      //   let total1 = 0;
+      //   let total2 = 0;
+      //   let total3 = 0;
+      //   let total4 = 0;
+
+      //   // Debugging statements
+      //   let jsonString = sessionStorage.getItem("FormData");
+      //   let jsonObject = JSON.parse(jsonString);
+      //   console.log("jsonObject:", jsonObject);
+      //   let fixA = jsonObject.smallUndervalueTab1_4;
+      //   let b = document.querySelector("#b").innerHTML;
+      //   let BNumber = parseInt(b);
+      //   let AminB = fixA - BNumber;
+
+      //   // state 1
+      //   let col1 =
+      //     parseInt(jsonObject.smallUndervalueTab2_A1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_A3_2) +
+      //     parseInt(jsonObject.smallUndervalueTab2_B1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_C1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_D1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_E1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_F1) +
+      //     parseInt(jsonObject.smallUndervalueTab2_G1);
+
+      //   // Debugging statements
+      //   console.log("col1:", col1);
+      //   let button1 = document.querySelector("#total1");
+      //   button1.addEventListener("click", function () {
+      //     if (!isButtonClicked1) {
+      //       total1 = total1 + col1;
+      //       document.querySelector("#total1").innerHTML = total1;
+
+      //       // Save the updated total to sessionStorage
+      //       saveDataToSessionStorage("total1", total1);
+
+      //       isButtonClicked1 = true;
+      //     }
+      //   });
+
+      //   // state 2
+      //   let col2 =
+      //     parseFloat(jsonObject.smallUndervalueTab2_A2) +
+      //     0 +
+      //     parseFloat(jsonObject.smallUndervalueTab2_0_B2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_C2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_D2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_E2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_F2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_G2);
+      //   // Debugging statements
+      //   console.log("col2:", col2);
+      //   let button2 = document.querySelector("#total2");
+      //   button2.addEventListener("click", function () {
+      //     if (!isButtonClicked2) {
+      //       total2 = total2 + col2;
+      //       document.querySelector("#total2").innerHTML = total2;
+
+      //       // Save the updated total to sessionStorage
+      //       saveDataToSessionStorage("total2", total2);
+
+      //       isButtonClicked2 = true;
+      //     }
+      //   });
+
+      //   // state 3
+      //   let col3 =
+      //     parseFloat(jsonObject.smallUndervalueTab2_A3) +
+      //     parseFloat(AminB) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_B2) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_C3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_D3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_E3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_F3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_G3);
+      //   // Debugging statements
+      //   console.log("col3:", col3);
+      //   let button3 = document.querySelector("#total3");
+      //   button3.addEventListener("click", function () {
+      //     if (!isButtonClicked3) {
+      //       total3 = total3 + col3;
+      //       document.querySelector("#total3").innerHTML = total3;
+
+      //       // Save the updated total to sessionStorage
+      //       saveDataToSessionStorage("total3", total3);
+
+      //       isButtonClicked3 = true;
+      //     }
+      //   });
+
+      //   // state 4
+      //   let col4 =
+      //     parseFloat(jsonObject.smallUndervalueTab2_A3_1) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_A3_3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_B3) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_C4) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_D4) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_E4) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_F4) +
+      //     parseFloat(jsonObject.smallUndervalueTab2_G4);
+      //   // Debugging statements
+      //   console.log("col4:", col4);
+      //   let button4 = document.querySelector("#total4");
+      //   button4.addEventListener("click", function () {
+      //     if (!isButtonClicked4) {
+      //       total4 = total4 + col4;
+      //       document.querySelector("#total4").innerHTML = total4;
+
+      //       // Save the updated total to sessionStorage
+      //       saveDataToSessionStorage("total4", total4);
+
+      //       isButtonClicked4 = true;
+      //     }
+      //   });
+      // }
+
+      // // Retrieve the stored data when the page loads
+      // function retrieveStoredData() {
+      //   let storedTotal1 = getDataFromSessionStorage("total1");
+      //   let storedTotal2 = getDataFromSessionStorage("total2");
+      //   let storedTotal3 = getDataFromSessionStorage("total3");
+      //   let storedTotal4 = getDataFromSessionStorage("total4");
+
+      //   // Check if the stored data exists
+      //   if (storedTotal1 !== null) {
+      //     // Update your total variable with the stored data
+      //     total1 = parseFloat(storedTotal1);
+      //     total2 = parseFloat(storedTotal2);
+      //     total3 = parseFloat(storedTotal3);
+      //     total4 = parseFloat(storedTotal4);
+
+      //     // Update the displayed total
+      //     document.querySelector("#total1").innerHTML = total1;
+      //     document.querySelector("#total2").innerHTML = total2;
+      //     document.querySelector("#total3").innerHTML = total3;
+      //     document.querySelector("#total4").innerHTML = total4;
+
+      //     // Set the corresponding button flags to true
+      //     isButtonClicked1 = true;
+      //     isButtonClicked2 = true;
+      //     isButtonClicked3 = true;
+      //     isButtonClicked4 = true;
+      //   }
+      // }
+
+      // // Call the function when the page loads to retrieve stored data
+      // retrieveStoredData();
+
+      // // Call this function to reset the flag when needed
+      // resetButtonClickedFlag();
+
+      let isButtonClicked1 = false;
+      let isButtonClicked2 = false;
+      let isButtonClicked3 = false;
+      let isButtonClicked4 = false;
+
+      // function saveDataToSessionStorage(dataKey, dataValue) {
+      //   sessionStorage.setItem(dataKey, JSON.stringify(dataValue));
+      // }
+
+      // function getDataFromSessionStorage(dataKey) {
+      //   let jsonData = sessionStorage.getItem(dataKey);
+      //   if (jsonData) {
+      //     return JSON.parse(jsonData);
+      //   }
+      //   return null;
+      // }
+
+      function totalcols() {
+        let total1 = 0;
+        let total2 = 0;
+        let total3 = 0;
+        let total4 = 0;
+
+        let jsonString = sessionStorage.getItem("FormData");
+        let jsonObject = JSON.parse(jsonString);
+        console.log("jsonObject:", jsonObject);
+        let fixA = jsonObject.smallUndervalueTab1_4;
+        let b = document.querySelector("#b").innerHTML;
+        let BNumber = parseInt(b);
+        let AminB = fixA - BNumber;
+
+        let col1 =
+          parseInt(jsonObject.smallUndervalueTab2_A1) +
+          parseInt(jsonObject.smallUndervalueTab2_A3_2) +
+          parseInt(jsonObject.smallUndervalueTab2_B1) +
+          parseInt(jsonObject.smallUndervalueTab2_C1) +
+          parseInt(jsonObject.smallUndervalueTab2_D1) +
+          parseInt(jsonObject.smallUndervalueTab2_E1) +
+          parseInt(jsonObject.smallUndervalueTab2_F1) +
+          parseInt(jsonObject.smallUndervalueTab2_G1);
+        let col2 =
+          parseInt(jsonObject.smallUndervalueTab2_A2) +
+          0 +
+          parseInt(jsonObject.smallUndervalueTab2_0_B2) +
+          parseInt(jsonObject.smallUndervalueTab2_C2) +
+          parseInt(jsonObject.smallUndervalueTab2_D2) +
+          parseInt(jsonObject.smallUndervalueTab2_E2) +
+          parseInt(jsonObject.smallUndervalueTab2_F2) +
+          parseInt(jsonObject.smallUndervalueTab2_G2);
+        let col3 =
+          parseInt(jsonObject.smallUndervalueTab2_A3) +
+          parseInt(AminB) +
+          parseInt(jsonObject.smallUndervalueTab2_B2) +
+          parseInt(jsonObject.smallUndervalueTab2_C3) +
+          parseInt(jsonObject.smallUndervalueTab2_D3) +
+          parseInt(jsonObject.smallUndervalueTab2_E3) +
+          parseInt(jsonObject.smallUndervalueTab2_F3) +
+          parseInt(jsonObject.smallUndervalueTab2_G3);
+        let col4 =
+          parseInt(jsonObject.smallUndervalueTab2_A3_1) +
+          parseInt(jsonObject.smallUndervalueTab2_A3_3) +
+          parseInt(jsonObject.smallUndervalueTab2_B3) +
+          parseInt(jsonObject.smallUndervalueTab2_C4) +
+          parseInt(jsonObject.smallUndervalueTab2_D4) +
+          parseInt(jsonObject.smallUndervalueTab2_E4) +
+          parseInt(jsonObject.smallUndervalueTab2_F4) +
+          parseInt(jsonObject.smallUndervalueTab2_G4);
+
+        let button1 = document.querySelector("#totalbutton1");
+        function myButton() {
+          if (!isButtonClicked1) {
+            location.reload();
+            let w = (total1 += col1);
+            let x = (total2 += col2);
+            let y = (total3 += col3);
+            let z = (total4 += col4);
+            console.log(w);
+            document.querySelector("#total1").innerHTML = total1;
+            document.querySelector("#total2").innerHTML = total2;
+            document.querySelector("#total3").innerHTML = total3;
+            document.querySelector("#total4").innerHTML = total4;
+
+            // Save the updated total to sessionStorage
+            // saveDataToSessionStorage("total1", total1);
+            // saveDataToSessionStorage("total2", total2);
+            // saveDataToSessionStorage("total3", total3);
+            // saveDataToSessionStorage("total4", total4);
+
+            isButtonClicked1 = true;
+          }
+        }
+      }
+      totalcols();
+      // isButtonClicked1 = true;
+      // isButtonClicked2 = true;
+      // isButtonClicked3 = true;
+      // isButtonClicked4 = true;
+
+      // Retrieve the stored data when the page loads
+      // function retrieveStoredData() {
+      //   let storedTotal1 = getDataFromSessionStorage("total1");
+      //   let storedTotal2 = getDataFromSessionStorage("total2");
+      //   let storedTotal3 = getDataFromSessionStorage("total3");
+      //   let storedTotal4 = getDataFromSessionStorage("total4");
+      //   console.log("storedTotal1:", storedTotal1);
+      //   console.log("storedTotal2:", storedTotal2);
+      //   console.log("storedTotal3:", storedTotal3);
+      //   console.log("storedTotal4:", storedTotal4);
+
+      //   // Check if the stored data exists
+      //   if (storedTotal1 !== null) {
+      //     // Update your total variable with the stored data
+      //     total1 = parseFloat(storedTotal1);
+      //     total2 = parseFloat(storedTotal2);
+      //     total3 = parseFloat(storedTotal3);
+      //     total4 = parseFloat(storedTotal4);
+
+      //     // Update the displayed total
+      //     document.querySelector("#total1").innerHTML = total1;
+      //     document.querySelector("#total2").innerHTML = total2;
+      //     document.querySelector("#total3").innerHTML = total3;
+      //     document.querySelector("#total4").innerHTML = total4;
+
+      //     // Set the corresponding button flags to true
+      //     isButtonClicked1 = true;
+      //     isButtonClicked2 = true;
+      //     isButtonClicked3 = true;
+      //     isButtonClicked4 = true;
+      //   }
+      // }
+
+      // Call the function when the page loads to retrieve stored data
+      // retrieveStoredData();
     </script>
   </body>
 </html>
