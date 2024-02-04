@@ -954,10 +954,38 @@
       var inputA1 = document.getElementById("smallUndervalueTab2_A1");
       var inputB1 = document.getElementById("smallUndervalueTab2_B1");
       var inputC1 = document.getElementById("smallUndervalueTab2_C1");
+      var inputD1 = document.getElementById("smallUndervalueTab2_D1");
+      var inputE1 = document.getElementById("smallUndervalueTab2_E1");
+      var inputF1 = document.getElementById("smallUndervalueTab2_F1");
+      var inputG1 = document.getElementById("smallUndervalueTab2_G1");
+      var inputH1 = document.getElementById("smallUndervalueTab2_H1");
       
       var inputA2 = document.getElementById("smallUndervalueTab2_A2");
       var inputB2 = document.getElementById("smallUndervalueTab2_B2");
       var inputC2 = document.getElementById("smallUndervalueTab2_C2");
+      var inputD2 = document.getElementById("smallUndervalueTab2_D2");
+      var inputE2 = document.getElementById("smallUndervalueTab2_E2");
+      var inputF2 = document.getElementById("smallUndervalueTab2_F2");
+      var inputG2 = document.getElementById("smallUndervalueTab2_G2");
+      var inputH2 = document.getElementById("smallUndervalueTab2_H2");
+
+      var inputA3 = document.getElementById("smallUndervalueTab2_A3");
+      var inputB3 = document.getElementById("smallUndervalueTab2_B3");
+      var inputC3 = document.getElementById("smallUndervalueTab2_C3");
+      var inputD3 = document.getElementById("smallUndervalueTab2_D3");
+      var inputE3 = document.getElementById("smallUndervalueTab2_E3");
+      var inputF3 = document.getElementById("smallUndervalueTab2_F3");
+      var inputG3 = document.getElementById("smallUndervalueTab2_G3");
+      var inputH3 = document.getElementById("smallUndervalueTab2_H3");
+
+      var inputA4 = document.getElementById("smallUndervalueTab2_A4");
+      var inputB4 = document.getElementById("smallUndervalueTab2_B4");
+      var inputC4 = document.getElementById("smallUndervalueTab2_C4");
+      var inputD4 = document.getElementById("smallUndervalueTab2_D4");
+      var inputE4 = document.getElementById("smallUndervalueTab2_E4");
+      var inputF4 = document.getElementById("smallUndervalueTab2_F4");
+      var inputG4 = document.getElementById("smallUndervalueTab2_G4");
+      var inputH4 = document.getElementById("smallUndervalueTab2_H4");
       
       // Mendapatkan elemen untuk menampilkan total
       var totalElement1 = document.getElementById("total1");
@@ -967,12 +995,38 @@
       inputA1.addEventListener("input", () => updateTotal(1));
       inputB1.addEventListener("input", () => updateTotal(1));
       inputC1.addEventListener("input", () => updateTotal(1));
+      inputD1.addEventListener("input", () => updateTotal(2));
+      inputE1.addEventListener("input", () => updateTotal(2));
+      inputF1.addEventListener("input", () => updateTotal(2));
+      inputG1.addEventListener("input", () => updateTotal(2));
+      inputH1.addEventListener("input", () => updateTotal(2));
 
-      // Menambahkan event listener untuk setiap input pada set kedua
       inputA2.addEventListener("input", () => updateTotal(2));
       inputB2.addEventListener("input", () => updateTotal(2));
       inputC2.addEventListener("input", () => updateTotal(2));
+      inputD2.addEventListener("input", () => updateTotal(2));
+      inputE2.addEventListener("input", () => updateTotal(2));
+      inputF2.addEventListener("input", () => updateTotal(2));
+      inputG2.addEventListener("input", () => updateTotal(2));
+      inputH2.addEventListener("input", () => updateTotal(2));
 
+      inputA3.addEventListener("input", () => updateTotal(3));
+      inputB3.addEventListener("input", () => updateTotal(3));
+      inputC3.addEventListener("input", () => updateTotal(3));
+      inputD3.addEventListener("input", () => updateTotal(3));
+      inputE3.addEventListener("input", () => updateTotal(3));
+      inputF3.addEventListener("input", () => updateTotal(3));
+      inputG3.addEventListener("input", () => updateTotal(3));
+      inputH3.addEventListener("input", () => updateTotal(3));
+
+      inputA4.addEventListener("input", () => updateTotal(4));
+      inputB4.addEventListener("input", () => updateTotal(4));
+      inputC4.addEventListener("input", () => updateTotal(4));
+      inputD4.addEventListener("input", () => updateTotal(4));
+      inputE4.addEventListener("input", () => updateTotal(4));
+      inputF4.addEventListener("input", () => updateTotal(4));
+      inputG4.addEventListener("input", () => updateTotal(4));
+inputH4.addEventListener("input", () => updateTotal(4));
       // Fungsi untuk menghitung total dan menampilkannya (set pertama dan kedua)
       function updateTotal(totalFor) {
           // Mengambil nilai dari input set pertama
@@ -998,11 +1052,6 @@
               totalElement2.textContent = "Total 2: " + total2;
           }
       }
-
-    
-      
-
-
     </script>
   </body>
 </html>
