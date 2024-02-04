@@ -509,17 +509,15 @@
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
                       <td class="px-6 py-4">TOTAL</td>
-                      <td class="px-6 py-4 justify-center"><p id="total1"></p></td>
-                      <td class="px-6 py-4 justify-center"><p id="total2"></p></td>
-                      <td class="px-6 py-4 justify-center"><p id="total3"></p></td>
-                      <td class="px-6 py-4 justify-center">
-                        <p id="total4"></p>
-                      </td>
+                      <td class="px-6 py-4 justify-center"><p id="total1">0</p></td>
+                      <td class="px-6 py-4 justify-center"><p id="total2">0</p></td>
+                      <td class="px-6 py-4 justify-center"><p id="total3">0</p></td>
+                      <td class="px-6 py-4 justify-center"><p id="total4">0</p></td>
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
                       <td class="px-6 py-4"></td>
                       <td class="px-6 py-4 justify-center">
-                        <button
+                        <!-- <button
                           onclick="saveAnswer();myButton()"
                           name=""
                           type="button"
@@ -527,7 +525,7 @@
                           class="text-white w-full mx-auto bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 focus:outline-none"
                         >
                           Click to Totalyze
-                        </button>
+                        </button> -->
                       </td>
                       <td class="px-6 py-4 justify-center"></td>
                       <td class="px-6 py-4 justify-center"></td>
@@ -595,6 +593,13 @@
         var time = timeStart, // your time in seconds here
           display = document.querySelector("#TimerDisplay");
         startTimer(time, display);
+
+        let storedTotal3 = sessionStorage.getItem("total3");
+        if (storedTotal3 !== null) {
+            // Use the retrieved value as needed
+            console.log("Retrieved total3:", storedTotal3);
+            // Perform actions with storedTotal3 on the next page
+    }
       };
 
       function loadAnswers() {
@@ -625,12 +630,16 @@
       function windowwss() {
         window.location.href = "frame20.html";
       }
+
+      var inputB3;
       // table
       function tableDataInnner() {
         let jsonString = sessionStorage.getItem("FormData");
         let jsonObject = JSON.parse(jsonString);
         let fixA = jsonObject.smallUndervalueTab1_4;
         console.log(fixA);
+        inputB3 = parseInt(fixA, 10);
+       
         document.querySelector("#a").innerHTML = fixA;
         let fixD = jsonObject.smallUndervalueTab1_3;
         document.querySelector("#d").innerHTML = fixD;
@@ -646,6 +655,7 @@
         return AminB;
       }
       tableDataInnner();
+      console.log(inputB3);
 
       // let isButtonClicked1 = false;
       // let isButtonClicked2 = false;
@@ -1049,6 +1059,7 @@
           var valueH2 = parseFloat(inputH2.value) || 0;
 
           var valueA3 = parseFloat(inputA3.value) || 0;
+          var valueB3 = parseFloat(inputB3.value) || 0;
           var valueC3 = parseFloat(inputC3.value) || 0;
           var valueD3 = parseFloat(inputD3.value) || 0;
           var valueE3 = parseFloat(inputE3.value) || 0;
@@ -1069,9 +1080,11 @@
           // Menghitung total set pertama
           var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
           var total2 = valueA2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
-          var total3 = valueA3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
+          var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
           var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
 
+          sessionStorage.setItem("smallUndervalueTab2_Total", total3);
+          let fixG = jsonObject.smallUndervalueTab2_Total;
           // var total2 = valueA2;
 
           // Menampilkan total di elemen yang ditentukan
