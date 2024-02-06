@@ -530,8 +530,6 @@
             </button>
           </div>
         </form>
-        <!-- inner -->
-      </section>
     </section>
 
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
@@ -592,6 +590,17 @@
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
         window.location.href = "frame33.html";
       }
+      function tableDataInnner() {
+        let jsonString = sessionStorage.getItem("FormData");
+        let jsonObject = JSON.parse(jsonString);
+        let fixG = jsonObject.smallOvervalueTab2_Total;
+        let fixA = jsonObject.smallOvervalueTab1_4;
+        let fixF = jsonObject.smallOvervalueTab2_0_B2;
+        document.querySelector("#g").innerHTML = fixG;
+        document.querySelector("#f").innerHTML = fixF;
+        document.querySelector("#a").innerHTML = fixA;
+      }
+      tableDataInnner();
     </script>
   </body>
 </html>

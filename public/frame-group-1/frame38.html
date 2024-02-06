@@ -41,7 +41,7 @@
     <!-- section -->
 
     <div class="max-w-4xl mx-auto mt-32 block">
-      <h5 class="font-normal text-2xl text-center mb-5">Small Error Of Undervalue</h5>
+      <h5 class="font-normal text-2xl text-center mb-5">Small Error Of Overvalue</h5>
       <p class="text-center text-slate-500 text-base max-w-xl mx-auto mb-1 px-3">Study Case 1</p>
       <p class="text-center text-slate-500 text-base max-w-xl mx-auto mb-5 px-3">ABDI BARAKAH TBK</p>
     </div>
@@ -586,6 +586,17 @@
 
         window.location.href = "frame39.html";
       }
+            function tableDataInnner() {
+        let jsonString = sessionStorage.getItem("FormData");
+        let jsonObject = JSON.parse(jsonString);
+        let fixG = jsonObject.smallOvervalueTab2_Total;
+        let fixA = jsonObject.smallOvervalueTab1_4;
+        let fixF = jsonObject.smallOvervalueTab2_0_B2;
+        document.querySelector("#g").innerHTML = fixG;
+        document.querySelector("#f").innerHTML = fixF;
+        document.querySelector("#a").innerHTML = fixA;
+      }
+      tableDataInnner();
     </script>
   </body>
 </html>
