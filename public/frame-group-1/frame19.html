@@ -181,7 +181,7 @@
                           required
                         />
                       </td>
-                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B2">0</p></td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B2"></p></td>
                       <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B3">0</p></td>
                       <td class="px-6 py-4">
                         <input
@@ -624,6 +624,12 @@
         tempStorage = { ...tempStorage, ...object };
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
+        sessionStorage.setItem("smallUndervalueTab2_B2", inputB2.innerHTML);
+        sessionStorage.setItem("smallUndervalueTab2_B3", inputB3.innerHTML);
+        sessionStorage.setItem("total1", total1.innerHTML);
+        sessionStorage.setItem("total2", total2.innerHTML);
+        sessionStorage.setItem("total3", total3.innerHTML);
+        sessionStorage.setItem("total4", total4.innerHTML);
       }
 
       function windowwss() {
@@ -776,16 +782,6 @@
         var total2 = valueA2 + valueB2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
         var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
         var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
-
-        const saveToSession = document.querySelector("#selanjutnya");
-        saveToSession.addEventListener("click", function () {
-          sessionStorage.setItem("smallUndervalueTab2_B2", inputB2.innerHTML);
-          sessionStorage.setItem("smallUndervalueTab2_B3", inputB3.innerHTML);
-          sessionStorage.setItem("total1", total1.innerHTML);
-          sessionStorage.setItem("total2", total2.innerHTML);
-          sessionStorage.setItem("total3", total3.innerHTML);
-          sessionStorage.setItem("total4", total4.innerHTML);
-        });
 
         // Menampilkan total di elemen yang ditentukan
         if (totalFor === 1) {
