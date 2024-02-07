@@ -159,43 +159,43 @@
                           required
                         />
                       </td>
-                      <td class="px-6 py-4">
-                        <!-- <input
-                          type="text"
-                          id="smallUndervalueTab2_A3"
-                          name="smallUndervalueTab7_A3_1"
+                      <td class="px-6 py-4"> 
+                        <input 
+                          type="text" 
+                          id="smallUndervalueTab2_A3" 
+                          name="smallUndervalueTab7_A3_1" 
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        /> -->
+                          placeholder=""  
+                          required 
+                        /> 
                       </td>
                     </tr>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                       <td class="px-6 py-4">01/01/2023</td>
                       <td class="px-6 py-4">
                         <p class="text-red-600" id="a">
-                          <!-- <input
+                          <input
                             type="text"
                             id="smallUndervalueTab2_A3"
                             name="smallUndervalueTab7_A3_2"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                             placeholder=""
                             required
-                          /> -->
+                          />
                         </p>
                       </td>
                       <td class="px-6 py-4"><p class="text-black" id="b">0</p></td>
                       <td class="px-6 py-4"><p class="text-black" id="c">*(c) = (a) – (b)</p></td>
                       <td class="px-6 py-4">
                         <p class="text-black">
-                          <!-- <input
+                          <input
                             type="text"
                             id="smallUndervalueTab2_A3"
                             name="smallUndervalueTab7_A3_3"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                             placeholder=""
                             required
-                          /> -->
+                          />
                         </p>
                       </td>
                     </tr>
@@ -558,35 +558,6 @@
                       <td class="px-6 py-4 justify-center"><p id="total2">0</p></td>
                       <td class="px-6 py-4 justify-center"><p id="total3">0</p></td>
                       <td class="px-6 py-4 justify-center"><p id="total4">0</p></td>
-                      <td class="px-6 py-4">
-                        
-                        <!-- Bang kamu pull aja nanti.. mau kupush -->
-                        <!-- oke silahkan push dah -->
-                      </td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
-                      </td>
-                      <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="text"
-                            id=""
-                            name=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
-                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -685,7 +656,7 @@
         let fixA = jsonObject.smallUndervalueTab1_4;
         console.log(fixA);
         inputB3 = parseInt(fixA, 10);
-       
+
         document.querySelector("#a").innerHTML = fixA;
         let fixD = jsonObject.smallUndervalueTab1_3;
         document.querySelector("#d").innerHTML = fixD;
@@ -787,7 +758,7 @@
       var inputF1 = document.getElementById("smallUndervalueTab2_F1");
       var inputG1 = document.getElementById("smallUndervalueTab2_G1");
       var inputH1 = document.getElementById("smallUndervalueTab2_H1");
-      
+
       var inputA2 = document.getElementById("smallUndervalueTab2_A2");
       var inputC2 = document.getElementById("smallUndervalueTab2_C2");
       var inputD2 = document.getElementById("smallUndervalueTab2_D2");
@@ -812,13 +783,12 @@
       var inputF4 = document.getElementById("smallUndervalueTab2_F4");
       var inputG4 = document.getElementById("smallUndervalueTab2_G4");
       var inputH4 = document.getElementById("smallUndervalueTab2_H4");
-      
+
       // Mendapatkan elemen untuk menampilkan total
       var totalElement1 = document.getElementById("total1");
       var totalElement2 = document.getElementById("total2");
       var totalElement3 = document.getElementById("total3");
       var totalElement4 = document.getElementById("total4");
-
 
       // Menambahkan event listener untuk setiap input pada set pertama
       inputA1.addEventListener("input", () => updateTotal(1));
@@ -854,67 +824,66 @@
       inputF4.addEventListener("input", () => updateTotal(4));
       inputG4.addEventListener("input", () => updateTotal(4));
       inputH4.addEventListener("input", () => updateTotal(4));
-      
+
       // Fungsi untuk menghitung total dan menampilkannya (set pertama dan kedua)
       function updateTotal(totalFor) {
-          // Mengambil nilai dari input set pertama
-          var valueA1 = parseFloat(inputA1.value) || 0;
-          var valueB1 = parseFloat(inputB1.value) || 0;
-          var valueC1 = parseFloat(inputC1.value) || 0;
-          var valueD1 = parseFloat(inputD1.value) || 0;
-          var valueE1 = parseFloat(inputE1.value) || 0;
-          var valueF1 = parseFloat(inputF1.value) || 0;
-          var valueG1 = parseFloat(inputG1.value) || 0;
-          var valueH1 = parseFloat(inputH1.value) || 0;
+        // Mengambil nilai dari input set pertama
+        var valueA1 = parseFloat(inputA1.value) || 0;
+        var valueB1 = parseFloat(inputB1.value) || 0;
+        var valueC1 = parseFloat(inputC1.value) || 0;
+        var valueD1 = parseFloat(inputD1.value) || 0;
+        var valueE1 = parseFloat(inputE1.value) || 0;
+        var valueF1 = parseFloat(inputF1.value) || 0;
+        var valueG1 = parseFloat(inputG1.value) || 0;
+        var valueH1 = parseFloat(inputH1.value) || 0;
 
-          // For valueA2 to valueH4
-          var valueA2 = parseFloat(inputA2.value) || 0;
-          var valueC2 = parseFloat(inputC2.value) || 0;
-          var valueD2 = parseFloat(inputD2.value) || 0;
-          var valueE2 = parseFloat(inputE2.value) || 0;
-          var valueF2 = parseFloat(inputF2.value) || 0;
-          var valueG2 = parseFloat(inputG2.value) || 0;
-          var valueH2 = parseFloat(inputH2.value) || 0;
+        // For valueA2 to valueH4
+        var valueA2 = parseFloat(inputA2.value) || 0;
+        var valueC2 = parseFloat(inputC2.value) || 0;
+        var valueD2 = parseFloat(inputD2.value) || 0;
+        var valueE2 = parseFloat(inputE2.value) || 0;
+        var valueF2 = parseFloat(inputF2.value) || 0;
+        var valueG2 = parseFloat(inputG2.value) || 0;
+        var valueH2 = parseFloat(inputH2.value) || 0;
 
-          var valueA3 = parseFloat(inputA3.value) || 0;
-          var valueB3 = parseFloat(inputB3.value) || 0;
-          var valueC3 = parseFloat(inputC3.value) || 0;
-          var valueD3 = parseFloat(inputD3.value) || 0;
-          var valueE3 = parseFloat(inputE3.value) || 0;
-          var valueF3 = parseFloat(inputF3.value) || 0;
-          var valueG3 = parseFloat(inputG3.value) || 0;
-          var valueH3 = parseFloat(inputH3.value) || 0;
+        var valueA3 = parseFloat(inputA3.value) || 0;
+        var valueB3 = parseFloat(inputB3.value) || 0;
+        var valueC3 = parseFloat(inputC3.value) || 0;
+        var valueD3 = parseFloat(inputD3.value) || 0;
+        var valueE3 = parseFloat(inputE3.value) || 0;
+        var valueF3 = parseFloat(inputF3.value) || 0;
+        var valueG3 = parseFloat(inputG3.value) || 0;
+        var valueH3 = parseFloat(inputH3.value) || 0;
 
-          var valueA4 = parseFloat(inputA4.value) || 0;
-          var valueB4 = parseFloat(inputB4.value) || 0;
-          var valueC4 = parseFloat(inputC4.value) || 0;
-          var valueD4 = parseFloat(inputD4.value) || 0;
-          var valueE4 = parseFloat(inputE4.value) || 0;
-          var valueF4 = parseFloat(inputF4.value) || 0;
-          var valueG4 = parseFloat(inputG4.value) || 0;
-          var valueH4 = parseFloat(inputH4.value) || 0;
+        var valueA4 = parseFloat(inputA4.value) || 0;
+        var valueB4 = parseFloat(inputB4.value) || 0;
+        var valueC4 = parseFloat(inputC4.value) || 0;
+        var valueD4 = parseFloat(inputD4.value) || 0;
+        var valueE4 = parseFloat(inputE4.value) || 0;
+        var valueF4 = parseFloat(inputF4.value) || 0;
+        var valueG4 = parseFloat(inputG4.value) || 0;
+        var valueH4 = parseFloat(inputH4.value) || 0;
 
+        // Menghitung total set pertama
+        var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
+        var total2 = valueA2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
+        var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
+        var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
 
-          // Menghitung total set pertama
-          var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
-          var total2 = valueA2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
-          var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
-          var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
+        sessionStorage.setItem("smallUndervalueTab2_Total", total3);
+        let fixG = jsonObject.smallUndervalueTab2_Total;
+        // var total2 = valueA2;
 
-          sessionStorage.setItem("smallUndervalueTab2_Total", total3);
-          let fixG = jsonObject.smallUndervalueTab2_Total;
-          // var total2 = valueA2;
-
-          // Menampilkan total di elemen yang ditentukan
-          if (totalFor === 1) {
-              totalElement1.textContent = total1;
-          } else if (totalFor === 2) {
-              totalElement2.textContent = total2;
-          } else if (totalFor === 3) {
-            totalElement3.textContent = total3;
-          } else if (totalFor === 4) {
-            totalElement4.textContent = total4;
-          }
+        // Menampilkan total di elemen yang ditentukan
+        if (totalFor === 1) {
+          totalElement1.textContent = total1;
+        } else if (totalFor === 2) {
+          totalElement2.textContent = total2;
+        } else if (totalFor === 3) {
+          totalElement3.textContent = total3;
+        } else if (totalFor === 4) {
+          totalElement4.textContent = total4;
+        }
       }
     </script>
   </body>

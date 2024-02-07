@@ -74,25 +74,25 @@
                     <tr class="border-b border-gray-200 dark:border-gray-700">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Fair Value of Assets</th>
                       <td class="px-6 py-4 flex">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd"></p>
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowA">0</p>
                       </td>
                     </tr>
                     <tr class="border-b border-gray-200 dark:border-gray-700">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">(-) PV of residual value</th>
                       <td class="px-6 py-4">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="aa"></p>
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowB">0</p>
                       </td>
                     </tr>
                     <tr class="border-b border-gray-200 dark:border-gray-700">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Total payment due for the leased asset</th>
                       <td class="px-6 py-4">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="d"></p>
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowC">0</p>
                       </td>
                     </tr>
                     <tr class="border-b border-gray-200 dark:border-gray-700">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800">Annual Lease Payments</th>
                       <td class="px-6 py-4">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="a"></p>
+                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowD">0</p>
                       </td>
                     </tr>
                     <tr>
@@ -181,8 +181,8 @@
                           required
                         />
                       </td>
-                      <td class="px-6 py-4"><p class="text-black font-semibold" id="b">0</p></td>
-                      <td class="px-6 py-4"><p class="text-black font-semibold" id="c">*(c) = (a) – (b)</p></td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B2">0</p></td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B3">0</p></td>
                       <td class="px-6 py-4">
                         <input
                           type="number"
@@ -221,16 +221,14 @@
                         </p>
                       </td>
                       <td class="px-6 py-4">
-                        <p class="text-black">
-                          <input
-                            type="number"
-                            id="smallUndervalueTab2_C3"
-                            name="smallUndervalueTab2_C3"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                            placeholder=""
-                            required
-                          />
-                        </p>
+                        <input
+                          type="number"
+                          id="smallUndervalueTab2_C3"
+                          name="smallUndervalueTab2_C3"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
                       </td>
                       <td class="px-6 py-4">
                         <p class="text-black">
@@ -553,6 +551,7 @@
             <button
               onclick="saveAnswer();windowwss();javascript:history.forward()"
               type="button"
+              id="selanjutnya"
               class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
             >
               Selanjutnya
@@ -596,10 +595,10 @@
 
         let storedTotal3 = sessionStorage.getItem("total3");
         if (storedTotal3 !== null) {
-            // Use the retrieved value as needed
-            console.log("Retrieved total3:", storedTotal3);
-            // Perform actions with storedTotal3 on the next page
-    }
+          // Use the retrieved value as needed
+          console.log("Retrieved total3:", storedTotal3);
+          // Perform actions with storedTotal3 on the next page
+        }
       };
 
       function loadAnswers() {
@@ -633,332 +632,23 @@
 
       var inputB3;
       // table
-      function tableDataInnner() {
-        let jsonString = sessionStorage.getItem("FormData");
-        let jsonObject = JSON.parse(jsonString);
-        let fixA = jsonObject.smallUndervalueTab1_4;
-        console.log(fixA);
-        inputB3 = parseInt(fixA, 10);
-       
-        document.querySelector("#a").innerHTML = fixA;
-        let fixD = jsonObject.smallUndervalueTab1_3;
-        document.querySelector("#d").innerHTML = fixD;
-        let b = document.querySelector("#b").innerHTML;
-        let BNumber = parseInt(b);
-        let AminB = fixA - BNumber;
-        document.querySelector("#c").innerHTML = AminB;
-        let dd = document.querySelector("#dd");
-        let fixDD = jsonObject.smallUndervalueTab1_1;
-        document.querySelector("#dd").innerHTML = fixDD;
-        let fixAA = jsonObject.smallUndervalueTab1_2;
-        document.querySelector("#aa").innerHTML = fixAA;
-        return AminB;
-      }
-      tableDataInnner();
-      console.log(inputB3);
 
-      // let isButtonClicked1 = false;
-      // let isButtonClicked2 = false;
-      // let isButtonClicked3 = false;
-      // let isButtonClicked4 = false;
-      // function saveDataToSessionStorage(dataKey, dataValue) {
-      //   sessionStorage.setItem(dataKey, JSON.stringify(dataValue));
-      // }
+      let jsonString = sessionStorage.getItem("FormData");
+      let jsonObject = JSON.parse(jsonString);
+      let fixDD = jsonObject.smallUndervalueTab1_1;
+      let fixAA = jsonObject.smallUndervalueTab1_2;
+      let fixD = jsonObject.smallUndervalueTab1_3;
+      let fixA = jsonObject.smallUndervalueTab1_4;
+      inputB3 = parseInt(fixA, 10);
+      let b = document.querySelector("#smallUndervalueTab2_B2").innerHTML;
+      let BNumber = parseInt(b);
+      let AminB = fixA - BNumber;
+      document.querySelector("#smallUndervalueTab2_B3").innerHTML = AminB;
 
-      // function getDataFromSessionStorage(dataKey) {
-      //   let jsonData = sessionStorage.getItem(dataKey);
-      //   if (jsonData) {
-      //     return JSON.parse(jsonData);
-      //   }
-      //   return null;
-      // }
-
-      // function totalcols() {
-      //   let total1 = 0;
-      //   let total2 = 0;
-      //   let total3 = 0;
-      //   let total4 = 0;
-
-      //   // Debugging statements
-      //   let jsonString = sessionStorage.getItem("FormData");
-      //   let jsonObject = JSON.parse(jsonString);
-      //   console.log("jsonObject:", jsonObject);
-      //   let fixA = jsonObject.smallUndervalueTab1_4;
-      //   let b = document.querySelector("#b").innerHTML;
-      //   let BNumber = parseInt(b);
-      //   let AminB = fixA - BNumber;
-
-      //   // state 1
-      //   let col1 =
-      //     parseInt(jsonObject.smallUndervalueTab2_A1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_A3_2) +
-      //     parseInt(jsonObject.smallUndervalueTab2_B1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_C1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_D1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_E1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_F1) +
-      //     parseInt(jsonObject.smallUndervalueTab2_G1);
-
-      //   // Debugging statements
-      //   console.log("col1:", col1);
-      //   let button1 = document.querySelector("#total1");
-      //   button1.addEventListener("click", function () {
-      //     if (!isButtonClicked1) {
-      //       total1 = total1 + col1;
-      //       document.querySelector("#total1").innerHTML = total1;
-
-      //       // Save the updated total to sessionStorage
-      //       saveDataToSessionStorage("total1", total1);
-
-      //       isButtonClicked1 = true;
-      //     }
-      //   });
-
-      //   // state 2
-      //   let col2 =
-      //     parseFloat(jsonObject.smallUndervalueTab2_A2) +
-      //     0 +
-      //     parseFloat(jsonObject.smallUndervalueTab2_0_B2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_C2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_D2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_E2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_F2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_G2);
-      //   // Debugging statements
-      //   console.log("col2:", col2);
-      //   let button2 = document.querySelector("#total2");
-      //   button2.addEventListener("click", function () {
-      //     if (!isButtonClicked2) {
-      //       total2 = total2 + col2;
-      //       document.querySelector("#total2").innerHTML = total2;
-
-      //       // Save the updated total to sessionStorage
-      //       saveDataToSessionStorage("total2", total2);
-
-      //       isButtonClicked2 = true;
-      //     }
-      //   });
-
-      //   // state 3
-      //   let col3 =
-      //     parseFloat(jsonObject.smallUndervalueTab2_A3) +
-      //     parseFloat(AminB) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_B2) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_C3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_D3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_E3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_F3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_G3);
-      //   // Debugging statements
-      //   console.log("col3:", col3);
-      //   let button3 = document.querySelector("#total3");
-      //   button3.addEventListener("click", function () {
-      //     if (!isButtonClicked3) {
-      //       total3 = total3 + col3;
-      //       document.querySelector("#total3").innerHTML = total3;
-
-      //       // Save the updated total to sessionStorage
-      //       saveDataToSessionStorage("total3", total3);
-
-      //       isButtonClicked3 = true;
-      //     }
-      //   });
-
-      //   // state 4
-      //   let col4 =
-      //     parseFloat(jsonObject.smallUndervalueTab2_A3_1) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_A3_3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_B3) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_C4) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_D4) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_E4) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_F4) +
-      //     parseFloat(jsonObject.smallUndervalueTab2_G4);
-      //   // Debugging statements
-      //   console.log("col4:", col4);
-      //   let button4 = document.querySelector("#total4");
-      //   button4.addEventListener("click", function () {
-      //     if (!isButtonClicked4) {
-      //       total4 = total4 + col4;
-      //       document.querySelector("#total4").innerHTML = total4;
-
-      //       // Save the updated total to sessionStorage
-      //       saveDataToSessionStorage("total4", total4);
-
-      //       isButtonClicked4 = true;
-      //     }
-      //   });
-      // }
-
-      // // Retrieve the stored data when the page loads
-      // function retrieveStoredData() {
-      //   let storedTotal1 = getDataFromSessionStorage("total1");
-      //   let storedTotal2 = getDataFromSessionStorage("total2");
-      //   let storedTotal3 = getDataFromSessionStorage("total3");
-      //   let storedTotal4 = getDataFromSessionStorage("total4");
-
-      //   // Check if the stored data exists
-      //   if (storedTotal1 !== null) {
-      //     // Update your total variable with the stored data
-      //     total1 = parseFloat(storedTotal1);
-      //     total2 = parseFloat(storedTotal2);
-      //     total3 = parseFloat(storedTotal3);
-      //     total4 = parseFloat(storedTotal4);
-
-      //     // Update the displayed total
-      //     document.querySelector("#total1").innerHTML = total1;
-      //     document.querySelector("#total2").innerHTML = total2;
-      //     document.querySelector("#total3").innerHTML = total3;
-      //     document.querySelector("#total4").innerHTML = total4;
-
-      //     // Set the corresponding button flags to true
-      //     isButtonClicked1 = true;
-      //     isButtonClicked2 = true;
-      //     isButtonClicked3 = true;
-      //     isButtonClicked4 = true;
-      //   }
-      // }
-
-      // // Call the function when the page loads to retrieve stored data
-      // retrieveStoredData();
-
-      // // Call this function to reset the flag when needed
-      // resetButtonClickedFlag();
-
-      //let isButtonClicked1 = false;
-      //let isButtonClicked2 = false;
-      //let isButtonClicked3 = false;
-      //let isButtonClicked4 = false;
-
-      // function saveDataToSessionStorage(dataKey, dataValue) {
-      //   sessionStorage.setItem(dataKey, JSON.stringify(dataValue));
-      // }
-
-      // function getDataFromSessionStorage(dataKey) {
-      //   let jsonData = sessionStorage.getItem(dataKey);
-      //   if (jsonData) {
-      //     return JSON.parse(jsonData);
-      //   }
-      //   return null;
-      // }
-
-      function totalcols() {
-        let total1 = 0;
-        let total2 = 0;
-        let total3 = 0;
-        let total4 = 0;
-
-        let jsonString = sessionStorage.getItem("FormData");
-        let jsonObject = JSON.parse(jsonString);
-        console.log("jsonObject:", jsonObject);
-        let fixA = jsonObject.smallUndervalueTab1_4;
-        let b = document.querySelector("#b").innerHTML;
-        let BNumber = parseInt(b);
-        let AminB = fixA - BNumber;
-
-        let col1 =
-          parseInt(jsonObject.smallUndervalueTab2_A1) +
-          parseInt(jsonObject.smallUndervalueTab2_A3_2) +
-          parseInt(jsonObject.smallUndervalueTab2_B1) +
-          parseInt(jsonObject.smallUndervalueTab2_C1) +
-          parseInt(jsonObject.smallUndervalueTab2_D1) +
-          parseInt(jsonObject.smallUndervalueTab2_E1) +
-          parseInt(jsonObject.smallUndervalueTab2_F1) +
-          parseInt(jsonObject.smallUndervalueTab2_G1);
-        let col2 =
-          parseInt(jsonObject.smallUndervalueTab2_A2) +
-          0 +
-          parseInt(jsonObject.smallUndervalueTab2_0_B2) +
-          parseInt(jsonObject.smallUndervalueTab2_C2) +
-          parseInt(jsonObject.smallUndervalueTab2_D2) +
-          parseInt(jsonObject.smallUndervalueTab2_E2) +
-          parseInt(jsonObject.smallUndervalueTab2_F2) +
-          parseInt(jsonObject.smallUndervalueTab2_G2);
-        let col3 =
-          parseInt(jsonObject.smallUndervalueTab2_A3) +
-          parseInt(AminB) +
-          parseInt(jsonObject.smallUndervalueTab2_B2) +
-          parseInt(jsonObject.smallUndervalueTab2_C3) +
-          parseInt(jsonObject.smallUndervalueTab2_D3) +
-          parseInt(jsonObject.smallUndervalueTab2_E3) +
-          parseInt(jsonObject.smallUndervalueTab2_F3) +
-          parseInt(jsonObject.smallUndervalueTab2_G3);
-        let col4 =
-          parseInt(jsonObject.smallUndervalueTab2_A3_1) +
-          parseInt(jsonObject.smallUndervalueTab2_A3_3) +
-          parseInt(jsonObject.smallUndervalueTab2_B3) +
-          parseInt(jsonObject.smallUndervalueTab2_C4) +
-          parseInt(jsonObject.smallUndervalueTab2_D4) +
-          parseInt(jsonObject.smallUndervalueTab2_E4) +
-          parseInt(jsonObject.smallUndervalueTab2_F4) +
-          parseInt(jsonObject.smallUndervalueTab2_G4);
-
-        let button1 = document.querySelector("#totalbutton1");
-        function myButton() {
-          if (!isButtonClicked1) {
-            location.reload();
-            let w = (total1 += col1);
-            let x = (total2 += col2);
-            let y = (total3 += col3);
-            let z = (total4 += col4);
-            console.log(w);
-            document.querySelector("#total1").innerHTML = total1;
-            document.querySelector("#total2").innerHTML = total2;
-            document.querySelector("#total3").innerHTML = total3;
-            document.querySelector("#total4").innerHTML = total4;
-
-            // Save the updated total to sessionStorage
-            // saveDataToSessionStorage("total1", total1);
-            // saveDataToSessionStorage("total2", total2);
-            // saveDataToSessionStorage("total3", total3);
-            // saveDataToSessionStorage("total4", total4);
-
-            isButtonClicked1 = true;
-          }
-        }
-      }
-      // totalcols();
-      // isButtonClicked1 = true;
-      // isButtonClicked2 = true;
-      // isButtonClicked3 = true;
-      // isButtonClicked4 = true;
-
-      // Retrieve the stored data when the page loads
-      // function retrieveStoredData() {
-      //   let storedTotal1 = getDataFromSessionStorage("total1");
-      //   let storedTotal2 = getDataFromSessionStorage("total2");
-      //   let storedTotal3 = getDataFromSessionStorage("total3");
-      //   let storedTotal4 = getDataFromSessionStorage("total4");
-      //   console.log("storedTotal1:", storedTotal1);
-      //   console.log("storedTotal2:", storedTotal2);
-      //   console.log("storedTotal3:", storedTotal3);
-      //   console.log("storedTotal4:", storedTotal4);
-
-      //   // Check if the stored data exists
-      //   if (storedTotal1 !== null) {
-      //     // Update your total variable with the stored data
-      //     total1 = parseFloat(storedTotal1);
-      //     total2 = parseFloat(storedTotal2);
-      //     total3 = parseFloat(storedTotal3);
-      //     total4 = parseFloat(storedTotal4);
-
-      //     // Update the displayed total
-      //     document.querySelector("#total1").innerHTML = total1;
-      //     document.querySelector("#total2").innerHTML = total2;
-      //     document.querySelector("#total3").innerHTML = total3;
-      //     document.querySelector("#total4").innerHTML = total4;
-
-      //     // Set the corresponding button flags to true
-      //     isButtonClicked1 = true;
-      //     isButtonClicked2 = true;
-      //     isButtonClicked3 = true;
-      //     isButtonClicked4 = true;
-      //   }
-      // }
-
-      // Call the function when the page loads to retrieve stored data
-      // retrieveStoredData();
-
+      document.getElementById("rowA").textContent = fixDD;
+      document.getElementById("rowB").textContent = fixAA;
+      document.getElementById("rowC").textContent = fixD;
+      document.getElementById("rowD").textContent = fixA;
 
       // Mendapatkan elemen input
       var inputA1 = document.getElementById("smallUndervalueTab2_A1");
@@ -969,8 +659,9 @@
       var inputF1 = document.getElementById("smallUndervalueTab2_F1");
       var inputG1 = document.getElementById("smallUndervalueTab2_G1");
       var inputH1 = document.getElementById("smallUndervalueTab2_H1");
-      
+
       var inputA2 = document.getElementById("smallUndervalueTab2_A2");
+      var inputB2 = document.getElementById("smallUndervalueTab2_B2");
       var inputC2 = document.getElementById("smallUndervalueTab2_C2");
       var inputD2 = document.getElementById("smallUndervalueTab2_D2");
       var inputE2 = document.getElementById("smallUndervalueTab2_E2");
@@ -978,6 +669,8 @@
       var inputG2 = document.getElementById("smallUndervalueTab2_G2");
       var inputH2 = document.getElementById("smallUndervalueTab2_H2");
 
+      var inputB3_ = document.getElementById("smallUndervalueTab2_B3");
+      var inputB3 = parseInt(inputB3_.textContent);
       var inputA3 = document.getElementById("smallUndervalueTab2_A3");
       var inputC3 = document.getElementById("smallUndervalueTab2_C3");
       var inputD3 = document.getElementById("smallUndervalueTab2_D3");
@@ -994,13 +687,12 @@
       var inputF4 = document.getElementById("smallUndervalueTab2_F4");
       var inputG4 = document.getElementById("smallUndervalueTab2_G4");
       var inputH4 = document.getElementById("smallUndervalueTab2_H4");
-      
+
       // Mendapatkan elemen untuk menampilkan total
       var totalElement1 = document.getElementById("total1");
       var totalElement2 = document.getElementById("total2");
       var totalElement3 = document.getElementById("total3");
       var totalElement4 = document.getElementById("total4");
-
 
       // Menambahkan event listener untuk setiap input pada set pertama
       inputA1.addEventListener("input", () => updateTotal(1));
@@ -1013,6 +705,7 @@
       inputH1.addEventListener("input", () => updateTotal(1));
 
       inputA2.addEventListener("input", () => updateTotal(2));
+      inputB2.addEventListener("input", () => updateTotal(2));
       inputC2.addEventListener("input", () => updateTotal(2));
       inputD2.addEventListener("input", () => updateTotal(2));
       inputE2.addEventListener("input", () => updateTotal(2));
@@ -1021,6 +714,7 @@
       inputH2.addEventListener("input", () => updateTotal(2));
 
       inputA3.addEventListener("input", () => updateTotal(3));
+      inputB3.addEventListener("input", () => updateTotal(3));
       inputC3.addEventListener("input", () => updateTotal(3));
       inputD3.addEventListener("input", () => updateTotal(3));
       inputE3.addEventListener("input", () => updateTotal(3));
@@ -1036,67 +730,73 @@
       inputF4.addEventListener("input", () => updateTotal(4));
       inputG4.addEventListener("input", () => updateTotal(4));
       inputH4.addEventListener("input", () => updateTotal(4));
-      
+
       // Fungsi untuk menghitung total dan menampilkannya (set pertama dan kedua)
       function updateTotal(totalFor) {
-          // Mengambil nilai dari input set pertama
-          var valueA1 = parseFloat(inputA1.value) || 0;
-          var valueB1 = parseFloat(inputB1.value) || 0;
-          var valueC1 = parseFloat(inputC1.value) || 0;
-          var valueD1 = parseFloat(inputD1.value) || 0;
-          var valueE1 = parseFloat(inputE1.value) || 0;
-          var valueF1 = parseFloat(inputF1.value) || 0;
-          var valueG1 = parseFloat(inputG1.value) || 0;
-          var valueH1 = parseFloat(inputH1.value) || 0;
+        // Mengambil nilai dari input set pertama
+        var valueA1 = parseFloat(inputA1.value) || 0;
+        var valueB1 = parseFloat(inputB1.value) || 0;
+        var valueC1 = parseFloat(inputC1.value) || 0;
+        var valueD1 = parseFloat(inputD1.value) || 0;
+        var valueE1 = parseFloat(inputE1.value) || 0;
+        var valueF1 = parseFloat(inputF1.value) || 0;
+        var valueG1 = parseFloat(inputG1.value) || 0;
+        var valueH1 = parseFloat(inputH1.value) || 0;
 
-          // For valueA2 to valueH4
-          var valueA2 = parseFloat(inputA2.value) || 0;
-          var valueC2 = parseFloat(inputC2.value) || 0;
-          var valueD2 = parseFloat(inputD2.value) || 0;
-          var valueE2 = parseFloat(inputE2.value) || 0;
-          var valueF2 = parseFloat(inputF2.value) || 0;
-          var valueG2 = parseFloat(inputG2.value) || 0;
-          var valueH2 = parseFloat(inputH2.value) || 0;
+        // For valueA2 to valueH4
+        var valueA2 = parseFloat(inputA2.value) || 0;
+        var valueB2 = parseFloat(inputB2.value) || 0;
+        var valueC2 = parseFloat(inputC2.value) || 0;
+        var valueD2 = parseFloat(inputD2.value) || 0;
+        var valueE2 = parseFloat(inputE2.value) || 0;
+        var valueF2 = parseFloat(inputF2.value) || 0;
+        var valueG2 = parseFloat(inputG2.value) || 0;
+        var valueH2 = parseFloat(inputH2.value) || 0;
 
-          var valueA3 = parseFloat(inputA3.value) || 0;
-          var valueB3 = parseFloat(inputB3.value) || 0;
-          var valueC3 = parseFloat(inputC3.value) || 0;
-          var valueD3 = parseFloat(inputD3.value) || 0;
-          var valueE3 = parseFloat(inputE3.value) || 0;
-          var valueF3 = parseFloat(inputF3.value) || 0;
-          var valueG3 = parseFloat(inputG3.value) || 0;
-          var valueH3 = parseFloat(inputH3.value) || 0;
+        var valueA3 = parseFloat(inputA3.value) || 0;
+        var valueB3 = parseFloat(inputB3.value) || 0;
+        var valueC3 = parseFloat(inputC3.value) || 0;
+        var valueD3 = parseFloat(inputD3.value) || 0;
+        var valueE3 = parseFloat(inputE3.value) || 0;
+        var valueF3 = parseFloat(inputF3.value) || 0;
+        var valueG3 = parseFloat(inputG3.value) || 0;
+        var valueH3 = parseFloat(inputH3.value) || 0;
 
-          var valueA4 = parseFloat(inputA4.value) || 0;
-          var valueB4 = parseFloat(inputB4.value) || 0;
-          var valueC4 = parseFloat(inputC4.value) || 0;
-          var valueD4 = parseFloat(inputD4.value) || 0;
-          var valueE4 = parseFloat(inputE4.value) || 0;
-          var valueF4 = parseFloat(inputF4.value) || 0;
-          var valueG4 = parseFloat(inputG4.value) || 0;
-          var valueH4 = parseFloat(inputH4.value) || 0;
+        var valueA4 = parseFloat(inputA4.value) || 0;
+        var valueB4 = parseFloat(inputB4.value) || 0;
+        var valueC4 = parseFloat(inputC4.value) || 0;
+        var valueD4 = parseFloat(inputD4.value) || 0;
+        var valueE4 = parseFloat(inputE4.value) || 0;
+        var valueF4 = parseFloat(inputF4.value) || 0;
+        var valueG4 = parseFloat(inputG4.value) || 0;
+        var valueH4 = parseFloat(inputH4.value) || 0;
 
+        // Menghitung total set pertama
+        var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
+        var total2 = valueA2 + valueB2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
+        var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
+        var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
 
-          // Menghitung total set pertama
-          var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
-          var total2 = valueA2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
-          var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
-          var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
+        const saveToSession = document.querySelector("#selanjutnya");
+        saveToSession.addEventListener("click", function () {
+          sessionStorage.setItem("smallUndervalueTab2_B2", inputB2.innerHTML);
+          sessionStorage.setItem("smallUndervalueTab2_B3", inputB3.innerHTML);
+          sessionStorage.setItem("total1", total1.innerHTML);
+          sessionStorage.setItem("total2", total2.innerHTML);
+          sessionStorage.setItem("total3", total3.innerHTML);
+          sessionStorage.setItem("total4", total4.innerHTML);
+        });
 
-          sessionStorage.setItem("smallUndervalueTab2_Total", total3);
-          let fixG = jsonObject.smallUndervalueTab2_Total;
-          // var total2 = valueA2;
-
-          // Menampilkan total di elemen yang ditentukan
-          if (totalFor === 1) {
-              totalElement1.textContent = total1;
-          } else if (totalFor === 2) {
-              totalElement2.textContent = total2;
-          } else if (totalFor === 3) {
-            totalElement3.textContent = total3;
-          } else if (totalFor === 4) {
-            totalElement4.textContent = total4;
-          }
+        // Menampilkan total di elemen yang ditentukan
+        if (totalFor === 1) {
+          totalElement1.textContent = total1;
+        } else if (totalFor === 2) {
+          totalElement2.textContent = total2;
+        } else if (totalFor === 3) {
+          totalElement3.textContent = total3;
+        } else if (totalFor === 4) {
+          totalElement4.textContent = total4;
+        }
       }
     </script>
   </body>
