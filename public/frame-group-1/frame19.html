@@ -181,7 +181,7 @@
                           required
                         />
                       </td>
-                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B2"></p></td>
+                      <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B2">0</p></td>
                       <td class="px-6 py-4"><p class="text-black font-semibold" id="smallUndervalueTab2_B3">0</p></td>
                       <td class="px-6 py-4">
                         <input
@@ -649,7 +649,7 @@
       let b = document.querySelector("#smallUndervalueTab2_B2").innerHTML;
       let BNumber = parseInt(b);
       let AminB = fixA - BNumber;
-      document.querySelector("#smallUndervalueTab2_B3").innerHTML = AminB;
+      document.querySelector("#smallUndervalueTab2_B3").innerHTML = fixA;
 
       document.getElementById("rowA").textContent = fixDD;
       document.getElementById("rowB").textContent = fixAA;
@@ -676,7 +676,7 @@
       var inputH2 = document.getElementById("smallUndervalueTab2_H2");
 
       var inputB3_ = document.getElementById("smallUndervalueTab2_B3");
-      var inputB3 = parseInt(inputB3_.textContent);
+      // var inputB3 = parseFloat(inputB3_.textContent);
       var inputA3 = document.getElementById("smallUndervalueTab2_A3");
       var inputC3 = document.getElementById("smallUndervalueTab2_C3");
       var inputD3 = document.getElementById("smallUndervalueTab2_D3");
@@ -720,7 +720,7 @@
       inputH2.addEventListener("input", () => updateTotal(2));
 
       inputA3.addEventListener("input", () => updateTotal(3));
-      inputB3.addEventListener("input", () => updateTotal(3));
+      // inputB3.addEventListener("input", () => updateTotal(3));
       inputC3.addEventListener("input", () => updateTotal(3));
       inputD3.addEventListener("input", () => updateTotal(3));
       inputE3.addEventListener("input", () => updateTotal(3));
@@ -760,7 +760,7 @@
         var valueH2 = parseFloat(inputH2.value) || 0;
 
         var valueA3 = parseFloat(inputA3.value) || 0;
-        var valueB3 = parseFloat(inputB3.value) || 0;
+        // var valueB3 = parseFloat(inputB3.value) || 0;
         var valueC3 = parseFloat(inputC3.value) || 0;
         var valueD3 = parseFloat(inputD3.value) || 0;
         var valueE3 = parseFloat(inputE3.value) || 0;
