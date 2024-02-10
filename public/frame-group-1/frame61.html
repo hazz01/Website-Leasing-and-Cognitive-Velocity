@@ -62,53 +62,51 @@
           <h5 class="mb-5 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">LEASE AMORTIZATION SCHEDULE.</h5>
           <div class="block max-w-xl w-full mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="relative overflow-x-auto shadow-md sm:rounded-l">
-              <form id="forms_pak_chusni">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-black border-2">
-                  <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
-                    <tr>
-                      <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800" colspan="2">Calculation of Annual Payments of Leassee</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-b border-gray-200 dark:border-gray-700">
-                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Fair Value of Assets</th>
-                      <td class="px-6 py-4 flex">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd">0</p>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-gray-200 dark:border-gray-700">
-                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">(-) PV of residual value</th>
-                      <td class="px-6 py-4 flex">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd">0</p>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-gray-200 dark:border-gray-700">
-                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Total payment due for the leased asset</th>
-                      <td class="px-6 py-4 flex">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd">0</p>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-gray-200 dark:border-gray-700">
-                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Annual Lease Payments</th>
-                      <td class="px-6 py-4 flex">
-                        <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="dd">0</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="px-6 pt-4 pb-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2"><strong> Notes : </strong></th>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(1) Present value discount rate (8,7%) = 0.582</th>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(2) Present value annuity-due (8,7%) = 5.971</th>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(3) Angka yang diinput tidak perlu menambahkan titik maupun koma</th>
-                    </tr>
-                  </tbody>
-                </table>
-              </form>
+              <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-black border-2">
+                <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800" colspan="2">Calculation of Annual Payments of Leassee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Fair Value of Assets</th>
+                    <td class="px-6 py-4 flex">
+                      <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowA">0</p>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">(-) PV of residual value</th>
+                    <td class="px-6 py-4 flex">
+                      <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowB">0</p>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Total payment due for the leased asset</th>
+                    <td class="px-6 py-4 flex">
+                      <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowC">0</p>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">Annual Lease Payments</th>
+                    <td class="px-6 py-4 flex">
+                      <p class="px-3 py-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" id="rowD">0</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-6 pt-4 pb-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2"><strong> Notes : </strong></th>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(1) Present value discount rate (8,7%) = 0.582</th>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(2) Present value annuity-due (8,7%) = 5.971</th>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(3) Angka yang diinput tidak perlu menambahkan titik maupun koma</th>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </a>
@@ -131,8 +129,8 @@
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id="smallOvervalueTab2_A1"
-                        name="smallOvervalueTab7_A1"
+                        id="bigOvervalueTab7_A1"
+                        name="bigOvervalueTab7_A1"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
@@ -141,8 +139,8 @@
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id="smallOvervalueTab2_A2"
-                        name="smallOvervalueTab7_A2"
+                        id="bigOvervalueTab7_A2"
+                        name="bigOvervalueTab7_A2"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
@@ -151,21 +149,54 @@
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id="smallOvervalueTab2_A3"
-                        name="smallOvervalueTab7_A3"
+                        id="bigOvervalueTab7_A3"
+                        name="bigOvervalueTab7_A3"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
                       />
                     </td>
-                    <td class="px-6 py-4"><p class="text-red-600">*(d)</p></td>
+                    <td class="px-6 py-4">
+                      <p class="text-red-600">
+                        <input
+                          type="text"
+                          id="bigOvervalueTab7_A4"
+                          name="bigOvervalueTab7_A4"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </p>
+                    </td>
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <td class="px-6 py-4">01/01/2023</td>
-                    <td class="px-6 py-4"><p class="text-red-600">*(a)</p></td>
-                    <td class="px-6 py-4"><p class="text-black">*(b) 0</p></td>
-                    <td class="px-6 py-4"><p class="text-black">*(c) = (a) – (b)</p></td>
-                    <td class="px-6 py-4"><p class="text-black">*(e)</p></td>
+                    <td class="px-6 py-4">
+                      <p class="text-red-600">
+                        <input
+                          type="text"
+                          id=""
+                          name="bigOvervalueTab7_B1"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </p>
+                    </td>
+                    <td class="px-6 py-4"><p class="text-black" id="bigOvervalueTab7_B2">*0</p></td>
+                    <td class="px-6 py-4"><p class="text-black" id="bigOvervalueTab7_B3">*(c) = (a) – (b)</p></td>
+                    <td class="px-6 py-4">
+                      <p class="text-black">
+                        <input
+                          type="text"
+                          id=""
+                          name="bigOvervalueTab7_B4"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </p>
+                    </td>
                   </tr>
                   <tr class="bg-white dark:bg-gray-800">
                     <td class="px-6 py-4">01/01/2024</td>
@@ -174,20 +205,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_B1"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
-                      </p>
-                    </td>
-                    <td class="px-6 py-4"><p class="text-black">**(f)</p></td>
-                    <td class="px-6 py-4">
-                      <p class="text-black">
-                        <input
-                          type="text"
-                          id=""
-                          name="smallOvervalueTab7_B2"
+                          name="bigOvervalueTab7_C1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -199,7 +217,31 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_B3"
+                          name="bigOvervalueTab7_C2"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </p>
+                    </td>
+                    <td class="px-6 py-4">
+                      <p class="text-black">
+                        <input
+                          type="text"
+                          id=""
+                          name="bigOvervalueTab7_c3"
+                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                          placeholder=""
+                          required
+                        />
+                      </p>
+                    </td>
+                    <td class="px-6 py-4">
+                      <p class="text-black">
+                        <input
+                          type="text"
+                          id=""
+                          name="bigOvervalueTab7_c4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -214,7 +256,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_C1"
+                          name="bigOvervalueTab7_D1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -226,7 +268,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_C2"
+                          name="bigOvervalueTab7_D2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -238,7 +280,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_C3"
+                          name="bigOvervalueTab7_D3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -250,7 +292,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_C4"
+                          name="bigOvervalueTab7_D4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -265,7 +307,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_D1"
+                          name="bigOvervalueTab7_E1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -277,7 +319,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_D2"
+                          name="bigOvervalueTab7_E2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -289,7 +331,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_D3"
+                          name="bigOvervalueTab7_E3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -301,7 +343,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_D4"
+                          name="bigOvervalueTab7_E4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -316,7 +358,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_E1"
+                          name="bigOvervalueTab7_F1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -328,7 +370,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_E2"
+                          name="bigOvervalueTab7_F2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -340,7 +382,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_E3"
+                          name="bigOvervalueTab7_F3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -352,7 +394,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_E4"
+                          name="bigOvervalueTab7_F4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -367,7 +409,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_F1"
+                          name="bigOvervalueTab7_G1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -379,7 +421,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_F2"
+                          name="bigOvervalueTab7_G2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -391,7 +433,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_F3"
+                          name="bigOvervalueTab7_G3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -403,7 +445,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_F4"
+                          name="bigOvervalueTab7_G4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -418,7 +460,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_G1"
+                          name="bigOvervalueTab7_H1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -430,7 +472,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_G2"
+                          name="bigOvervalueTab7_H2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -442,7 +484,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_G3"
+                          name="bigOvervalueTab7_H3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -454,7 +496,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_G4"
+                          name="bigOvervalueTab7_H4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -469,7 +511,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_H1"
+                          name="bigOvervalueTab7_I1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -481,7 +523,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_H2"
+                          name="bigOvervalueTab7_I2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -493,7 +535,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_H3"
+                          name="bigOvervalueTab7_I3"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -505,7 +547,7 @@
                         <input
                           type="text"
                           id=""
-                          name="smallOvervalueTab7_H4"
+                          name="bigOvervalueTab7_I4"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
@@ -521,55 +563,11 @@
                     <td class="px-6 py-4"><p class="text-black"></p></td>
                   </tr>
                   <tr class="bg-white dark:bg-gray-800">
-                    <td class="px-6 py-4">TOTAL (Otomatis Terjumlah)</td>
-                    <td class="px-6 py-4">
-                      <p class="text-black">
-                        <input
-                          type="text"
-                          id=""
-                          name=""
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
-                      </p>
-                    </td>
-                    <td class="px-6 py-4">
-                      <p class="text-black">
-                        <input
-                          type="text"
-                          id=""
-                          name=""
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
-                      </p>
-                    </td>
-                    <td class="px-6 py-4">
-                      <p class="text-black">
-                        <input
-                          type="text"
-                          id=""
-                          name=""
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
-                      </p>
-                    </td>
-                    <td class="px-6 py-4">
-                      <p class="text-black">
-                        <input
-                          type="text"
-                          id=""
-                          name=""
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
-                      </p>
-                    </td>
+                    <td class="px-6 py-4">TOTAL</td>
+                    <td class="px-6 py-4 justify-center"><p id="total1">0</p></td>
+                    <td class="px-6 py-4 justify-center"><p id="total2">0</p></td>
+                    <td class="px-6 py-4 justify-center"><p id="total3">0</p></td>
+                    <td class="px-6 py-4 justify-center"><p id="total4">0</p></td>
                   </tr>
                 </tbody>
               </table>
@@ -662,139 +660,66 @@
 
       var inputB3;
       // table
-      function tableDataInnner() {
-        let jsonString = sessionStorage.getItem("FormData");
-        let jsonObject = JSON.parse(jsonString);
-        let fixA = jsonObject.smallUndervalueTab1_4;
-        console.log(fixA);
-        inputB3 = parseInt(fixA, 10);
 
-        document.querySelector("#a").innerHTML = fixA;
-        let fixD = jsonObject.smallUndervalueTab1_3;
-        document.querySelector("#d").innerHTML = fixD;
-        let b = document.querySelector("#b").innerHTML;
-        let BNumber = parseInt(b);
-        let AminB = fixA - BNumber;
-        document.querySelector("#c").innerHTML = AminB;
-        let dd = document.querySelector("#dd");
-        let fixDD = jsonObject.smallUndervalueTab1_1;
-        document.querySelector("#dd").innerHTML = fixDD;
-        let fixAA = jsonObject.smallUndervalueTab1_2;
-        document.querySelector("#aa").innerHTML = fixAA;
-        return AminB;
-      }
-      tableDataInnner();
-      console.log(inputB3);
+      let jsonString = sessionStorage.getItem("FormData");
+      let jsonObject = JSON.parse(jsonString);
+      let fixrow1 = jsonObject.bigOvervalueTab5_A;
+      let fixrow2 = jsonObject.bigOvervalueTab5_B;
+      let fiXrow3 = jsonObject.bigOvervalueTab5_C;
+      let fixrow4 = jsonObject.bigOvervalueTab5_D;
+      console.log(fiXrow3);
+      inputB3 = parseInt(fixrow4, 10);
+      let b = document.querySelector("#bigOvervalueTab7_B2").innerHTML;
+      let BNumber = parseInt(b);
+      let AminB = fixrow4 - BNumber;
+      document.querySelector("#bigOvervalueTab7_B3").innerHTML = fixrow4;
 
-      function totalcols() {
-        let total1 = 0;
-        let total2 = 0;
-        let total3 = 0;
-        let total4 = 0;
+      document.getElementById("rowA").textContent = fixrow1;
+      document.getElementById("rowB").textContent = fixrow2;
+      document.getElementById("rowC").textContent = fiXrow3;
+      document.getElementById("rowD").textContent = fixrow4;
 
-        let jsonString = sessionStorage.getItem("FormData");
-        let jsonObject = JSON.parse(jsonString);
-        console.log("jsonObject:", jsonObject);
-        let fixA = jsonObject.smallUndervalueTab1_4;
-        let b = document.querySelector("#b").innerHTML;
-        let BNumber = parseInt(b);
-        let AminB = fixA - BNumber;
+      // Mendapatkan elemen input
+      var inputA1 = document.getElementById("bigOvervalueTab7_A1");
+      var inputB1 = document.getElementById("bigOvervalueTab7_B1");
+      var inputC1 = document.getElementById("bigOvervalueTab7_C1");
+      var inputD1 = document.getElementById("bigOvervalueTab7_D1");
+      var inputE1 = document.getElementById("bigOvervalueTab7_E1");
+      var inputF1 = document.getElementById("bigOvervalueTab7_F1");
+      var inputG1 = document.getElementById("bigOvervalueTab7_G1");
+      var inputH1 = document.getElementById("bigOvervalueTab7_H1");
+      var inputI1 = document.getElementById("bigOvervalueTab7_I1");
 
-        let col1 =
-          parseInt(jsonObject.smallUndervalueTab2_A1) +
-          parseInt(jsonObject.smallUndervalueTab2_A3_2) +
-          parseInt(jsonObject.smallUndervalueTab2_B1) +
-          parseInt(jsonObject.smallUndervalueTab2_C1) +
-          parseInt(jsonObject.smallUndervalueTab2_D1) +
-          parseInt(jsonObject.smallUndervalueTab2_E1) +
-          parseInt(jsonObject.smallUndervalueTab2_F1) +
-          parseInt(jsonObject.smallUndervalueTab2_G1);
-        let col2 =
-          parseInt(jsonObject.smallUndervalueTab2_A2) +
-          0 +
-          parseInt(jsonObject.smallUndervalueTab2_0_B2) +
-          parseInt(jsonObject.smallUndervalueTab2_C2) +
-          parseInt(jsonObject.smallUndervalueTab2_D2) +
-          parseInt(jsonObject.smallUndervalueTab2_E2) +
-          parseInt(jsonObject.smallUndervalueTab2_F2) +
-          parseInt(jsonObject.smallUndervalueTab2_G2);
-        let col3 =
-          parseInt(jsonObject.smallUndervalueTab2_A3) +
-          parseInt(AminB) +
-          parseInt(jsonObject.smallUndervalueTab2_B2) +
-          parseInt(jsonObject.smallUndervalueTab2_C3) +
-          parseInt(jsonObject.smallUndervalueTab2_D3) +
-          parseInt(jsonObject.smallUndervalueTab2_E3) +
-          parseInt(jsonObject.smallUndervalueTab2_F3) +
-          parseInt(jsonObject.smallUndervalueTab2_G3);
-        let col4 =
-          parseInt(jsonObject.smallUndervalueTab2_A3_1) +
-          parseInt(jsonObject.smallUndervalueTab2_A3_3) +
-          parseInt(jsonObject.smallUndervalueTab2_B3) +
-          parseInt(jsonObject.smallUndervalueTab2_C4) +
-          parseInt(jsonObject.smallUndervalueTab2_D4) +
-          parseInt(jsonObject.smallUndervalueTab2_E4) +
-          parseInt(jsonObject.smallUndervalueTab2_F4) +
-          parseInt(jsonObject.smallUndervalueTab2_G4);
+      var inputA2 = document.getElementById("bigOvervalueTab7_A2");
+      var inputB2 = document.getElementById("bigOvervalueTab7_B2");
+      var inputC2 = document.getElementById("bigOvervalueTab7_C2");
+      var inputD2 = document.getElementById("bigOvervalueTab7_D2");
+      var inputE2 = document.getElementById("bigOvervalueTab7_E2");
+      var inputF2 = document.getElementById("bigOvervalueTab7_F2");
+      var inputG2 = document.getElementById("bigOvervalueTab7_G2");
+      var inputH2 = document.getElementById("bigOvervalueTab7_H2");
+      var inputI2 = document.getElementById("bigOvervalueTab7_I2");
 
-        let button1 = document.querySelector("#totalbutton1");
-        function myButton() {
-          if (!isButtonClicked1) {
-            location.reload();
-            let w = (total1 += col1);
-            let x = (total2 += col2);
-            let y = (total3 += col3);
-            let z = (total4 += col4);
-            console.log(w);
-            document.querySelector("#total1").innerHTML = total1;
-            document.querySelector("#total2").innerHTML = total2;
-            document.querySelector("#total3").innerHTML = total3;
-            document.querySelector("#total4").innerHTML = total4;
+      var inputB3_ = document.getElementById("bigOvervalueTab7_B3");
+      // var inputB3 = parseFloat(inputB3_.textContent);
+      var inputA3 = document.getElementById("bigOvervalueTab7_A3");
+      var inputC3 = document.getElementById("bigOvervalueTab7_C3");
+      var inputD3 = document.getElementById("bigOvervalueTab7_D3");
+      var inputE3 = document.getElementById("bigOvervalueTab7_E3");
+      var inputF3 = document.getElementById("bigOvervalueTab7_F3");
+      var inputG3 = document.getElementById("bigOvervalueTab7_G3");
+      var inputH3 = document.getElementById("bigOvervalueTab7_H3");
+      var inputI3 = document.getElementById("bigOvervalueTab7_I3");
 
-            // Save the updated total to sessionStorage
-            // saveDataToSessionStorage("total1", total1);
-            // saveDataToSessionStorage("total2", total2);
-            // saveDataToSessionStorage("total3", total3);
-            // saveDataToSessionStorage("total4", total4);
-
-            isButtonClicked1 = true;
-          }
-        }
-      }
-
-      var inputA1 = document.getElementById("smallUndervalueTab2_A1");
-      var inputB1 = document.getElementById("smallUndervalueTab2_B1");
-      var inputC1 = document.getElementById("smallUndervalueTab2_C1");
-      var inputD1 = document.getElementById("smallUndervalueTab2_D1");
-      var inputE1 = document.getElementById("smallUndervalueTab2_E1");
-      var inputF1 = document.getElementById("smallUndervalueTab2_F1");
-      var inputG1 = document.getElementById("smallUndervalueTab2_G1");
-      var inputH1 = document.getElementById("smallUndervalueTab2_H1");
-
-      var inputA2 = document.getElementById("smallUndervalueTab2_A2");
-      var inputC2 = document.getElementById("smallUndervalueTab2_C2");
-      var inputD2 = document.getElementById("smallUndervalueTab2_D2");
-      var inputE2 = document.getElementById("smallUndervalueTab2_E2");
-      var inputF2 = document.getElementById("smallUndervalueTab2_F2");
-      var inputG2 = document.getElementById("smallUndervalueTab2_G2");
-      var inputH2 = document.getElementById("smallUndervalueTab2_H2");
-
-      var inputA3 = document.getElementById("smallUndervalueTab2_A3");
-      var inputC3 = document.getElementById("smallUndervalueTab2_C3");
-      var inputD3 = document.getElementById("smallUndervalueTab2_D3");
-      var inputE3 = document.getElementById("smallUndervalueTab2_E3");
-      var inputF3 = document.getElementById("smallUndervalueTab2_F3");
-      var inputG3 = document.getElementById("smallUndervalueTab2_G3");
-      var inputH3 = document.getElementById("smallUndervalueTab2_H3");
-
-      var inputA4 = document.getElementById("smallUndervalueTab2_A4");
-      var inputB4 = document.getElementById("smallUndervalueTab2_B4");
-      var inputC4 = document.getElementById("smallUndervalueTab2_C4");
-      var inputD4 = document.getElementById("smallUndervalueTab2_D4");
-      var inputE4 = document.getElementById("smallUndervalueTab2_E4");
-      var inputF4 = document.getElementById("smallUndervalueTab2_F4");
-      var inputG4 = document.getElementById("smallUndervalueTab2_G4");
-      var inputH4 = document.getElementById("smallUndervalueTab2_H4");
+      var inputA4 = document.getElementById("bigOvervalueTab7_A4");
+      var inputB4 = document.getElementById("bigOvervalueTab7_B4");
+      var inputC4 = document.getElementById("bigOvervalueTab7_C4");
+      var inputD4 = document.getElementById("bigOvervalueTab7_D4");
+      var inputE4 = document.getElementById("bigOvervalueTab7_E4");
+      var inputF4 = document.getElementById("bigOvervalueTab7_F4");
+      var inputG4 = document.getElementById("bigOvervalueTab7_G4");
+      var inputH4 = document.getElementById("bigOvervalueTab7_H4");
+      var inputI4 = document.getElementById("bigOvervalueTab7_I4");
 
       // Mendapatkan elemen untuk menampilkan total
       var totalElement1 = document.getElementById("total1");
@@ -811,22 +736,27 @@
       inputF1.addEventListener("input", () => updateTotal(1));
       inputG1.addEventListener("input", () => updateTotal(1));
       inputH1.addEventListener("input", () => updateTotal(1));
+      inputI1.addEventListener("input", () => updateTotal(1));
 
       inputA2.addEventListener("input", () => updateTotal(2));
+      inputB2.addEventListener("input", () => updateTotal(2));
       inputC2.addEventListener("input", () => updateTotal(2));
       inputD2.addEventListener("input", () => updateTotal(2));
       inputE2.addEventListener("input", () => updateTotal(2));
       inputF2.addEventListener("input", () => updateTotal(2));
       inputG2.addEventListener("input", () => updateTotal(2));
       inputH2.addEventListener("input", () => updateTotal(2));
+      inputI2.addEventListener("input", () => updateTotal(2));
 
       inputA3.addEventListener("input", () => updateTotal(3));
+      // inputB3.addEventListener("input", () => updateTotal(3));
       inputC3.addEventListener("input", () => updateTotal(3));
       inputD3.addEventListener("input", () => updateTotal(3));
       inputE3.addEventListener("input", () => updateTotal(3));
       inputF3.addEventListener("input", () => updateTotal(3));
       inputG3.addEventListener("input", () => updateTotal(3));
       inputH3.addEventListener("input", () => updateTotal(3));
+      inputI3.addEventListener("input", () => updateTotal(3));
 
       inputA4.addEventListener("input", () => updateTotal(4));
       inputB4.addEventListener("input", () => updateTotal(4));
@@ -836,6 +766,7 @@
       inputF4.addEventListener("input", () => updateTotal(4));
       inputG4.addEventListener("input", () => updateTotal(4));
       inputH4.addEventListener("input", () => updateTotal(4));
+      inputI4.addEventListener("input", () => updateTotal(4));
 
       // Fungsi untuk menghitung total dan menampilkannya (set pertama dan kedua)
       function updateTotal(totalFor) {
@@ -848,24 +779,28 @@
         var valueF1 = parseFloat(inputF1.value) || 0;
         var valueG1 = parseFloat(inputG1.value) || 0;
         var valueH1 = parseFloat(inputH1.value) || 0;
+        var valueI1 = parseFloat(inputI1.value) || 0;
 
         // For valueA2 to valueH4
         var valueA2 = parseFloat(inputA2.value) || 0;
+        var valueB2 = parseFloat(inputB2.value) || 0;
         var valueC2 = parseFloat(inputC2.value) || 0;
         var valueD2 = parseFloat(inputD2.value) || 0;
         var valueE2 = parseFloat(inputE2.value) || 0;
         var valueF2 = parseFloat(inputF2.value) || 0;
         var valueG2 = parseFloat(inputG2.value) || 0;
         var valueH2 = parseFloat(inputH2.value) || 0;
+        var valueI2 = parseFloat(inputI2.value) || 0;
 
         var valueA3 = parseFloat(inputA3.value) || 0;
-        var valueB3 = parseFloat(inputB3.value) || 0;
+        // var valueB3 = parseFloat(inputB3.value) || 0;
         var valueC3 = parseFloat(inputC3.value) || 0;
         var valueD3 = parseFloat(inputD3.value) || 0;
         var valueE3 = parseFloat(inputE3.value) || 0;
         var valueF3 = parseFloat(inputF3.value) || 0;
         var valueG3 = parseFloat(inputG3.value) || 0;
         var valueH3 = parseFloat(inputH3.value) || 0;
+        var valueI3 = parseFloat(inputI3.value) || 0;
 
         var valueA4 = parseFloat(inputA4.value) || 0;
         var valueB4 = parseFloat(inputB4.value) || 0;
@@ -875,16 +810,15 @@
         var valueF4 = parseFloat(inputF4.value) || 0;
         var valueG4 = parseFloat(inputG4.value) || 0;
         var valueH4 = parseFloat(inputH4.value) || 0;
+        var valueI4 = parseFloat(inputI4.value) || 0;
 
         // Menghitung total set pertama
-        var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1;
-        var total2 = valueA2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2;
-        var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3;
-        var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4;
+        var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1 + valueI1;
+        var total2 = valueA2 + valueB2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2 + valueI2;
+        var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3 + valueI3;
+        var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4 + valueI4;
 
-        sessionStorage.setItem("smallUndervalueTab2_Total", total3);
-        let fixG = jsonObject.smallUndervalueTab2_Total;
-        // var total2 = valueA2;
+        console.log(total1 + " - " + total2 + " - " + total3 + " - " + total4);
 
         // Menampilkan total di elemen yang ditentukan
         if (totalFor === 1) {
@@ -896,6 +830,14 @@
         } else if (totalFor === 4) {
           totalElement4.textContent = total4;
         }
+
+        sessionStorage.setItem("bigOvervalueTab7_B2", valueB2);
+        sessionStorage.setItem("bigOvervalueTab7_B3", inputB3);
+        sessionStorage.setItem("total1f61", total1);
+        sessionStorage.setItem("total2f61", total2);
+        sessionStorage.setItem("total3f61", total3);
+        sessionStorage.setItem("total4f61", total4);
+        //
       }
     </script>
   </body>

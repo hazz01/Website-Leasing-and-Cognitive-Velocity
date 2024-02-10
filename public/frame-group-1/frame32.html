@@ -68,15 +68,15 @@
                 <tbody>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <td class="px-6 py-4">Right of use asset</td>
-                    <td class="px-6 py-4">Nilai *(g) terinput otomatis pada kolom ini,</td>
+                    <td class="px-6 py-4" id="g">Nilai *(g) terinput otomatis pada kolom ini,</td>
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <td class="px-6 py-4">Lease Liabilities in 2019</td>
-                    <td class="px-6 py-4">Nilai *(a) terinput otomatis pada kolom ini</td>
+                    <td class="px-6 py-4" id="a">Nilai *(a) terinput otomatis pada kolom ini</td>
                   </tr>
                   <tr class="bg-white dark:bg-gray-800">
                     <td class="px-6 py-4">Interest Inccured in 2019</td>
-                    <td class="px-6 py-4">Nilai **(f) terinput otomatis pada kolom ini</td>
+                    <td class="px-6 py-4" id="f">Nilai **(f) terinput otomatis pada kolom ini</td>
                   </tr>
                   <tr class="bg-white dark:bg-gray-800">
                     <td class="px-6 py-4">Useful life of assets</td>
@@ -593,9 +593,10 @@
       function tableDataInnner() {
         let jsonString = sessionStorage.getItem("FormData");
         let jsonObject = JSON.parse(jsonString);
-        let fixG = jsonObject.smallOvervalueTab2_Total;
-        let fixA = jsonObject.smallOvervalueTab1_4;
-        let fixF = jsonObject.smallOvervalueTab2_0_B2;
+        let jsontotal3 = sessionStorage.getItem("total3f31");
+        let fixG = jsontotal3;
+        let fixA = jsonObject.smallOvervalueTab1_D;
+        let fixF = jsonObject.smallOvervalueTab2_C2;
         document.querySelector("#g").innerHTML = fixG;
         document.querySelector("#f").innerHTML = fixF;
         document.querySelector("#a").innerHTML = fixA;

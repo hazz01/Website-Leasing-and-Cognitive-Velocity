@@ -624,12 +624,6 @@
         tempStorage = { ...tempStorage, ...object };
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
-        sessionStorage.setItem("smallUndervalueTab2_B2", inputB2.innerHTML);
-        sessionStorage.setItem("smallUndervalueTab2_B3", inputB3.innerHTML);
-        sessionStorage.setItem("total1", total1.innerHTML);
-        sessionStorage.setItem("total2", total2.innerHTML);
-        sessionStorage.setItem("total3", total3.innerHTML);
-        sessionStorage.setItem("total4", total4.innerHTML);
       }
 
       function windowwss() {
@@ -793,6 +787,13 @@
         } else if (totalFor === 4) {
           totalElement4.textContent = total4;
         }
+
+        sessionStorage.setItem("smallUndervalueTab2_B2", valueB2);
+        sessionStorage.setItem("smallUndervalueTab2_B3", inputB3);
+        sessionStorage.setItem("total1f19", total1);
+        sessionStorage.setItem("total2f19", total2);
+        sessionStorage.setItem("total3f19", total3);
+        sessionStorage.setItem("total4f19", total4);
       }
     </script>
   </body>

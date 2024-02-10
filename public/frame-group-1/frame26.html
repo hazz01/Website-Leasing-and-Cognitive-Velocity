@@ -112,7 +112,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_A2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_A2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -157,7 +157,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_B2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_B2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -202,7 +202,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_C2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_C2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -247,7 +247,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_D2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_D2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -292,7 +292,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_E2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_E2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -337,7 +337,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_F2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_F2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -382,7 +382,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_G2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_G2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -427,7 +427,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_H2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_H2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -472,7 +472,7 @@
                       </td>
                       <td class="px-6 py-4">
                         <div class="relative">
-                          <select title="choose" name="smallUndervalueTab8_I2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1   ">
+                          <select title="choose" name="smallUndervalueTab8_I2" id="dropdownMenu" class="flex bg-white shadow rounded mt-1">
                             <option value="">- Choose -</option>
                             <option value="Righ_of_Use_Assets">Right of Use Assets</option>
                             <option value="Lease_Liabilities">Lease Liabilities</option>
@@ -595,9 +595,10 @@
       function tableDataInnner() {
         let jsonString = sessionStorage.getItem("FormData");
         let jsonObject = JSON.parse(jsonString);
-        let fixG = jsonObject.smallUndervalueTab2_Total;
-        let fixA = jsonObject.smallUndervalueTab1_4;
-        let fixF = jsonObject.smallUndervalueTab2_0_B2;
+        let jsontotal3 = sessionStorage.getItem("total3f25");
+        let fixG = jsontotal3;
+        let fixA = jsonObject.smallUndervalueTab5_D;
+        let fixF = jsonObject.smallUndervalueTab7_C2;
         document.querySelector("#g").innerHTML = fixG;
         document.querySelector("#f").innerHTML = fixF;
         document.querySelector("#a").innerHTML = fixA;
