@@ -595,8 +595,7 @@
       function tableDataInnner() {
         let jsonString = sessionStorage.getItem("FormData");
         let jsonObject = JSON.parse(jsonString);
-        let jsontotal3 = sessionStorage.getItem("total3f19");
-        let fixG = jsontotal3;
+        let fixG = jsonObject.total3f19;
         let fixA = jsonObject.smallUndervalueTab1_4;
         let fixF = jsonObject.smallUndervalueTab2_C2;
         document.querySelector("#g").innerHTML = fixG;

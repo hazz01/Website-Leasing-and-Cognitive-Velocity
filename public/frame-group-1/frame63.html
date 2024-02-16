@@ -271,8 +271,20 @@
         tempStorage = { ...tempStorage, ...object };
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
+
+        // total timer
+
+        let Timer = sessionStorage.getItem("timerframe1");
+
+        console.log(Timer);
+        // total timer
+
         submit();
       }
+      let JsonObjects = sessionStorage.getItem("FormData");
+      let JsonObjetcs = JSON.parse(JsonObjects);
+      let Timerframe1 = JsonObjects(timerframe1);
+      console.log(Timerframe1);
 
       // submit
       function submit() {
