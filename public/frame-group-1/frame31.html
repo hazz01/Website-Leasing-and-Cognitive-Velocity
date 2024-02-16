@@ -108,7 +108,8 @@
                       <th scope="row" class="px-6 pb-4 pt-2 font-medium text-gray-900 bg-gray-50 dark:text-white dark:bg-gray-800" colspan="2">(3) Angka yang diinput tidak perlu menambahkan titik maupun koma</th>
                     </tr>
                   </tbody>
-                </table>smallOvervalueTab2_A1
+                </table>
+                smallOvervalueTab2_A1
               </div>
             </div>
           </a>
@@ -770,13 +771,15 @@
           totalElement4.textContent = total4;
         }
 
-        sessionStorage.setItem("smallOvervalueTab2_B2", valueB2);
-        sessionStorage.setItem("smallOvervalueTab2_B3", inputB3);
-        sessionStorage.setItem("total1f31", total1);
-        sessionStorage.setItem("total2f31", total2);
-        sessionStorage.setItem("total3f31", total3);
-        sessionStorage.setItem("total4f31", total4);
-        //
+        const totalsObject = {
+          total1f31: total1,
+          total2f31: total2,
+          total3f31: total3,
+          total4f31: total4,
+          smallOvervalueTab2_B2: valueB2,
+          smallOvervalueTab2_B3: inputB3,
+        };
+        sessionStorage.setItem("FormData", JSON.stringify(totalsObject));
       }
     </script>
   </body>

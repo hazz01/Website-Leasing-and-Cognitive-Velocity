@@ -831,22 +831,15 @@
           totalElement4.textContent = total4;
         }
 
-        sessionStorage.setItem("bigUndervalueTab7_B2", valueB2);
-        sessionStorage.setItem("bigUndervalueTab7_B3", inputB3);
-        sessionStorage.setItem("total1f49", total1);
-        sessionStorage.setItem("total2f49", total2);
-        sessionStorage.setItem("total3f49", total3);
-        sessionStorage.setItem("total4f49", total4);
-        // let fixbigUndervalueTab2_B2 = sessionStorage.getItem("bigUndervalueTab2_B2");
-        // let fixbigUndervalueTab2_B3 = sessionStorage.getItem("bigUndervalueTab2_B3");
-        // let total1Value = sessionStorage.getItem("total1");
-        // let total2Value = sessionStorage.getItem("total2");
-        // let total4Value = sessionStorage.getItem("total4");
-        // let total3Value = sessionStorage.getItem("total3");
-        // console.log("total3Value = " + total3Value);
-        // console.log("fixbigUndervalueTab2_B2 = " + fixbigUndervalueTab2_B2);
-        // console.log("fixbigUndervalueTab2_B3 = " + fixbigUndervalueTab2_B3);
-        // let addStorage = JSON.stringify(parseFloat(total3Value));
+        const totalsObject = {
+          total1f49: total1,
+          total2f49: total2,
+          total3f49: total3,
+          total4f49: total4,
+          bigUndervalueTab7_B2: valueB2,
+          bigUndervalueTab7_B3: inputB3,
+        };
+        sessionStorage.setItem("FormData", JSON.stringify(totalsObject));
       }
     </script>
   </body>

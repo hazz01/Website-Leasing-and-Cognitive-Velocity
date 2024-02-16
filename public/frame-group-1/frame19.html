@@ -788,12 +788,15 @@
           totalElement4.textContent = total4;
         }
 
-        sessionStorage.setItem("smallUndervalueTab2_B2", valueB2);
-        sessionStorage.setItem("smallUndervalueTab2_B3", inputB3);
-        sessionStorage.setItem("total1f19", total1);
-        sessionStorage.setItem("total2f19", total2);
-        sessionStorage.setItem("total3f19", total3);
-        sessionStorage.setItem("total4f19", total4);
+        const totalsObject = {
+          total1f19: total1,
+          total2f19: total2,
+          total3f19: total3,
+          total4f19: total4,
+          smallUndervalueTab2_B2: valueB2,
+          smallUndervalueTab2_B3: inputB3,
+        };
+        sessionStorage.setItem("FormData", JSON.stringify(totalsObject));
       }
     </script>
   </body>
