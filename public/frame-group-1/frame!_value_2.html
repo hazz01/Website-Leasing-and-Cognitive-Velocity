@@ -25,625 +25,152 @@
               Mohon berikan indikasi sejauh mana Anda setuju dengan setiap pernyataan atau sejauh mana pernyataan-pernyataan tersebut mencerminkan kondisi Anda. Skala (1) menyatakan sangat tidak setuju, sementara itu skala (5) menyatakan
               sangat setuju
             </h1>
-            <h1 class="text-center font-semibold text-black text-xl mt-5"><i>
-              (Kindly indicate the degree to which you align with each statement or how accurately these statements represent your current situation). Scale (1) for strongly disagree, while scale (5) for strongly agree.</i>
+            <h1 class="text-center font-semibold text-black text-xl mt-5">
+              <i> (Kindly indicate the degree to which you align with each statement or how accurately these statements represent your current situation). Scale (1) for strongly disagree, while scale (5) for strongly agree.</i>
             </h1>
           </div>
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Saya mempertimbangkan untuk menilai aset lebih tinggi, dalam keadaan tertentu.</p>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I consider valuing the assets higher, under some circumstances) </i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range7" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-        
-          <br>
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1" name="question7" value="1" class="hidden peer" required />
-              <label
-                for="answer1"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2" name="question7" value="2" class="hidden peer" required />
-              <label
-                for="answer2"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3" name="question7" value="3" class="hidden peer" required />
-              <label
-                for="answer3"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4" name="question7" value="4" class="hidden peer" required />
-              <label
-                for="answer4"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5" name="question7" value="5" class="hidden peer" required />
-              <label
-                for="answer5"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
+
+          <br />
 
           <div href="#" class="block max-w3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 2</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Jika menemukan hal yang janggal atau tidak umum dalam perusahaan, saya merasa tidak nyaman</p>
-            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(If I see something unusual in the company, it makes me uncomfortable).
-            
-            </i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
-
+            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(If I see something unusual in the company, it makes me uncomfortable). </i></p>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range8" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
+          <br />
 
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_8" name="question8" value="1" class="hidden peer" required />
-              <label
-                for="answer1_8"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_8" name="question8" value="2" class="hidden peer" required />
-              <label
-                for="answer2_8"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_8" name="question8" value="3" class="hidden peer" required />
-              <label
-                for="answer3_8"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_8" name="question8" value="4" class="hidden peer" required />
-              <label
-                for="answer4_8"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_8" name="question8" value="5" class="hidden peer" required />
-              <label
-                for="answer5_8"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 3</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Jika saya menemukan ketidaksesuaian antara pelaporan standar dengan standar, maka saya tidak merasa terganggu.</p>
-            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(If I find discrepancies between reporting and standards, I am not disturbed).
-
-            </i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
+            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(If I find discrepancies between reporting and standards, I am not disturbed). </i></p>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range9" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
+          <br />
 
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_9" name="question9" value="1" class="hidden peer" required />
-              <label
-                for="answer1_9"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_9" name="question9" value="2" class="hidden peer" required />
-              <label
-                for="answer2_9"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_9" name="question9" value="3" class="hidden peer" required />
-              <label
-                for="answer3_9"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_9" name="question9" value="4" class="hidden peer" required />
-              <label
-                for="answer4_9"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_9" name="question9" value="5" class="hidden peer" required />
-              <label
-                for="answer5_9"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 4</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Jika saya menemukan kendala anggaran dalam bisnis, saya tidak akan mengadakan perjanjian sewa walaupun laporan yang terlihat sangat baik</p>
-            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(If I realize the budget constraints in the business, I will abstain from entering into a lease agreement even the reports seem very favorable)</i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
+            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">
+              <i>(If I realize the budget constraints in the business, I will abstain from entering into a lease agreement even the reports seem very favorable)</i>
+            </p>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range10" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
-
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_10" name="question10" value="1" class="hidden peer" required />
-              <label
-                for="answer1_10"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_10" name="question10" value="2" class="hidden peer" required />
-              <label
-                for="answer2_10"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_10" name="question10" value="3" class="hidden peer" required />
-              <label
-                for="answer3_10"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_10" name="question10" value="4" class="hidden peer" required />
-              <label
-                for="answer4_10"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_10" name="question10" value="5" class="hidden peer" required />
-              <label
-                for="answer5_10"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
+          <br />
 
           <div class="mb-24 mt-20">
-            <h1 class="text-center font-semibold text-black text-xl">
-              Seberapa cemas anda dengan beberapa kondisi berikut?
-Skala (1) menyatakan sangat tidak khawatir, sementara itu skala (5) menyatakan sangat khawatir
-
-
-            </h1>
-            <h1 class="text-center font-semibold text-black text-xl mt-5"><i>
-              How worried are you with the following condition? 
-              Scale (1) for not at all worried, while scale (5) for very worried.            </h1>
+            <h1 class="text-center font-semibold text-black text-xl">Seberapa cemas anda dengan beberapa kondisi berikut? Skala (1) menyatakan sangat tidak khawatir, sementara itu skala (5) menyatakan sangat khawatir</h1>
+            <h1 class="text-center font-semibold text-black text-xl mt-5"><i> How worried are you with the following condition? Scale (1) for not at all worried, while scale (5) for very worried. </i></h1>
           </div>
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 1</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Saya melihat kejanggalan dalam perjanjian sewa aset.</p>
-            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I perceive irregularities in the asset lease agreement).
-
-            </i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
-
+            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I perceive irregularities in the asset lease agreement). </i></p>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range11" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
+          <br />
 
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_11" name="question11" value="1" class="hidden peer" required />
-              <label
-                for="answer1_11"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_11" name="question11" value="2" class="hidden peer" required />
-              <label
-                for="answer2_11"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_11" name="question11" value="3" class="hidden peer" required />
-              <label
-                for="answer3_11"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_11" name="question11" value="4" class="hidden peer" required />
-              <label
-                for="answer4_11"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_11" name="question11" value="5" class="hidden peer" required />
-              <label
-                for="answer5_11"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 2</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Saat saya meninjau laporan yang kompleks, saya dapat merasakan terdapat kejanggalan dalam laporan tersebut</p>
-            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(When I scrutinize a comprehensive report, I can detect irregularities).
-
-            </i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
-
+            <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(When I scrutinize a comprehensive report, I can detect irregularities). </i></p>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range12" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
+          <br />
 
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_12" name="question12" value="1" class="hidden peer" required />
-              <label
-                for="answer1_12"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_12" name="question12" value="2" class="hidden peer" required />
-              <label
-                for="answer2_12"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_12" name="question12" value="3" class="hidden peer" required />
-              <label
-                for="answer3_12"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_12" name="question12" value="4" class="hidden peer" required />
-              <label
-                for="answer4_12"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_12" name="question12" value="5" class="hidden peer" required />
-              <label
-                for="answer5_12"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 3</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Teman saya memberikan laporan keuangan atau kontrak yang tidak wajar</p>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(My friend provides unreasonable (obstructive) financial statements or contracts).</i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range13" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
-          <br>
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_13" name="question13" value="1" class="hidden peer" required />
-              <label
-                for="answer1_13"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_13" name="question13" value="2" class="hidden peer" required />
-              <label
-                for="answer2_13"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_13" name="question13" value="3" class="hidden peer" required />
-              <label
-                for="answer3_13"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_13" name="question13" value="4" class="hidden peer" required />
-              <label
-                for="answer4_13"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_13" name="question13" value="5" class="hidden peer" required />
-              <label
-                for="answer5_13"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
-          
+          <br />
+
           <div href="#" class="block max-w-3xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pertanyaan 4</h5>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed">Saat melihat kesalahan nilai dalam suatu pos akun di laporan keuangan yang belum diperbaiki</p>
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I identify a value error in the chart of accounts in the financial statements that remain uncorrected).</i></p>
-            <br>
-              <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range" type="range" min="1" max="5" value="1" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider">
-              <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
+            <br />
+            <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
+            <input id="steps-range14" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
           </div>
 
-          <!-- <ul class="grid w-full gap-6 grid-cols-5 max-w-4xl mt-8 mb-10">
-            <li>
-              <input type="radio" id="answer1_14" name="question14" value="1" class="hidden peer" required />
-              <label
-                for="answer1_14"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">1</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer2_14" name="question14" value="2" class="hidden peer" required />
-              <label
-                for="answer2_14"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">2</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer3_14" name="question14" value="3" class="hidden peer" required />
-              <label
-                for="answer3_14"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">3</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer4_14" name="question14" value="4" class="hidden peer" required />
-              <label
-                for="answer4_14"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">4</div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" id="answer5_14" name="question14" value="5" class="hidden peer" required />
-              <label
-                for="answer5_14"
-                class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <div class="block w-full">
-                  <div class="w-full text-lg font-semibold text-center">5</div>
-                </div>
-              </label>
-            </li>
-          </ul> -->
           <div class="flex justify-end w-full">
             <button
               onclick="javascript:history.back()"
@@ -666,7 +193,7 @@ Skala (1) menyatakan sangat tidak khawatir, sementara itu skala (5) menyatakan s
     </section>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
-       let timerNumber = "timerframe2";
+      let timerNumber = "timerframe2";
       let timeStart = parseInt(sessionStorage.getItem(timerNumber)) || 0; // Time Start
       var timer;
       function startTimer(duration, display) {
@@ -690,6 +217,60 @@ Skala (1) menyatakan sangat tidak khawatir, sementara itu skala (5) menyatakan s
         }, 1000);
       }
 
+      var rangeInput7 = document.getElementById("steps-range7");
+      var rangeInput8 = document.getElementById("steps-range8");
+      var rangeInput9 = document.getElementById("steps-range9");
+      var rangeInput10 = document.getElementById("steps-range10");
+      var rangeInput11 = document.getElementById("steps-range11");
+      var rangeInput12 = document.getElementById("steps-range12");
+      var rangeInput13 = document.getElementById("steps-range13");
+      var rangeInput14 = document.getElementById("steps-range14");
+      rangeInput7.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question7 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput8.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question8 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput9.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question9 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput10.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question10 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput11.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question11 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput12.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question12 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+      rangeInput13.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question13 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+      rangeInput14.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question14 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
       window.onload = function () {
         var time = timeStart, // your time in seconds here
           display = document.querySelector("#TimerDisplay");
@@ -706,6 +287,17 @@ Skala (1) menyatakan sangat tidak khawatir, sementara itu skala (5) menyatakan s
               inputs[0].value = sessionObject[question];
             }
           }
+        }
+        const formdata = JSON.parse(sessionStorage.getItem("FormData"));
+        if (formdata) {
+          rangeInput7.value = formdata.question7 || 1;
+          rangeInput8.value = formdata.question8 || 1;
+          rangeInput9.value = formdata.question9 || 1;
+          rangeInput10.value = formdata.question10 || 1;
+          rangeInput11.value = formdata.question11 || 1;
+          rangeInput12.value = formdata.question12 || 1;
+          rangeInput13.value = formdata.question13 || 1;
+          rangeInput14.value = formdata.question14 || 1;
         }
       }
 

@@ -36,7 +36,7 @@
               <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I must comprehend the materiality of accounting to enhance the accrual profit of the company).</i></p>
               <br />
               <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-              <input id="steps-range1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+              <input id="steps-range1" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
               <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
                 <span>1</span>
                 <span>2</span>
@@ -53,7 +53,7 @@
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(Expanding assistance to business associates, in boostimg accrual profit, is not a significant issue as no one is adversely affected).</i></p>
             <br />
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-            <input id="steps-range2" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <input id="steps-range2" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>1</span>
               <span>2</span>
@@ -70,7 +70,7 @@
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(Standard leasing errors are exploited by everyone).</i></p>
             <br />
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-            <input id="steps-range3" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <input id="steps-range3" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>1</span>
               <span>2</span>
@@ -89,7 +89,7 @@
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I will only engage proactively in the business process when I perceive obtaining future benefits).</i></p>
             <br />
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-            <input id="steps-range4" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <input id="steps-range4" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>1</span>
               <span>2</span>
@@ -106,7 +106,7 @@
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I continually strive to improve my understanding of accounting standards in relation to field practices).</i></p>
             <br />
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-            <input id="steps-range5" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <input id="steps-range5" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>1</span>
               <span>2</span>
@@ -123,7 +123,7 @@
             <p class="font-normal text-2xl text-gray-700 dark:text-gray-400 leading-relaxed"><i>(I enhance skills in increasing the capitalization value of assets to gain public legitimacy).</i></p>
             <br />
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
-            <input id="steps-range6" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
+            <input id="steps-range6" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>1</span>
               <span>2</span>
@@ -181,6 +181,48 @@
         }, 1000);
       }
 
+      var rangeInput1 = document.getElementById("steps-range1");
+      var rangeInput2 = document.getElementById("steps-range2");
+      var rangeInput3 = document.getElementById("steps-range3");
+      var rangeInput4 = document.getElementById("steps-range4");
+      var rangeInput5 = document.getElementById("steps-range5");
+      var rangeInput6 = document.getElementById("steps-range6");
+      rangeInput1.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question1 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput2.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question2 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput3.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question3 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput4.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question4 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput5.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question5 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
+      rangeInput6.addEventListener("input", function () {
+        const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        formData.question6 = this.value;
+        sessionStorage.setItem("FormData", JSON.stringify(formData));
+      });
+
       window.onload = function () {
         var time = timeStart, // your time in seconds here
           display = document.querySelector("#TimerDisplay");
@@ -198,6 +240,15 @@
             }
           }
         }
+        const formdata = JSON.parse(sessionStorage.getItem("FormData"));
+        if (formdata) {
+          rangeInput1.value = formdata.question1 || 1;
+          rangeInput2.value = formdata.question2 || 1;
+          rangeInput3.value = formdata.question3 || 1;
+          rangeInput4.value = formdata.question4 || 1;
+          rangeInput5.value = formdata.question5 || 1;
+          rangeInput6.value = formdata.question6 || 1;
+        }
       }
 
       const form = document.forms["forms_pak_chusni"];
@@ -207,9 +258,7 @@
 
         let tempStorage = JSON.parse(sessionStorage.getItem("FormData"));
         let formData = new FormData(form);
-        // for (var pair of formData.entries()) {
-        //   tempStorage[pair[0]] = pair[1];
-        // }
+
         let object = Object.fromEntries(formData.entries());
         object[timerNumber] = timer;
         tempStorage = { ...tempStorage, ...object };
@@ -218,7 +267,6 @@
 
         window.location.href = "frame!_value_2.html";
       }
-      var rangeInput = document.getElementById("steps-range");
     </script>
   </body>
 </html>
