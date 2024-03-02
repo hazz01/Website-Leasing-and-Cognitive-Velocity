@@ -19,7 +19,7 @@
       <form name="forms_pak_chusni">
         <div class="grid gap-6 mb-6 md:grid-cols-2">
           <div>
-            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama (<i>Name</i>)</label>
             <input
               type="text"
               name="nama"
@@ -43,7 +43,7 @@
           </div>
 
           <div>
-            <label for="umur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Umur</label>
+            <label for="umur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Umur (<i>Age</i>)</label>
             <input
               type="number"
               name="umur"
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="mb-6">
-          <label for="studi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Program Studi</label>
+          <label for="studi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Program Studi (<i>Department</i>)</label>
           <input
             type="text"
             name="program_studi"
@@ -78,7 +78,7 @@
         </div>
 
         <div class="mb-6">
-          <label for="universitas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Asal Universitas</label>
+          <label for="universitas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Asal Universitas (<i>University</i>)</label>
           <input
             type="text"
             name="asal_universitas"
@@ -89,7 +89,7 @@
           />
         </div>
         <div>
-          <label for="IPK" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Indeks Prestasi Kumulatif (IPK)</label>
+          <label for="IPK" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Indeks Prestasi Kumulatif (IPK/GPA)</label>
           <input
             type="number"
             name="IPK"
@@ -121,7 +121,7 @@
 
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
       import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
-    
+
       // Your web app's Firebase configuration
       const firebaseConfig = {
         apiKey: "AIzaSyBH5qtL-B41AXl3hm5ywcK6UcrWOxzKJb0",
@@ -130,50 +130,48 @@
         projectId: "web-leasing-cognitife-velocity",
         storageBucket: "web-leasing-cognitife-velocity.appspot.com",
         messagingSenderId: "759615616067",
-        appId: "1:759615616067:web:6dbfe6a0b7bc5d5cc550f6"
+        appId: "1:759615616067:web:6dbfe6a0b7bc5d5cc550f6",
       };
-    
+
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const database = getDatabase(app);
-      const webOpenRef = ref(database, 'Website/Open');
-      console.log('webOpen:', webOpenRef);
+      const webOpenRef = ref(database, "Website/Open");
+      console.log("webOpen:", webOpenRef);
 
       // Mendengarkan perubahan nilai pada path 'Website/Open'
       onValue(webOpenRef, (snapshot) => {
         const webOpenValue = snapshot.val();
-        console.log('Nilai terbaru dari Website/Open:', webOpenValue);
+        console.log("Nilai terbaru dari Website/Open:", webOpenValue);
 
         // Di sini, Anda dapat melakukan sesuatu dengan nilai boolean dari 'Website/Open'
         // Misalnya:
         if (webOpenValue) {
-          console.log('Website terbuka!');
+          console.log("Website terbuka!");
         } else {
-          console.log('Website tertutup!');
+          console.log("Website tertutup!");
           window.location.href = "frame-group-1/closed.html";
         }
       });
-
     </script>
 
     <script>
-
       // const fetch = require("node-fetch");
 
       // const deploymentId = "AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg";
-      // const url = `https://script.google.com/macros/s/${deploymentId}/exec`; 
+      // const url = `https://script.google.com/macros/s/${deploymentId}/exec`;
 
       // async function getValueClose() {
       //   try {
       //     // Perform the first fetch
       //     const response1 = await fetch(url, { method: "HEAD" });
       //     const redirectUrl = response1.headers.get("location");
-      // 
+      //
       //     if (redirectUrl) {
       //       // Perform the second fetch
       //       const response2 = await fetch(redirectUrl);
       //       const data = await response2.json();
-      // 
+      //
       //       // Redirect based on data.status
       //       if (data.status == false) {
       //         console.log("Redirecting to ./closed.html");
@@ -189,8 +187,8 @@
       //     console.error("Error:", error.message);
       //   }
       // }
-      // 
-      // getValueClose(); 
+      //
+      // getValueClose();
 
       function loadAnswers() {
         const session = sessionStorage.getItem("FormData");
