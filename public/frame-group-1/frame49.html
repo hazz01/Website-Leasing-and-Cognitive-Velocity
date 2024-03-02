@@ -183,8 +183,26 @@
                         />
                       </p>
                     </td>
-                    <td class="px-6 py-4"><p class="text-black" id="bigUndervalueTab7_B2">0</p></td>
-                    <td class="px-6 py-4"><p class="text-black" id="bigUndervalueTab7_B3">*(c) = (a) – (b)</p></td>
+                    <td class="px-6 py-4">
+                      <input
+                        type="number"
+                        id="bigUndervalueTab7_B2"
+                        name="bigUndervalueTab7_B2"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                        placeholder=""
+                        required
+                      />
+                    </td>
+                    <td class="px-6 py-4">
+                      <input
+                        type="number"
+                        id="bigUndervalueTab7_B3"
+                        name="bigUndervalueTab7_B3"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
+                        placeholder=""
+                        required
+                      />
+                    </td>
                     <td class="px-6 py-4">
                       <p class="text-black">
                         <input
@@ -667,12 +685,12 @@
       let fixrow2 = jsonObject.bigUndervalueTab5_B;
       let fiXrow3 = jsonObject.bigUndervalueTab5_C;
       let fixrow4 = jsonObject.bigUndervalueTab5_D;
-      console.log(fiXrow3);
-      inputB3 = parseInt(fixrow4, 10);
-      let b = document.querySelector("#bigUndervalueTab7_B2").innerHTML;
-      let BNumber = parseInt(b);
-      let AminB = fixrow4 - BNumber;
-      document.querySelector("#bigUndervalueTab7_B3").innerHTML = fixrow4;
+      // console.log(fiXrow3);
+      // inputB3 = parseInt(fixrow4, 10);
+      // let b = document.querySelector("#bigUndervalueTab7_B2").innerHTML;
+      // let BNumber = parseInt(b);
+      // let AminB = fixrow4 - BNumber;
+      // document.querySelector("#bigUndervalueTab7_B3").innerHTML = fixrow4;
 
       document.getElementById("rowA").textContent = fixrow1;
       document.getElementById("rowB").textContent = fixrow2;
@@ -700,8 +718,7 @@
       var inputH2 = document.getElementById("bigUndervalueTab7_H2");
       var inputI2 = document.getElementById("bigUndervalueTab7_I2");
 
-      var inputB3_ = document.getElementById("bigUndervalueTab7_B3");
-      // var inputB3 = parseFloat(inputB3_.textContent);
+      var inputB3 = document.getElementById("bigUndervalueTab7_B3");
       var inputA3 = document.getElementById("bigUndervalueTab7_A3");
       var inputC3 = document.getElementById("bigUndervalueTab7_C3");
       var inputD3 = document.getElementById("bigUndervalueTab7_D3");
@@ -749,7 +766,7 @@
       inputI2.addEventListener("input", () => updateTotal(2));
 
       inputA3.addEventListener("input", () => updateTotal(3));
-      // inputB3.addEventListener("input", () => updateTotal(3));
+      inputB3.addEventListener("input", () => updateTotal(3));
       inputC3.addEventListener("input", () => updateTotal(3));
       inputD3.addEventListener("input", () => updateTotal(3));
       inputE3.addEventListener("input", () => updateTotal(3));
@@ -793,7 +810,7 @@
         var valueI2 = parseFloat(inputI2.value) || 0;
 
         var valueA3 = parseFloat(inputA3.value) || 0;
-        // var valueB3 = parseFloat(inputB3.value) || 0;
+        var valueB3 = parseFloat(inputB3.value) || 0;
         var valueC3 = parseFloat(inputC3.value) || 0;
         var valueD3 = parseFloat(inputD3.value) || 0;
         var valueE3 = parseFloat(inputE3.value) || 0;
@@ -815,7 +832,7 @@
         // Menghitung total set pertama
         var total1 = valueA1 + valueB1 + valueC1 + valueD1 + valueE1 + valueF1 + valueG1 + valueH1 + valueI1;
         var total2 = valueA2 + valueB2 + valueC2 + valueD2 + valueE2 + valueF2 + valueG2 + valueH2 + valueI2;
-        var total3 = valueA3 + inputB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3 + valueI3;
+        var total3 = valueA3 + valueB3 + valueC3 + valueD3 + valueE3 + valueF3 + valueG3 + valueH3 + valueI3;
         var total4 = valueA4 + valueB4 + valueC4 + valueD4 + valueE4 + valueF4 + valueG4 + valueH4 + valueI4;
 
         console.log(total1 + " - " + total2 + " - " + total3 + " - " + total4);
@@ -836,8 +853,8 @@
           total2f49: total2,
           total3f49: total3,
           total4f49: total4,
-          bigUndervalueTab7_B2: valueB2,
-          bigUndervalueTab7_B3: inputB3,
+          // bigUndervalueTab7_B2: valueB2,
+          // bigUndervalueTab7_B3: inputB3,
         };
         sessionStorage.setItem("FormData", JSON.stringify(totalsObject));
       }
