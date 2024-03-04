@@ -594,11 +594,11 @@
         let jsonString = sessionStorage.getItem("FormData");
         let jsonObject = JSON.parse(jsonString);
         let fixG = jsonObject.total3f31;
-        let fixA = jsonObject.smallOvervalueTab1_D;
+        let fixA = jsonObject.smallOvervalueTab2_B3;
         let fixF = jsonObject.smallOvervalueTab2_C2;
         document.querySelector("#g").innerHTML = fixG;
-        document.querySelector("#f").innerHTML = fixF;
         document.querySelector("#a").innerHTML = fixA;
+        document.querySelector("#f").innerHTML = fixF;
       }
       tableDataInnner();
     </script>
