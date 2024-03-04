@@ -314,7 +314,21 @@
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
 
-        window.location.href = "frame16.html";
+        const randomPage = [16, 28, 40, 52][Math.floor(Math.random() * 4)];
+        console.log(randomPage.value)
+        if(randomPage === 16){
+          window.location.href = `frame16.html`;
+        } else if (randomPage === 28) {
+          window.location.href = `frame28.html`;
+        } else if (randomPage === 40) {
+          window.location.href = `frame40.html`;
+        } else if (randomPage === 52) {
+          window.location.href = `frame52.html`;
+        } else {
+          console.log("Error randomPage")
+        }
+        
+
       }
     </script>
   </body>
