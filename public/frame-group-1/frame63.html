@@ -81,12 +81,14 @@
                 <tbody>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <td class="px-6 py-4">Current Assets</td>
-                    <td class="px-6 py-4">453,500,200</td>
+                    <td class="px-6 py-4">
+                      <p id="currentAssets">453500200</p>
+                    </td>
                     <td class="px-6 py-4">Current Liabilities</td>
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id=""
+                        id="currentLiabilities"
                         name="bigOvervalueTab9_A1"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
@@ -99,18 +101,18 @@
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id=""
+                        id="nonCurrentAssets"
                         name="bigOvervalueTab9_B1"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
                       />
                     </td>
-                    <td class="px-6 py-4">Non Current Assets</td>
+                    <td class="px-6 py-4">Non Current Liabilities</td>
                     <td class="px-6 py-4">
                       <input
                         type="text"
-                        id=""
+                        id="nonCurrentLiabilities"
                         name="bigOvervalueTab9_B2"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
@@ -123,14 +125,7 @@
                     <td class="px-6 py-4"></td>
                     <td class="px-6 py-4">Total Liabilities</td>
                     <td class="px-6 py-4">
-                      <input
-                        type="text"
-                        id=""
-                        name="bigOvervalueTab9_C1"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                        placeholder=""
-                        required
-                      />
+                      <p id="totalLiabilities"></p>
                     </td>
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -143,30 +138,18 @@
                     <td class="px-6 py-4"></td>
                     <td class="px-6 py-4"></td>
                     <td class="px-6 py-4">Equity Total Liabilities</td>
-                    <td class="px-6 py-4">450,002,061</td>
+                    <td class="px-6 py-4">
+                      <p id="equityTotalLiabilities"></p>
+                    </td>
                   </tr>
                   <tr class="bg-white dark:bg-gray-800">
                     <td class="px-6 py-4">Total Assets</td>
                     <td class="px-6 py-4">
-                      <input
-                        type="text"
-                        id=""
-                        name="bigOvervalueTab9_D1"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                        placeholder=""
-                        required
-                      />
+                      <p id="totalAssets"></p>
                     </td>
                     <td class="px-6 py-4">Total Assets</td>
                     <td class="px-6 py-4">
-                      <input
-                        type="text"
-                        id=""
-                        name="bigOvervalueTab9_D2"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                        placeholder=""
-                        required
-                      />
+                      <p id="totalAssets1"></p>
                     </td>
                   </tr>
                 </tbody>
@@ -261,6 +244,43 @@
 
         window.location.href = "zSubmit.html";
       }
+
+      function updateTotal(){
+        let currentAssets = document.getElementById("currentAssets")
+        let nonCurrentAssets = document.getElementById("nonCurrentAssets")
+        let inputCurrentLiabilities = document.getElementById("currentLiabilities")
+        let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities")
+
+        let totalElement = document.getElementById("totalAssets1")
+        let totalElement1 = document.getElementById("totalAssets")
+        let totalElement2 = document.getElementById("totalLiabilities")
+        let totalElement3 = document.getElementById("equityTotalLiabilities")
+
+        let valueCurrent1 = parseFloat(currentAssets.textContent) || 0
+        let valueNonCurrent1 = parseFloat(nonCurrentAssets.value) || 0
+        
+        let valueCurrent2 = parseFloat(inputCurrentLiabilities.value) || 0
+        let valueNonCurrent2 = parseFloat(inputNonCurrentLiabilities.value) || 0
+
+        let total1 = valueCurrent1+valueNonCurrent1
+        let total2 = valueCurrent2+valueNonCurrent2
+        let total3 = total2 - total1
+
+        totalElement.innerHTML = total1
+        totalElement1.innerHTML = total1
+        totalElement2.innerHTML = total2
+        totalElement3.innerHTML = total3
+      }
+
+      let inputNonCurrentAssets = document.getElementById("nonCurrentAssets")
+      let inputCurrentLiabilities = document.getElementById("currentLiabilities")
+      let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities")
+
+      inputNonCurrentAssets.addEventListener("input", updateTotal)
+      inputCurrentLiabilities.addEventListener("input", updateTotal)
+      inputNonCurrentLiabilities.addEventListener("input", updateTotal)
+
+      updateTotal()
       // let JsonObjects = sessionStorage.getItem("FormData");
       // let JsonObjetcs = JSON.parse(JsonObjects);
       // let Timerframe1 = JsonObjects(timerframe1);
@@ -283,6 +303,7 @@
       //     .catch((error) => console.error("Error!", error.message));
       //   window.location.href = "zSubmit.html";
       // }
+      
     </script>
   </body>
 </html>
