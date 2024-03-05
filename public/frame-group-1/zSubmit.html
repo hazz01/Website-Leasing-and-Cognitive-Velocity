@@ -85,6 +85,8 @@
       let timerNumber59 = "timer59";
       let timerNumber60 = "timer60";
       let timerNumber61 = "timer61";
+      let timerNumber62 = "timer62";
+      let timerNumber63 = "timer63";
 
       let timeStart18 = parseInt(sessionStorage.getItem(timerNumber18)) || 0;
       let timeStart19 = parseInt(sessionStorage.getItem(timerNumber19)) || 0;
@@ -130,6 +132,8 @@
       let timeStart59 = parseInt(sessionStorage.getItem(timerNumber59)) || 0;
       let timeStart60 = parseInt(sessionStorage.getItem(timerNumber60)) || 0;
       let timeStart61 = parseInt(sessionStorage.getItem(timerNumber61)) || 0;
+      let timeStart62 = parseInt(sessionStorage.getItem(timerNumber62)) || 0;
+      let timeStart63 = parseInt(sessionStorage.getItem(timerNumber63)) || 0;
 
       function startTimer(duration, timerNumber) {
         let timer = duration;
@@ -188,6 +192,8 @@
         let time59 = timeStart59;
         let time60 = timeStart60;
         let time61 = timeStart61;
+        let time62 = timeStart62;
+        let time63 = timeStart63;
 
         startTimer(time18, timerNumber18);
         startTimer(time19, timerNumber19);
@@ -233,6 +239,8 @@
         startTimer(time59, timerNumber59);
         startTimer(time60, timerNumber60);
         startTimer(time61, timerNumber61);
+        startTimer(time62, timerNumber62);
+        startTimer(time63, timerNumber63);
 
         let storedTotal18 = sessionStorage.getItem(timerNumber18);
         let storedTotal19 = sessionStorage.getItem(timerNumber19);
@@ -278,6 +286,8 @@
         let storedTotal59 = sessionStorage.getItem(timerNumber59);
         let storedTotal60 = sessionStorage.getItem(timerNumber60);
         let storedTotal61 = sessionStorage.getItem(timerNumber61);
+        let storedTotal62 = sessionStorage.getItem(timerNumber62);
+        let storedTotal63 = sessionStorage.getItem(timerNumber63);
 
         if (storedTotal18 !== null && storedTotal19 !== null) {
           let totalSeconds =
@@ -324,10 +334,16 @@
             parseInt(storedTotal58) +
             parseInt(storedTotal59) +
             parseInt(storedTotal60) +
-            parseInt(storedTotal61);
+            parseInt(storedTotal61) +
+            parseInt(storedTotal62) +
+            parseInt(storedTotal63);
           // let totalSeconds = parseInt(storedTotal18) + parseInt(storedTotal19);
           console.log("Total time:", totalSeconds);
-          sessionStorage.setItem("totalSeconds", totalSeconds);
+          // let objStorage = JSON.parse(sessionStorage.getItem("FormData"));
+          const TotalSecond = {
+            totalSeconds: totalSeconds,
+          };
+          sessionStorage.setItem("FormData", JSON.stringify(TotalSecond));
 
           // Debugging: Log the total time to the console
           console.log("Total time:", totalSeconds);
