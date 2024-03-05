@@ -62,12 +62,12 @@
                   <tbody>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                       <td class="px-6 py-4">Current Assets</td>
-                      <td class="px-6 py-4">1,487,800,300</td>
+                      <td class="px-6 py-4"><p id="currentAsset">1475800300</p></td>
                       <td class="px-6 py-4">Current Liabilities</td>
                       <td class="px-6 py-4">
                         <input
                           type="text"
-                          id=""
+                          id="smallUndervalueTab4_A1"
                           name="smallUndervalueTab4_A1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
@@ -80,18 +80,18 @@
                       <td class="px-6 py-4">
                         <input
                           type="text"
-                          id=""
+                          id="mallUndervalueTab4_B1"
                           name="smallUndervalueTab4_B1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
                         />
                       </td>
-                      <td class="px-6 py-4">Non Current Assets</td>
+                      <td class="px-6 py-4">Non Current Liabilities</td>
                       <td class="px-6 py-4">
                         <input
                           type="text"
-                          id=""
+                          id="smallUndervalueTab4_B2"
                           name="smallUndervalueTab4_B2"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
@@ -104,14 +104,7 @@
                       <td class="px-6 py-4"></td>
                       <td class="px-6 py-4">Total Liabilities</td>
                       <td class="px-6 py-4">
-                        <input
-                          type="text"
-                          id=""
-                          name="smallUndervalueTab4_C1"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
+                        <p id="totalLiabilities"></p>
                       </td>
                     </tr>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -124,30 +117,26 @@
                       <td class="px-6 py-4"></td>
                       <td class="px-6 py-4"></td>
                       <td class="px-6 py-4">Equity Total Liabilities</td>
-                      <td class="px-6 py-4">1,447,346,,409</td>
+                      <td class="px-6 py-4">                      
+                        <p id="equityTotalLiabilities">0</p>
+                      </td>
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
                       <td class="px-6 py-4">Total Assets</td>
                       <td class="px-6 py-4">
-                        <input
+                        <!-- <input
                           type="text"
                           id=""
                           name="smallUndervalueTab4_D1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
                           required
-                        />
+                        /> -->
+                        <p id="totalAssets">0</p>
                       </td>
                       <td class="px-6 py-4">Total Assets</td>
                       <td class="px-6 py-4">
-                        <input
-                          type="text"
-                          id=""
-                          name="smallUndervalueTab4_D2"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
-                          placeholder=""
-                          required
-                        />
+                        <p id="totalAssets1">0</p>
                       </td>
                     </tr>
                   </tbody>
@@ -237,6 +226,79 @@
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
         window.location.href = "frame22.html";
       }
+
+      // Menampilkan Total Assets
+      //let jsonString = sessionStorage.getItem("FormData");
+      //let jsonObject = JSON.parse(jsonString);
+      
+      
+      
+      //let inputNonCurrentAssets = document.getElementById("smallUndervalueTab4_B1");
+      //let currentAssets = document.getElementById("currentAsset").innerHTML
+      //inputNonCurrentAssets.addEventListener("input", () => updateTotal())
+//
+      //function updateTotal() {
+      //  let valueNonCurrent = parseFloat(inputNonCurrentAssets.value) || 0;
+      //  let valueCurrent = parseFloat(currentAssets) || 0
+//
+      //  let total1 = valueCurrent + valueNonCurrent;
+      //  const a = "dhbhjdhsbds";
+//
+      //  let totalElement1 = document.getElementById("totalAssets").innerHTML
+      //    totalElement1.innerHTML = total1;
+      //
+      //}
+
+      function updateTotal() {
+        let inputNonCurrentAssets = document.getElementById("mallUndervalueTab4_B1");
+        let currentAssetsElement = document.getElementById("currentAsset");
+        let totalElement1 = document.getElementById("totalAssets");
+        let totalElement = document.getElementById("totalAssets1");
+        let totalElement2 = document.getElementById("totalLiabilities")
+        let totalElement3 = document.getElementById("equityTotalLiabilities")
+        let inputCurrentLiabilities = document.getElementById("smallUndervalueTab4_A1")
+        let inputNonCurrentLiabilities = document.getElementById("smallUndervalueTab4_B2")
+      
+        let valueNonCurrent1 = parseFloat(inputNonCurrentAssets.value) || 0;
+        let valueCurrent1 = parseFloat(currentAssetsElement.textContent) || 0;
+
+        let valueCurrent2 = parseFloat(inputCurrentLiabilities.value) || 0
+        let valueNonCurrent2 = parseFloat(inputNonCurrentLiabilities.value) || 0
+
+      
+        let total1 = valueCurrent1 + valueNonCurrent1;
+        let total2 = valueCurrent2 + valueNonCurrent2
+        let total3 = total2 - total1
+        
+        totalElement.innerHTML = total1
+        totalElement1.innerHTML = total1;
+        totalElement2.innerHTML = total2
+        totalElement3.innerHTML = total3
+      }
+      
+      // Attach the event listener to the input field
+      let inputNonCurrentLiabilities = document.getElementById("smallUndervalueTab4_B2")
+      let inputCurrentLiabilities = document.getElementById("smallUndervalueTab4_A1")
+      let inputNonCurrentAssets = document.getElementById("mallUndervalueTab4_B1");
+      inputNonCurrentAssets.addEventListener("input", updateTotal);
+      inputCurrentLiabilities.addEventListener("input", updateTotal);
+      inputNonCurrentLiabilities.addEventListener("input", updateTotal);
+      
+      
+      // Initial update on page load
+      updateTotal();
+      
+      
+
+
+
+
+
+
+      console.log(currentAssets)
+      // Elemen untuk total
+      let totalAssets = document.getElementByName("smallUndervalueTab4_D1")
+      
     </script>
   </body>
 </html>
