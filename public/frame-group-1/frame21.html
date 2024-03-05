@@ -79,8 +79,9 @@
                       <td class="px-6 py-4">Non Current Assets</td>
                       <td class="px-6 py-4">
                         <input
-                          type="text"
-                          id="mallUndervalueTab4_B1"
+
+                          type="number"
+                          id="smallUndervalueTab4_B1"
                           name="smallUndervalueTab4_B1"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                           placeholder=""
@@ -123,7 +124,10 @@
                     </tr>
                     <tr class="bg-white dark:bg-gray-800">
                       <td class="px-6 py-4">Total Assets</td>
-                      <td class="px-6 py-4">
+
+                      <td class="px-6 py-4" id="smallUndervalueTab4_D1">
+                        0
+                        <!-- <td class="px-6 py-4"></td> -->
                         <!-- <input
                           type="text"
                           id=""
@@ -137,6 +141,7 @@
                       <td class="px-6 py-4">Total Assets</td>
                       <td class="px-6 py-4">
                         <p id="totalAssets1">0</p>
+
                       </td>
                     </tr>
                   </tbody>
@@ -199,6 +204,30 @@
           display = document.querySelector("#TimerDisplay");
         startTimer(time, display);
       };
+
+      var inputA1 = document.getElementById("smallUndervalueTab4_B1");
+      console.debug(inputA1)
+      var totalElement1 = document.getElementById("smallUndervalueTab4_D1");
+      var totalElement2 = document.getElementById("smallUndervalueTab4_D2");
+      inputA1.addEventListener("input", () => updateTotal(1));
+
+      function updateTotal(totalFor) {
+        var valueA1 = parseFloat(inputA1.value) || 0;
+
+        var total1 = valueA1 + 1487800300;
+        var total2 = valueA1 + 1;
+        console.log(total1);
+
+        if (totalFor === 1) {
+          totalElement1.textContent = total1;
+          console.log("total 1 done")
+        } else if (totalFor === 2) {
+          totalElement2.textContent = total2;
+        }
+      }
+
+
+
 
       function loadAnswers() {
         const session = sessionStorage.getItem("FormData");

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Leasing and Cognitive Velocity</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-color-main-bg">
+    <section class="max-w-3xl mx-auto mb-32 p-10 bg-white rounded-lg mt-56">
+      <h5 class="mb-2 text-2xl font-bold text-center text-gray-900 dark:text-white">Pertanyaan Anda sudah tersimpan, klik tombol submit dibawah ini untuk mengirim jawaban anda</h5>
+      <form name="forms_pak_chusni">
+        <div class="flex justify-center w-full mt-10">
+          <div class="w-5"></div>
+          <button
+            onclick="saveAnswer()"
+            type="submit"
+            class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 btn-kirim"
+          >
+            Kirim
+          </button>
+          <button
+            disabled
+            type="button"
+            class="btn-loading text-white bg-indigo-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3 text-center me-2 dark:bg-primary-color dark:focus:ring-blue-800 items-center hidden mt-5"
+          >
+            <svg aria-hidden="true" role="status" class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="#E5E7EB"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentColor"
+              />
+            </svg>
+            Loading...
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      let timerNumber18 = "timer18";
+      let timerNumber19 = "timer19";
+      let timerNumber20 = "timer20";
+      let timerNumber21 = "timer21";
+      let timerNumber22 = "timer22";
+      let timerNumber23 = "timer23";
+      let timerNumber24 = "timer24";
+      let timerNumber25 = "timer25";
+      let timerNumber26 = "timer26";
+      let timerNumber27 = "timer27";
+      let timerNumber28 = "timer28";
+      let timerNumber29 = "timer29";
+      let timerNumber30 = "timer30";
+      let timerNumber31 = "timer31";
+      let timerNumber32 = "timer32";
+      let timerNumber33 = "timer33";
+      let timerNumber34 = "timer34";
+      let timerNumber35 = "timer35";
+      let timerNumber36 = "timer36";
+      let timerNumber37 = "timer37";
+      let timerNumber38 = "timer38";
+      let timerNumber39 = "timer39";
+      let timerNumber40 = "timer40";
+      let timerNumber41 = "timer41";
+      let timerNumber42 = "timer42";
+      let timerNumber43 = "timer43";
+      let timerNumber44 = "timer44";
+      let timerNumber45 = "timer45";
+      let timerNumber46 = "timer46";
+      let timerNumber47 = "timer47";
+      let timerNumber48 = "timer48";
+      let timerNumber49 = "timer49";
+      let timerNumber50 = "timer50";
+      let timerNumber51 = "timer51";
+      let timerNumber52 = "timer52";
+      let timerNumber53 = "timer53";
+      let timerNumber54 = "timer54";
+      let timerNumber55 = "timer55";
+      let timerNumber56 = "timer56";
+      let timerNumber57 = "timer57";
+      let timerNumber58 = "timer58";
+      let timerNumber59 = "timer59";
+      let timerNumber60 = "timer60";
+      let timerNumber61 = "timer61";
+      let timerNumber62 = "timer62";
+      let timerNumber63 = "timer63";
+
+      let timeStart18 = parseInt(sessionStorage.getItem(timerNumber18)) || 0;
+      let timeStart19 = parseInt(sessionStorage.getItem(timerNumber19)) || 0;
+      let timeStart20 = parseInt(sessionStorage.getItem(timerNumber20)) || 0;
+      let timeStart21 = parseInt(sessionStorage.getItem(timerNumber21)) || 0;
+      let timeStart22 = parseInt(sessionStorage.getItem(timerNumber22)) || 0;
+      let timeStart23 = parseInt(sessionStorage.getItem(timerNumber23)) || 0;
+      let timeStart24 = parseInt(sessionStorage.getItem(timerNumber24)) || 0;
+      let timeStart25 = parseInt(sessionStorage.getItem(timerNumber25)) || 0;
+      let timeStart26 = parseInt(sessionStorage.getItem(timerNumber26)) || 0;
+      let timeStart27 = parseInt(sessionStorage.getItem(timerNumber27)) || 0;
+      let timeStart28 = parseInt(sessionStorage.getItem(timerNumber28)) || 0;
+      let timeStart29 = parseInt(sessionStorage.getItem(timerNumber29)) || 0;
+      let timeStart30 = parseInt(sessionStorage.getItem(timerNumber30)) || 0;
+      let timeStart31 = parseInt(sessionStorage.getItem(timerNumber31)) || 0;
+      let timeStart32 = parseInt(sessionStorage.getItem(timerNumber32)) || 0;
+      let timeStart33 = parseInt(sessionStorage.getItem(timerNumber33)) || 0;
+      let timeStart34 = parseInt(sessionStorage.getItem(timerNumber34)) || 0;
+      let timeStart35 = parseInt(sessionStorage.getItem(timerNumber35)) || 0;
+      let timeStart36 = parseInt(sessionStorage.getItem(timerNumber36)) || 0;
+      let timeStart37 = parseInt(sessionStorage.getItem(timerNumber37)) || 0;
+      let timeStart38 = parseInt(sessionStorage.getItem(timerNumber38)) || 0;
+      let timeStart39 = parseInt(sessionStorage.getItem(timerNumber39)) || 0;
+      let timeStart40 = parseInt(sessionStorage.getItem(timerNumber30)) || 0;
+      let timeStart41 = parseInt(sessionStorage.getItem(timerNumber41)) || 0;
+      let timeStart42 = parseInt(sessionStorage.getItem(timerNumber42)) || 0;
+      let timeStart43 = parseInt(sessionStorage.getItem(timerNumber43)) || 0;
+      let timeStart44 = parseInt(sessionStorage.getItem(timerNumber44)) || 0;
+      let timeStart45 = parseInt(sessionStorage.getItem(timerNumber45)) || 0;
+      let timeStart46 = parseInt(sessionStorage.getItem(timerNumber46)) || 0;
+      let timeStart47 = parseInt(sessionStorage.getItem(timerNumber47)) || 0;
+      let timeStart48 = parseInt(sessionStorage.getItem(timerNumber48)) || 0;
+      let timeStart49 = parseInt(sessionStorage.getItem(timerNumber49)) || 0;
+      let timeStart50 = parseInt(sessionStorage.getItem(timerNumber40)) || 0;
+      let timeStart51 = parseInt(sessionStorage.getItem(timerNumber51)) || 0;
+      let timeStart52 = parseInt(sessionStorage.getItem(timerNumber52)) || 0;
+      let timeStart53 = parseInt(sessionStorage.getItem(timerNumber53)) || 0;
+      let timeStart54 = parseInt(sessionStorage.getItem(timerNumber54)) || 0;
+      let timeStart55 = parseInt(sessionStorage.getItem(timerNumber55)) || 0;
+      let timeStart56 = parseInt(sessionStorage.getItem(timerNumber56)) || 0;
+      let timeStart57 = parseInt(sessionStorage.getItem(timerNumber57)) || 0;
+      let timeStart58 = parseInt(sessionStorage.getItem(timerNumber58)) || 0;
+      let timeStart59 = parseInt(sessionStorage.getItem(timerNumber59)) || 0;
+      let timeStart60 = parseInt(sessionStorage.getItem(timerNumber60)) || 0;
+      let timeStart61 = parseInt(sessionStorage.getItem(timerNumber61)) || 0;
+      let timeStart62 = parseInt(sessionStorage.getItem(timerNumber62)) || 0;
+      let timeStart63 = parseInt(sessionStorage.getItem(timerNumber63)) || 0;
+
+      function startTimer(duration, timerNumber) {
+        let timer = duration;
+
+        let t = setInterval(function () {
+          sessionStorage.setItem(timerNumber, timer);
+
+          if (--timer < 0) {
+            clearInterval(t);
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        let time18 = timeStart18;
+        let time19 = timeStart19;
+        let time20 = timeStart20;
+        let time21 = timeStart21;
+        let time22 = timeStart22;
+        let time23 = timeStart23;
+        let time24 = timeStart24;
+        let time25 = timeStart25;
+        let time26 = timeStart26;
+        let time27 = timeStart27;
+        let time28 = timeStart28;
+        let time29 = timeStart29;
+        let time30 = timeStart30;
+        let time31 = timeStart31;
+        let time32 = timeStart32;
+        let time33 = timeStart33;
+        let time34 = timeStart34;
+        let time35 = timeStart35;
+        let time36 = timeStart36;
+        let time37 = timeStart37;
+        let time38 = timeStart38;
+        let time39 = timeStart39;
+        let time40 = timeStart40;
+        let time41 = timeStart41;
+        let time42 = timeStart42;
+        let time43 = timeStart43;
+        let time44 = timeStart44;
+        let time45 = timeStart45;
+        let time46 = timeStart46;
+        let time47 = timeStart47;
+        let time48 = timeStart48;
+        let time49 = timeStart49;
+        let time50 = timeStart50;
+        let time51 = timeStart51;
+        let time52 = timeStart52;
+        let time53 = timeStart53;
+        let time54 = timeStart54;
+        let time55 = timeStart55;
+        let time56 = timeStart56;
+        let time57 = timeStart57;
+        let time58 = timeStart58;
+        let time59 = timeStart59;
+        let time60 = timeStart60;
+        let time61 = timeStart61;
+        let time62 = timeStart62;
+        let time63 = timeStart63;
+
+        startTimer(time18, timerNumber18);
+        startTimer(time19, timerNumber19);
+        startTimer(time20, timerNumber20);
+        startTimer(time21, timerNumber21);
+        startTimer(time22, timerNumber22);
+        startTimer(time23, timerNumber23);
+        startTimer(time24, timerNumber24);
+        startTimer(time25, timerNumber25);
+        startTimer(time26, timerNumber26);
+        startTimer(time27, timerNumber27);
+        startTimer(time28, timerNumber28);
+        startTimer(time29, timerNumber29);
+        startTimer(time30, timerNumber30);
+        startTimer(time31, timerNumber31);
+        startTimer(time32, timerNumber32);
+        startTimer(time33, timerNumber33);
+        startTimer(time34, timerNumber34);
+        startTimer(time35, timerNumber35);
+        startTimer(time36, timerNumber36);
+        startTimer(time37, timerNumber37);
+        startTimer(time38, timerNumber38);
+        startTimer(time39, timerNumber39);
+        startTimer(time40, timerNumber40);
+        startTimer(time41, timerNumber41);
+        startTimer(time42, timerNumber42);
+        startTimer(time43, timerNumber43);
+        startTimer(time44, timerNumber44);
+        startTimer(time45, timerNumber45);
+        startTimer(time46, timerNumber46);
+        startTimer(time47, timerNumber47);
+        startTimer(time48, timerNumber48);
+        startTimer(time49, timerNumber49);
+        startTimer(time50, timerNumber50);
+        startTimer(time51, timerNumber51);
+        startTimer(time52, timerNumber52);
+        startTimer(time53, timerNumber53);
+        startTimer(time54, timerNumber54);
+        startTimer(time55, timerNumber55);
+        startTimer(time56, timerNumber56);
+        startTimer(time57, timerNumber57);
+        startTimer(time58, timerNumber58);
+        startTimer(time59, timerNumber59);
+        startTimer(time60, timerNumber60);
+        startTimer(time61, timerNumber61);
+        startTimer(time62, timerNumber62);
+        startTimer(time63, timerNumber63);
+
+        let storedTotal18 = sessionStorage.getItem(timerNumber18);
+        let storedTotal19 = sessionStorage.getItem(timerNumber19);
+        let storedTotal20 = sessionStorage.getItem(timerNumber20);
+        let storedTotal21 = sessionStorage.getItem(timerNumber21);
+        let storedTotal22 = sessionStorage.getItem(timerNumber22);
+        let storedTotal23 = sessionStorage.getItem(timerNumber23);
+        let storedTotal24 = sessionStorage.getItem(timerNumber24);
+        let storedTotal25 = sessionStorage.getItem(timerNumber25);
+        let storedTotal26 = sessionStorage.getItem(timerNumber26);
+        let storedTotal27 = sessionStorage.getItem(timerNumber27);
+        let storedTotal28 = sessionStorage.getItem(timerNumber28);
+        let storedTotal29 = sessionStorage.getItem(timerNumber29);
+        let storedTotal30 = sessionStorage.getItem(timerNumber30);
+        let storedTotal31 = sessionStorage.getItem(timerNumber31);
+        let storedTotal32 = sessionStorage.getItem(timerNumber32);
+        let storedTotal33 = sessionStorage.getItem(timerNumber33);
+        let storedTotal34 = sessionStorage.getItem(timerNumber34);
+        let storedTotal35 = sessionStorage.getItem(timerNumber35);
+        let storedTotal36 = sessionStorage.getItem(timerNumber36);
+        let storedTotal37 = sessionStorage.getItem(timerNumber37);
+        let storedTotal38 = sessionStorage.getItem(timerNumber38);
+        let storedTotal39 = sessionStorage.getItem(timerNumber39);
+        let storedTotal40 = sessionStorage.getItem(timerNumber40);
+        let storedTotal41 = sessionStorage.getItem(timerNumber41);
+        let storedTotal42 = sessionStorage.getItem(timerNumber42);
+        let storedTotal43 = sessionStorage.getItem(timerNumber43);
+        let storedTotal44 = sessionStorage.getItem(timerNumber44);
+        let storedTotal45 = sessionStorage.getItem(timerNumber45);
+        let storedTotal46 = sessionStorage.getItem(timerNumber46);
+        let storedTotal47 = sessionStorage.getItem(timerNumber47);
+        let storedTotal48 = sessionStorage.getItem(timerNumber48);
+        let storedTotal49 = sessionStorage.getItem(timerNumber49);
+        let storedTotal50 = sessionStorage.getItem(timerNumber50);
+        let storedTotal51 = sessionStorage.getItem(timerNumber51);
+        let storedTotal52 = sessionStorage.getItem(timerNumber52);
+        let storedTotal53 = sessionStorage.getItem(timerNumber53);
+        let storedTotal54 = sessionStorage.getItem(timerNumber54);
+        let storedTotal55 = sessionStorage.getItem(timerNumber55);
+        let storedTotal56 = sessionStorage.getItem(timerNumber56);
+        let storedTotal57 = sessionStorage.getItem(timerNumber57);
+        let storedTotal58 = sessionStorage.getItem(timerNumber58);
+        let storedTotal59 = sessionStorage.getItem(timerNumber59);
+        let storedTotal60 = sessionStorage.getItem(timerNumber60);
+        let storedTotal61 = sessionStorage.getItem(timerNumber61);
+        let storedTotal62 = sessionStorage.getItem(timerNumber62);
+        let storedTotal63 = sessionStorage.getItem(timerNumber63);
+
+        if (storedTotal18 !== null && storedTotal19 !== null) {
+          let totalSeconds =
+            parseInt(storedTotal18) +
+            parseInt(storedTotal19) +
+            parseInt(storedTotal20) +
+            parseInt(storedTotal21) +
+            parseInt(storedTotal22) +
+            parseInt(storedTotal23) +
+            parseInt(storedTotal24) +
+            parseInt(storedTotal25) +
+            parseInt(storedTotal26) +
+            parseInt(storedTotal27) +
+            parseInt(storedTotal28) +
+            parseInt(storedTotal29) +
+            parseInt(storedTotal30) +
+            parseInt(storedTotal31) +
+            parseInt(storedTotal32) +
+            parseInt(storedTotal33) +
+            parseInt(storedTotal34) +
+            parseInt(storedTotal35) +
+            parseInt(storedTotal36) +
+            parseInt(storedTotal37) +
+            parseInt(storedTotal38) +
+            parseInt(storedTotal39) +
+            parseInt(storedTotal40) +
+            parseInt(storedTotal41) +
+            parseInt(storedTotal42) +
+            parseInt(storedTotal43) +
+            parseInt(storedTotal44) +
+            parseInt(storedTotal45) +
+            parseInt(storedTotal46) +
+            parseInt(storedTotal47) +
+            parseInt(storedTotal48) +
+            parseInt(storedTotal49) +
+            parseInt(storedTotal50) +
+            parseInt(storedTotal51) +
+            parseInt(storedTotal52) +
+            parseInt(storedTotal53) +
+            parseInt(storedTotal54) +
+            parseInt(storedTotal55) +
+            parseInt(storedTotal56) +
+            parseInt(storedTotal57) +
+            parseInt(storedTotal58) +
+            parseInt(storedTotal59) +
+            parseInt(storedTotal60) +
+            parseInt(storedTotal61) +
+            parseInt(storedTotal62) +
+            parseInt(storedTotal63);
+          // let totalSeconds = parseInt(storedTotal18) + parseInt(storedTotal19);
+          console.log("Total time:", totalSeconds);
+          // let objStorage = JSON.parse(sessionStorage.getItem("FormData"));
+          const TotalSecond = {
+            totalSeconds: totalSeconds,
+          };
+          sessionStorage.setItem("FormData", JSON.stringify(TotalSecond));
+
+          // Debugging: Log the total time to the console
+          console.log("Total time:", totalSeconds);
+        }
+      };
+      function loadAnswers() {
+        const session = sessionStorage.getItem("FormData");
+        if (session) {
+          const sessionObject = JSON.parse(session);
+          for (var question in sessionObject) {
+            const inputs = document.getElementsByName(question);
+            if (inputs) {
+              inputs[0].value = sessionObject[question];
+            }
+          }
+        }
+      }
+
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      //   const btnBack = document.querySelector(".btn-back");
+
+      const form = document.forms["forms_pak_chusni"];
+      form.addEventListener("submit", saveAnswer);
+
+      function saveAnswer(e) {
+        e.preventDefault(); // Mencegah pengiriman formulir secara default
+
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+
+        btnLoading.classList.toggle("hidden");
+        btnKirim.classList.toggle("hidden");
+
+        const tempStorage = JSON.parse(sessionStorage.getItem("FormData")) || {};
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData.entries());
+        const timer = "timer"; // Timer harus didefinisikan atau disesuaikan dengan kebutuhan Anda
+        object[timer] = timer; // Masukkan timer ke dalam data formulir
+        const updatedData = { ...tempStorage, ...object };
+        sessionStorage.setItem("FormData", JSON.stringify(updatedData));
+
+        // Panggil fungsi submit setelah menyimpan data
+        submit();
+      }
+
+      function submit() {
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
+        const formData = new FormData();
+        const storage = JSON.parse(sessionStorage.getItem("FormData"));
+
+        // Tambahkan data ke FormData
+        Object.keys(storage).forEach((key) => formData.append(key, storage[key]));
+
+        // Kirim data menggunakan fetch API
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            console.log("Success!", response);
+            // Redirect setelah berhasil mengirim data
+            window.location.href = "end.html";
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            // Handle error jika terjadi
+          });
+      }
+    </script>
+  </body>
+</html>
