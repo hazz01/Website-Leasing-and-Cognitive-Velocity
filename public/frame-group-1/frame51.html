@@ -88,7 +88,6 @@
                       <input
                         type="text"
                         id="currentLiabilities"
-                        name="bigUndervalueTab9_A1"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
@@ -101,7 +100,6 @@
                       <input
                         type="text"
                         id="nonCurrentAssets"
-                        name="bigUndervalueTab9_B1"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
@@ -112,7 +110,6 @@
                       <input
                         type="text"
                         id="nonCurrentLiabilities"
-                        name="bigUndervalueTab9_B2"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 abso"
                         placeholder=""
                         required
@@ -169,7 +166,7 @@
           </button>
           <div class="w-5"></div>
           <button
-            onclick="saveAnswer();javascript:history.forward()"
+            onclick="saveAnswer();updateSession();javascript:history.forward()"
             type="button"
             class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800"
           >
@@ -238,42 +235,66 @@
 
         window.location.href = "frame52.html";
       }
-      function updateTotal(){
-        let currentAssets = document.getElementById("currentAssets")
-        let nonCurrentAssets = document.getElementById("nonCurrentAssets")
-        let inputCurrentLiabilities = document.getElementById("currentLiabilities")
-        let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities")
+      function updateTotal() {
+        let currentAssets = document.getElementById("currentAssets");
+        let nonCurrentAssets = document.getElementById("nonCurrentAssets");
+        let inputCurrentLiabilities = document.getElementById("currentLiabilities");
+        let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities");
 
-        let totalElement = document.getElementById("totalAssets1")
-        let totalElement1 = document.getElementById("totalAssets")
-        let totalElement2 = document.getElementById("totalLiabilities")
-        let totalElement3 = document.getElementById("equityTotalLiabilities")
+        let totalElement = document.getElementById("totalAssets1");
+        let totalElement1 = document.getElementById("totalAssets");
+        let totalElement2 = document.getElementById("totalLiabilities");
+        let totalElement3 = document.getElementById("equityTotalLiabilities");
 
-        let valueCurrent1 = parseFloat(currentAssets.textContent) || 0
-        let valueNonCurrent1 = parseFloat(nonCurrentAssets.value) || 0
-        
-        let valueCurrent2 = parseFloat(inputCurrentLiabilities.value) || 0
-        let valueNonCurrent2 = parseFloat(inputNonCurrentLiabilities.value) || 0
+        let valueCurrent1 = parseFloat(currentAssets.textContent) || 0;
+        let valueNonCurrent1 = parseFloat(nonCurrentAssets.value) || 0;
 
-        let total1 = valueCurrent1+valueNonCurrent1
-        let total2 = valueCurrent2+valueNonCurrent2
-        let total3 = total2 - total1
+        let valueCurrent2 = parseFloat(inputCurrentLiabilities.value) || 0;
+        let valueNonCurrent2 = parseFloat(inputNonCurrentLiabilities.value) || 0;
 
-        totalElement.innerHTML = total1
-        totalElement1.innerHTML = total1
-        totalElement2.innerHTML = total2
-        totalElement3.innerHTML = total3
+        let total1 = valueCurrent1 + valueNonCurrent1;
+        let total2 = valueCurrent2 + valueNonCurrent2;
+        let total3 = total2 - total1;
+
+        totalElement.innerHTML = total1;
+        totalElement1.innerHTML = total1;
+        totalElement2.innerHTML = total2;
+        totalElement3.innerHTML = total3;
       }
 
-      let inputNonCurrentAssets = document.getElementById("nonCurrentAssets")
-      let inputCurrentLiabilities = document.getElementById("currentLiabilities")
-      let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities")
+      let inputNonCurrentAssets = document.getElementById("nonCurrentAssets");
+      let inputCurrentLiabilities = document.getElementById("currentLiabilities");
+      let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities");
 
-      inputNonCurrentAssets.addEventListener("input", updateTotal)
-      inputCurrentLiabilities.addEventListener("input", updateTotal)
-      inputNonCurrentLiabilities.addEventListener("input", updateTotal)
+      inputNonCurrentAssets.addEventListener("input", updateTotal);
+      inputCurrentLiabilities.addEventListener("input", updateTotal);
+      inputNonCurrentLiabilities.addEventListener("input", updateTotal);
 
-      updateTotal()
+      updateTotal();
+
+      function updateSession() {
+        let inputNonCurrentAssets = document.getElementById("nonCurrentAssets").value;
+        let inputCurrentLiabilities = document.getElementById("currentLiabilities").value;
+        let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities").value;
+
+        let currentAssets = document.getElementById("currentAssets").innerHTML;
+        let totalElement = document.getElementById("totalAssets1").innerHTML;
+        let totalElement1 = document.getElementById("totalAssets").innerHTML;
+        let totalElement2 = document.getElementById("totalLiabilities").innerHTML;
+        let totalElement3 = document.getElementById("equityTotalLiabilities").innerHTML;
+
+        const totalFixElement = {
+          bigUndervalueTab9_A1: currentAssets,
+          bigUndervalueTab9_A2: inputCurrentLiabilities,
+          bigUndervalueTab9_B1: inputNonCurrentAssets,
+          bigUndervalueTab9_B2: inputNonCurrentLiabilities,
+          bigUndervalueTab9_C1: totalElement2,
+          bigUndervalueTab9_D1: totalElement3,
+          bigUndervalueTab9_E1: totalElement,
+          bigUndervalueTab9_E2: totalElement1,
+        };
+        sessionStorage.setItem("FormData", JSON.stringify(totalFixElement));
+      }
     </script>
   </body>
 </html>
