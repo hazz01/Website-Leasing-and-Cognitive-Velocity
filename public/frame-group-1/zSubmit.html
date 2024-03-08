@@ -403,12 +403,12 @@
           .then((response) => {
             console.log("Success!", response);
             // Redirect setelah berhasil mengirim data
-            window.location.href = "end.html";
           })
           .catch((error) => {
             console.error("Error!", error.message);
             // Handle error jika terjadi
           });
+        window.location.href = "end.html";
       }
     </script>
   </body>
