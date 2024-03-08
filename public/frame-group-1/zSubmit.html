@@ -369,7 +369,7 @@
       const form = document.forms["forms_pak_chusni"];
       form.addEventListener("submit", saveAnswer);
 
-      async function saveAnswer(e) {
+      function saveAnswer(e) {
         e.preventDefault(); // Mencegah pengiriman formulir secara default
 
         const btnKirim = document.querySelector(".btn-kirim");
@@ -387,10 +387,10 @@
         sessionStorage.setItem("FormData", JSON.stringify(updatedData));
 
         // Panggil fungsi submit setelah menyimpan data
-        await submit();
+        submit();
       }
 
-      async function submit() {
+      function submit() {
         const scriptURL = "https://script.google.com/macros/s/AKfycbwUVdBgiVO02UDiyfUH00aw-r5VNTSMrOApONVAAn_LbUXqQJdn9tT6WAagbXF-ehjg/exec";
         const formData = new FormData();
         const storage = JSON.parse(sessionStorage.getItem("FormData"));
@@ -399,16 +399,16 @@
         Object.keys(storage).forEach((key) => formData.append(key, storage[key]));
 
         // Kirim data menggunakan fetch API
-        await fetch(scriptURL, { method: "POST", body: formData })
+        fetch(scriptURL, { method: "POST", body: formData })
           .then((response) => {
             console.log("Success!", response);
             // Redirect setelah berhasil mengirim data
+            window.location.href = "end.html";
           })
           .catch((error) => {
             console.error("Error!", error.message);
             // Handle error jika terjadi
           });
-        window.location.href = "end.html";
       }
     </script>
   </body>
