@@ -38,7 +38,7 @@
               <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
               <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
                 <span>Strongly Disagree</span>
-                <span class='mr-5'>Undecided</span>
+                <span class="mr-5">Undecided</span>
                 <span>Strongly Agree</span>
               </div>
               <input id="steps-range1" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -60,7 +60,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range2" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -82,7 +82,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range3" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -106,7 +106,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range4" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -128,7 +128,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range5" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -150,7 +150,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range6" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -219,37 +219,37 @@
       var rangeInput6 = document.getElementById("steps-range6");
       rangeInput1.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question1 = this.value;
+        formData["question1"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput2.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question2 = this.value;
+        formData["question2"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput3.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question3 = this.value;
+        formData["question3"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput4.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question4 = this.value;
+        formData["question4"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput5.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question5 = this.value;
+        formData["question5"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput6.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question6 = this.value;
+        formData["question6"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 

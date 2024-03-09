@@ -267,47 +267,47 @@
       var rangeInput14 = document.getElementById("steps-range14");
       rangeInput7.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question7 = this.value;
+        formData["question7"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput8.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question8 = this.value;
+        formData["question8"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput9.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question9 = this.value;
+        formData["question9"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput10.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question10 = this.value;
+        formData["question10"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput11.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question11 = this.value;
+        formData["question11"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput12.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question12 = this.value;
+        formData["question12"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
       rangeInput13.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question13 = this.value;
+        formData["question13"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
       rangeInput14.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question14 = this.value;
+        formData["question14"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
@@ -353,21 +353,20 @@
         tempStorage = { ...tempStorage, ...object };
         console.log(tempStorage);
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
-        window.location.href = `frame16.html`;
 
-        // const randomPage = [16, 28, 40, 52][Math.floor(Math.random() * 4)];
-        // console.log(randomPage.value);
-        // if (randomPage === 16) {
-        //   window.location.href = `frame16.html`;
-        // } else if (randomPage === 28) {
-        //   window.location.href = `frame28.html`;
-        // } else if (randomPage === 40) {
-        //   window.location.href = `frame40.html`;
-        // } else if (randomPage === 52) {
-        //   window.location.href = `frame52.html`;
-        // } else {
-        //   console.log("Error randomPage");
-        // }
+        const randomPage = [16, 28, 40, 52][Math.floor(Math.random() * 4)];
+        console.log(randomPage.value);
+        if (randomPage === 16) {
+          window.location.href = `frame16.html`;
+        } else if (randomPage === 28) {
+          window.location.href = `frame28.html`;
+        } else if (randomPage === 40) {
+          window.location.href = `frame40.html`;
+        } else if (randomPage === 52) {
+          window.location.href = `frame52.html`;
+        } else {
+          console.log("Error randomPage");
+        }
       }
     </script>
   </body>
