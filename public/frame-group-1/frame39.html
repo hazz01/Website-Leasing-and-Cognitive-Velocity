@@ -274,27 +274,28 @@
       updateTotal();
 
       function updateSession() {
+        let tempStorage = JSON.parse(sessionStorage.getItem("FormData")) || {};
+
         let inputNonCurrentAssets = document.getElementById("nonCurrentAssets").value;
         let inputCurrentLiabilities = document.getElementById("currentLiabilities").value;
         let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities").value;
 
-        let currentAssets = document.getElementById("currentAssets").innerHTML;
-        let totalElement = document.getElementById("totalAssets1").innerHTML;
-        let totalElement1 = document.getElementById("totalAssets").innerHTML;
-        let totalElement2 = document.getElementById("totalLiabilities").innerHTML;
-        let totalElement3 = document.getElementById("equityTotalLiabilities").innerHTML;
+        let currentAssets = document.getElementById("currentAssets").textContent;
+        let totalElement = document.getElementById("totalAssets1").textContent;
+        let totalElement1 = document.getElementById("totalAssets").textContent;
+        let totalElement2 = document.getElementById("totalLiabilities").textContent;
+        let totalElement3 = document.getElementById("equityTotalLiabilities").textContent;
 
-        const totalFixElement = {
-          smallOvervalueTab9_A1: currentAssets,
-          smallOvervalueTab9_A2: inputCurrentLiabilities,
-          smallOvervalueTab9_B1: inputNonCurrentAssets,
-          smallOvervalueTab9_B2: inputNonCurrentLiabilities,
-          smallOvervalueTab9_C1: totalElement2,
-          smallOvervalueTab9_D1: totalElement3,
-          smallOvervalueTab9_E1: totalElement,
-          smallOvervalueTab9_E2: totalElement1,
-        };
-        sessionStorage.setItem("FormData", JSON.stringify(totalFixElement));
+        tempStorage["smallOvervalueTab9_B1"] = inputNonCurrentAssets;
+        tempStorage["smallOvervalueTab9_A2"] = inputCurrentLiabilities;
+        tempStorage["smallOvervalueTab9_B2"] = inputNonCurrentLiabilities;
+        tempStorage["smallOvervalueTab9_A1"] = currentAssets;
+        tempStorage["smallOvervalueTab9_E1"] = totalElement;
+        tempStorage["smallOvervalueTab9_E2"] = totalElement1;
+        tempStorage["smallOvervalueTab9_C1"] = totalElement2;
+        tempStorage["smallOvervalueTab9_D1"] = totalElement3;
+
+        sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
       }
     </script>
   </body>

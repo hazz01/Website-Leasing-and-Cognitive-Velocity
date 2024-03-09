@@ -275,27 +275,28 @@
       updateTotal();
 
       function updateSession() {
+        let tempStorage = JSON.parse(sessionStorage.getItem("FormData")) || {};
+
         let inputNonCurrentAssets = document.getElementById("nonCurrentAssets").value;
         let inputCurrentLiabilities = document.getElementById("currentLiabilities").value;
         let inputNonCurrentLiabilities = document.getElementById("nonCurrentLiabilities").value;
 
-        let currentAssets = document.getElementById("currentAssets").innerHTML;
-        let totalElement = document.getElementById("totalAssets1").innerHTML;
-        let totalElement1 = document.getElementById("totalAssets").innerHTML;
-        let totalElement2 = document.getElementById("totalLiabilities").innerHTML;
-        let totalElement3 = document.getElementById("equityTotalLiabilities").innerHTML;
+        let currentAssets = document.getElementById("currentAssets").textContent;
+        let totalElement = document.getElementById("totalAssets1").textContent;
+        let totalElement1 = document.getElementById("totalAssets").textContent;
+        let totalElement2 = document.getElementById("totalLiabilities").textContent;
+        let totalElement3 = document.getElementById("equityTotalLiabilities").textContent;
 
-        const totalFixElement = {
-          bigOvervalueTab4_A1: currentAssets,
-          bigOvervalueTab4_A2: inputCurrentLiabilities,
-          bigOvervalueTab4_B1: inputNonCurrentAssets,
-          bigOvervalueTab4_B2: inputNonCurrentLiabilities,
-          bigOvervalueTab4_C1: totalElement2,
-          bigOvervalueTab4_D1: totalElement3,
-          bigOvervalueTab4_E1: totalElement,
-          bigOvervalueTab4_E2: totalElement1,
-        };
-        sessionStorage.setItem("FormData", JSON.stringify(totalFixElement));
+        tempStorage["bigOvervalueTab4_B1"] = inputNonCurrentAssets;
+        tempStorage["bigOvervalueTab4_A2"] = inputCurrentLiabilities;
+        tempStorage["bigOvervalueTab4_B2"] = inputNonCurrentLiabilities;
+        tempStorage["bigOvervalueTab4_A1"] = currentAssets;
+        tempStorage["bigOvervalueTab4_E1"] = totalElement;
+        tempStorage["bigOvervalueTab4_E2"] = totalElement1;
+        tempStorage["bigOvervalueTab4_C1"] = totalElement2;
+        tempStorage["bigOvervalueTab4_D1"] = totalElement3;
+
+        sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
       }
     </script>
   </body>

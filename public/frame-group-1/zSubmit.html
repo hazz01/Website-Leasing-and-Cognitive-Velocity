@@ -15,6 +15,7 @@
           <button
             onclick="saveAnswer()"
             type="submit"
+            id="submitButton"
             class="content-center text-white bg-primary-color hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3 text-center dark:bg-primary-color dark:hover:bg-indigo-600 dark:focus:ring-blue-800 btn-kirim"
           >
             Kirim
@@ -41,6 +42,8 @@
     </section>
 
     <script>
+      let timerframe1 = "timerframe1";
+      let timerframe2 = "timerframe2";
       let timerNumber18 = "timer18";
       let timerNumber19 = "timer19";
       let timerNumber20 = "timer20";
@@ -88,6 +91,8 @@
       let timerNumber62 = "timer62";
       let timerNumber63 = "timer63";
 
+      let timerStartframe1 = parseInt(sessionStorage.getItem(timerframe1)) || 0;
+      let timerStartframe2 = parseInt(sessionStorage.getItem(timerframe2)) || 0;
       let timeStart18 = parseInt(sessionStorage.getItem(timerNumber18)) || 0;
       let timeStart19 = parseInt(sessionStorage.getItem(timerNumber19)) || 0;
       let timeStart20 = parseInt(sessionStorage.getItem(timerNumber20)) || 0;
@@ -110,7 +115,7 @@
       let timeStart37 = parseInt(sessionStorage.getItem(timerNumber37)) || 0;
       let timeStart38 = parseInt(sessionStorage.getItem(timerNumber38)) || 0;
       let timeStart39 = parseInt(sessionStorage.getItem(timerNumber39)) || 0;
-      let timeStart40 = parseInt(sessionStorage.getItem(timerNumber30)) || 0;
+      let timeStart40 = parseInt(sessionStorage.getItem(timerNumber40)) || 0;
       let timeStart41 = parseInt(sessionStorage.getItem(timerNumber41)) || 0;
       let timeStart42 = parseInt(sessionStorage.getItem(timerNumber42)) || 0;
       let timeStart43 = parseInt(sessionStorage.getItem(timerNumber43)) || 0;
@@ -148,6 +153,8 @@
       }
 
       window.onload = function () {
+        let timerfr1 = timerStartframe1;
+        let timerfr2 = timerStartframe2;
         let time18 = timeStart18;
         let time19 = timeStart19;
         let time20 = timeStart20;
@@ -195,6 +202,8 @@
         let time62 = timeStart62;
         let time63 = timeStart63;
 
+        startTimer(timerfr1, timerframe1);
+        startTimer(timerfr2, timerframe2);
         startTimer(time18, timerNumber18);
         startTimer(time19, timerNumber19);
         startTimer(time20, timerNumber20);
@@ -242,6 +251,8 @@
         startTimer(time62, timerNumber62);
         startTimer(time63, timerNumber63);
 
+        let storedTotalfr1 = sessionStorage.getItem(timerframe1);
+        let storedTotalfr2 = sessionStorage.getItem(timerframe2);
         let storedTotal18 = sessionStorage.getItem(timerNumber18);
         let storedTotal19 = sessionStorage.getItem(timerNumber19);
         let storedTotal20 = sessionStorage.getItem(timerNumber20);
@@ -291,6 +302,8 @@
 
         if (storedTotal18 !== null && storedTotal19 !== null) {
           let totalSeconds =
+            parseInt(storedTotalfr1) +
+            parseInt(storedTotalfr2) +
             parseInt(storedTotal18) +
             parseInt(storedTotal19) +
             parseInt(storedTotal20) +
@@ -339,11 +352,10 @@
             parseInt(storedTotal63);
           // let totalSeconds = parseInt(storedTotal18) + parseInt(storedTotal19);
           console.log("Total time:", totalSeconds);
-          // let objStorage = JSON.parse(sessionStorage.getItem("FormData"));
-          const TotalSecond = {
-            totalSeconds: totalSeconds,
-          };
-          sessionStorage.setItem("FormData", JSON.stringify(TotalSecond));
+          let tempStorage = JSON.parse(sessionStorage.getItem("FormData"));
+          tempStorage["totalSeconds"] = totalSeconds;
+
+          sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
 
           // Debugging: Log the total time to the console
           console.log("Total time:", totalSeconds);
@@ -402,12 +414,14 @@
         fetch(scriptURL, { method: "POST", body: formData })
           .then((response) => {
             console.log("Success!", response);
+            alert("Data Anda Terkirim");
             // Redirect setelah berhasil mengirim data
             window.location.href = "end.html";
           })
           .catch((error) => {
             console.error("Error!", error.message);
             // Handle error jika terjadi
+            throw new Error("Error!", error.message);
           });
       }
     </script>
