@@ -1248,20 +1248,12 @@ input:checked + .toggle-bg {
   margin-top: 1.25rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-44 {
-  margin-top: 11rem;
-}
-
-.mt-64 {
-  margin-top: 16rem;
-}
-
 .mt-56 {
   margin-top: 14rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
