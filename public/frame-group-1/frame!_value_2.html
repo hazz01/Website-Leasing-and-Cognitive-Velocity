@@ -37,7 +37,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range7" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -60,7 +60,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range8" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -82,7 +82,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range9" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -106,7 +106,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range10" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -132,7 +132,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range11" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -154,7 +154,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range12" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -176,7 +176,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range13" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -198,7 +198,7 @@
             <!-- <label for="steps-range" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Range steps</label> -->
             <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400">
               <span>Strongly Disagree</span>
-              <span class='mr-5'>Undecided</span>
+              <span class="mr-5">Undecided</span>
               <span>Strongly Agree</span>
             </div>
             <input id="steps-range14" value="1" type="range" min="1" max="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" aria-label="Slider" />
@@ -267,47 +267,47 @@
       var rangeInput14 = document.getElementById("steps-range14");
       rangeInput7.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question7 = this.value;
+        formData["question7"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput8.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question8 = this.value;
+        formData["question8"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput9.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question9 = this.value;
+        formData["question9"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput10.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question10 = this.value;
+        formData["question10"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput11.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question11 = this.value;
+        formData["question11"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
       rangeInput12.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question12 = this.value;
+        formData["question12"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
       rangeInput13.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question13 = this.value;
+        formData["question13"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
       rangeInput14.addEventListener("input", function () {
         const formData = JSON.parse(sessionStorage.getItem("FormData")) || {};
-        formData.question14 = this.value;
+        formData["question14"] = this.value;
         sessionStorage.setItem("FormData", JSON.stringify(formData));
       });
 
@@ -355,8 +355,8 @@
         sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
 
         const randomPage = [16, 28, 40, 52][Math.floor(Math.random() * 4)];
-        console.log(randomPage.value)
-        if(randomPage === 16){
+        console.log(randomPage.value);
+        if (randomPage === 16) {
           window.location.href = `frame16.html`;
         } else if (randomPage === 28) {
           window.location.href = `frame28.html`;
@@ -365,10 +365,8 @@
         } else if (randomPage === 52) {
           window.location.href = `frame52.html`;
         } else {
-          console.log("Error randomPage")
+          console.log("Error randomPage");
         }
-        
-
       }
     </script>
   </body>

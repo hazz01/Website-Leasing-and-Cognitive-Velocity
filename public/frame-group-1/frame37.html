@@ -849,15 +849,14 @@
           totalElement4.textContent = total4;
         }
 
-        const totalsObject = {
-          total1f37: total1,
-          total2f37: total2,
-          total3f37: total3,
-          total4f37: total4,
-          // smallOvervalueTab7_B2: valueB2,
-          // smallOvervalueTab7_B3: inputB3,
-        };
-        sessionStorage.setItem("FormData", JSON.stringify(totalsObject));
+        let tempStorage = JSON.parse(sessionStorage.getItem("FormData")) || {};
+
+        tempStorage["total1f37"] = total1;
+        tempStorage["total2f37"] = total2;
+        tempStorage["total3f37"] = total3;
+        tempStorage["total4f37"] = total4;
+
+        sessionStorage.setItem("FormData", JSON.stringify(tempStorage));
       }
     </script>
   </body>
