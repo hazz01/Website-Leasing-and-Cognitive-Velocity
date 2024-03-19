@@ -11,10 +11,25 @@
       * {
         font-family: Inter;
       }
+      .bgbgbg {
+        background-image: url("../img/Main_BG_Fixed.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        z-index: -10;
+      }
     </style>
   </head>
 
   <body class="bg-color-main-bg">
+    <div class="bgbgbg"></div>
+
     <section class="mainContent">
       <!-- section -->
       <div class="px-2 py-2 rounded-md p-2 m-auto bg-primary-color fixed top-4 right-4 invisible"><p id="TimerDisplay" class="font-semibold text-lg text-white w-full text-center"></p></div>
