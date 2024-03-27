@@ -11,10 +11,25 @@
       * {
         font-family: Inter;
       }
+      .bgbgbg {
+        background-image: url("../img/Main_BG_Fixed.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        z-index: -10;
+      }
     </style>
   </head>
 
   <body class="bg-color-main-bg">
+    <div class="bgbgbg"></div>
+
     <!-- <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -60,7 +75,7 @@
       <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-5">
         <div class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">Abdi Barakah Tbk. Statement of Finansial Position:</h5>
-          <img src="../../img/figureSmallErrrOvervalue.jpg" alt="Statement Financial Position" width="100%" />
+          <img src="../img/figureSmallErrrOvervalue.jpg" alt="Statement Financial Position" width="100%" />
         </div>
         <div class="block max-w-xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <p class="font-normal text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
